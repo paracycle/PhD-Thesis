@@ -1,0 +1,253 @@
+%
+% This is a template for the fbe_tez.sty, v4.1 (and maybe later).
+%
+%
+\documentclass[12pt]{report}
+
+% Main Thesis Layout style
+\usepackage{fbe_tez}
+
+% The following are needed for chapter3
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\adag}{a^{\dagger}}
+\newcommand{\bdag}{b^{\dagger}}
+\newcommand{\ket}[1]{\mid #1\;\rangle}
+\newcommand{\bra}[1]{\langle\; #1\mid}
+\newcommand{\braket}[2]{\langle\; #1\mid #2\;\rangle}
+\newcommand{\delfn}[1]{\delta(#1)}
+\newcommand{\kro}[1]{\delta_{#1}}
+\newcommand{\anti}[2]{\{#1, #2\}}
+
+
+\def\IC{\mathbb{C}}
+\def\IR{\mathbb{R}}
+\def\I1{\mathbb{I}}
+\def\II{\mathbb{J}}
+\def\FIO{$FIO(2d, \IR)\;$}
+\def\BISp{$BISp(2d, \IR)\;$}
+
+%
+% LaTeX 2.09 users: Replace the above two lines with the following line
+%\documentstyle[12pt,fbe_tez]{report}
+%
+% Declarations
+%
+\title{QUANTUM GROUP INVARIANCE OF SOME PHYSICAL ALGEBRAS}
+\turkcebaslik{BAZI F\.{I}Z\.{I}KSEL CEB\.{I}RLERIN KUVANTUM GRUP DE\~G\.{I}\c{S}MEZL\.{I}\~G\.{I}}
+\degree{
+B.S. in Physics, Bo\~ gazi\c ci University, 1997 \\
+B.S. in Mathematics, Bo\~ gazi\c ci University, 1997
+}
+\author{Ufuk Kayserilio\~ glu}
+% The \program declaration is needed only for M.S. theses
+%\program{FBE Program for which the Thesis is Submitted}
+%\subyear{20xx}
+%
+% Declare relevant examiners
+%
+\supervisor{Prof. Dr. Metin Ar\i k}
+%\cosuperi{Title and Name of Cosupervisor I}
+%\cosuperii{Title and Name of Cosupervisor II}
+\examineri{Title and Name of Examiner}
+\examinerii{Title and Name of Examiner}
+%\examineriii{Title and Name of Examiner}
+%\examineriv{Title and Name of Examiner}
+%\examinerv{Title and Name of Examiner}
+\dateofapproval{Day.Month.Year}
+
+\begin{document}
+\pagenumbering{roman}
+%
+% Choose the relevant one
+%\makemstitle        % For M.S. theses
+\makephdtitle      % For Ph.D. theses
+%\makeproposaltitle % For Proposals
+
+\makeapprovalpage
+
+\begin{acknowledgements}
+For my loving wife Emi for all her support; my wise and understanding mentor Metin Bey for
+teaching me a lot of what I know.
+\end{acknowledgements}
+
+\begin{abstract}
+Type your abstract here.
+\end{abstract}
+%
+% The usage of the "foreword" and "preface" environments are similar
+% the "abstract" and "acknowledgements". See FBE manual for the
+% correct order of these pages in the thesis.
+%
+\begin{ozet}
+T\"urk\c ce tez \"ozetini buraya yaz\i n\i z.
+\end{ozet}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\begin{symabbreviations}
+% The title will be typeset as "LIST OF SYMBOLS/ABBREVIATIONS".
+% If you prefer it as "LIST OF SYMBOLS" or "LIST OF ABBREVIATIONS"
+% use the environments "symbols" or "abbreviations", respectively.
+%
+% Use a separate \sym command for each symbols definition.
+% First Latin symbols in alphabetical order
+\sym{$a_{ij}$}{Description of $a_{ij}$}
+% Then Greek symbols in alphabetical order
+\sym{$\alpha$}{Description of $\alpha$}
+\sym{}{}       % Separating line between symbols and abbreviations
+\sym{DA}{Description of abbreviation}
+\end{symabbreviations}
+
+\chapter{INTRODUCTION}
+\pagenumbering{arabic}
+
+\input{chapter1}
+
+\chapter{The Anticommuting Spin Algebra}
+
+\input{chapter2}
+
+\chapter{Hopf Algebras associated with invariance of non-deformed oscillators}
+
+\input{chapter3}
+
+\chapter{Conclusions}
+
+\input{chapter4}
+
+\appendix      % Starts appendices
+\chapter{Explicit calculation of ACSA invariance relations}
+
+\input{appendix1}
+
+\begin{thebibliography}{9}
+
+%% References for Chapter 2
+
+\bibitem{frt}
+L.D. Fadeev, N.Y. Reshetikhin, L.A. Takhtajan,
+\textit{Quantization of Lie Groups and Lie Algebras}, preprint
+LOMI, {\bf E-14-87} (1987)
+
+\bibitem{drinfeld}
+V.G. Drinfeld, \textit{Quantum Groups}, Proc. Int. Congr. Math.,
+Berkeley 1, 798 (1986)
+
+\bibitem{woronowicz}
+S.L. Woronowicz, \textit{Commun. Math. Phys.}, {\bf 111} (1987)
+613
+
+\bibitem{manin}
+Yu I. Manin, \textit{Quantum Groups and Non-commutative Geometry}
+(CRM, Montreal University Press, 1988)
+
+\bibitem{jx}
+S. Jing, J. Xu, \textit{J. Phys. A: Math. Gen.}, {\bf 24} (1991)
+L891
+
+\bibitem{xh}
+W.Y. Chan, C.L. Ho, \textit{J. Phys. A: Math. Gen.}, {\bf 26}
+(1993) 4827
+
+\bibitem{sm}
+A. Solomon, R. McDermott, \textit{J. Phys. A: Math. Gen.}, {\bf
+27} (1994) 2619
+
+\bibitem{chung}
+W.S. Chung, \textit{Phys. Lett. A}, {\bf 259} (1999) 437
+
+\bibitem{nt}
+T Nassar and O Tirkkonen, \textit{J. Phys. A: Math. Gen.}, {\bf31}
+(1998) 9983
+
+\bibitem{gppr}
+H Grosse, S Pallua, P Prester and E Raschhofer, \textit{J. Phys.
+A: Math. Gen.}, {\bf27} (1994) 4761
+
+\bibitem{bnnpsw} J. Balog, M. Niedermaier, F. Niedermayer, A. Patrascioiu, E. Seiler and P. Weisz,
+\textit{Nuclear Physics B}, {\bf618} (2001) 315
+
+\bibitem{ubriaco}
+M. R. Ubriaco, \textit{Phys. Rev. E}, {\bf58} (1998) 4191
+
+\bibitem{leites}
+D. A. Leites, I. M. Shchepochkina, \textit{Theor. Math. Phys.},
+{\bf 3}, (2001) 281
+
+\bibitem{batalin}
+I. Batalin, I. Tyutin, “Generalized field–antifield formalism,”,
+Topics in Statistical and Theoretical Physics (R. Dobrushin et
+al., eds.) (Trans. Am. Math. Soc., Ser. 2, Vol. 177), Am. Math.
+Soc., Providence, RI (1996), 23
+
+%% References for Chapter 3
+
+\bibitem{fadeev}
+V. G. Drinfeld, \textit{Proc. Int. Congr. Math.}, Berkeley {\bf
+1}, 798 (1986)
+
+M. Jimbo, \textit{Lett. Math. Phys.} {\bf 11}, 247 (1986)
+
+S. L. Woronowicz, \textit{Commun. Math. Phys.} {\bf 111}, 613
+(1987)
+
+L.D. Fadeev, N.Y. Reshetikhin, L.A. Takhtajan, "Quantization of
+Lie Groups and Lie Algebras", \textit{Leningrad Math. J.} {\bf 1},
+193 (1987)
+
+\bibitem{sww}
+M. Schlieker, W. Weich and R. Weixler, \textit{Z. Phys. C} {\bf
+53}, 79 (1992)
+
+\bibitem{pw}
+P. Podles and S. L. Woronowicz, \textit{Commun. Math. Phys.} {\bf
+185}, 325 (1997)
+
+\bibitem{unruh}
+W. G. Unruh, \textit{Phys. Rev. D} {\bf14}, 870 (1976)
+
+\bibitem{hawking}
+S. W. Hawking, \textit{Phys. Rev. D} {\bf 14}, 2460 (1976)
+
+\bibitem{agy}
+M. Arik, S. Gun, A. Yildiz, \textit{Eur. Phys. J. C} {\bf 27}, 453
+(2003)
+
+\bibitem{ab}
+M. Arik, A. Baykal, \textit{J. Math. Phys.} {\bf 45}, 4207 (2004)
+
+\bibitem{inonu}
+E.Inonu and E.P.Wigner, \textit{Proc. Natl. Acad. Sci. U.S.A.}
+{\bf 39}, 510 (1953)
+
+\bibitem{majid}
+S. Majid, "Braided groups and algebraic quantum field theories",
+\textit{Letters in Math. Phys.} {\bf 22}, 167 (1991)
+
+\bibitem{puszwor}
+W. Pusz and S.L. Woronowicz, \textit{Rep. Math. Phys.} {\bf 27},
+231 (1989)
+
+M. Arik, \textit{Z. Phys. C} {\bf 51}, 627 (1991)
+
+%% References for Chapter 4
+
+
+
+\end{thebibliography}
+%
+% You can also try harvardbibliography, bibnotcited and
+% harvardbibnotcited environments for other types of bibliographical
+% lists.
+%
+\end{document}
