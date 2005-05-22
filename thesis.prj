@@ -1,16 +1,33 @@
-212 Patch Control
+243 Patch Control
 
 0
 0
 0
-
-0
-0
-0
-
-
+C:\Personal Area\PhD Thesis\thesis.tex
+3
+3
+2
 
 
 
 
 
+
+C:\Personal Area\PhD Thesis\thesis.tex
+TeX
+135278522 0 0 1 0 1 22 24 703 256 0 22 1 -1 -1 0 0 -1 -1 -1 -1 1 0 1 0   0
+C:\Personal Area\PhD Thesis\chapter3.tex
+TeX
+1060794 0 433 1 434 1 22 24 681 310 0 22 307 -1 -1 0 0 -1 -1 -1 -1 1 0 1 434   0
+C:\Personal Area\PhD Thesis\chapter1.tex
+TeX
+269496250 0 42 114 62 32 44 48 574 334 0 270 1055 -1 -1 0 0 -1 -1 -1 -1 1 0 32 62   0
+
+*C:\Personal Area\PhD Thesis\thesis.tex
+>
+*chapter1
+*chapter2
+*chapter3
+*chapter4
+*appendix1
+<
