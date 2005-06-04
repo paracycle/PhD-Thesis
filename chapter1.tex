@@ -9,7 +9,7 @@ Before we start investigating such matters, it would be apt to give an overview 
 
 When the harmonic oscillator is studied in a quantum mechanical manner, one arrives at the relation:
 \beq
-a \adag - \adag a = 1
+a \adag - \adag a = 1 \label{bosonic comm rel}
 \eeq
 for the system the Hamiltonian of which is given by $\frac{\hbar \omega}{2} (a \adag + \adag a)$. The spectrum of this Hamiltonian, which in turn gives us the allowable energy levels of the quantum harmonic oscillator, can be obtained easily by introducing the hermitian operator $N = \adag a$ which satisfies the following relations with $a$ and $\adag$:
 \bea
@@ -21,9 +21,9 @@ where $[\;,\; ]$ denotes the usual commutator. By observing the fact that the Ha
 \adag \ket{n} &=& \sqrt{n + 1} \ket{n + 1} \\
 a \ket{n} &=& \sqrt{n} \ket{n - 1}
 \eea
-Due to the fact that the operator $N$ is a positive-definite hermitian operator, its eigenvalues, namely $n$, cannot be negative. For a given positive value of $n$, however, one can construct states with eigenvalues $n-1$, $n-2$, $n-3$, and so on, by repeatedly applying the operator $a$ on the original state. This sequence of eigenvalues will contain negative values eventually for any given finite $n$ unless it is an integer. In that case, the sequence will end at the eigenvalue $0$ since a further application of the operator $a$ on that state will give us the zero vector of the Hilbert space which is not a physically observable state and is thus a state out of our domain.
+Due to the fact that the operator $N$ is a positive hermitian operator, its eigenvalues, namely $n$, cannot be negative. For a given positive value of $n$, however, one can construct states with eigenvalues $n-1$, $n-2$, $n-3$, and so on, by repeatedly applying the operator $a$ on the original state. This sequence of eigenvalues will contain negative values eventually for any given finite $n$ unless it is an integer. In that case, the sequence will end at the eigenvalue $0$ since a further application of the operator $a$ on that state will give us the zero vector of the Hilbert space which is not a physically observable state and is thus a state out of our domain.
 
-As a result of this study one finds that the values of $n$, the eigenvalues of the operator $N$, begin from $0$ and increase by $1$ every time $\adag$ is applied on the relevant state and that the energy levels of the quantum harmonic oscillator is given by $\hbar \omega (n + \frac12)$. The operators $\adag$ and $a$ turn out to be  operators that create and destroy, respectively, one quanta of energy. For this reason they are usually called creation and annihilation operators.
+As a result of this study one finds that the values of $n$, the eigenvalues of the operator $N$, begin from $0$ and increase by $1$ every time $\adag$ is applied on the relevant state and that the energy levels of the quantum harmonic oscillator are given by $\hbar \omega (n + \frac12)$. The operators $\adag$ and $a$ turn out to be  operators that create and destroy, respectively, one quanta of energy and for this reason they are usually called creation and annihilation operators.
 
 Even though this operator algebra seems to only describe the quantum harmonic oscillator, when one studies quantum field theory, this algebra comes up as the algebra of the Fourier coefficients of the field operator describing a bosonic particle. Each normal mode of a quantum field behaves as if it is an independent harmonic oscillator and for that reason we have a separate set of creation and annihilation operators for each of these modes. In that setting, the operators $\adag_p$ and $a_p$, which now carry a continuous momentum index, are interpreted as the operators that create and destroy, respectively, one bosonic particle of such a field with momentum $p$.
 
@@ -31,9 +31,9 @@ For fermionic particles the story is a little bit more different.
 In 1925, Pauli first proposed his "exclusion principle" to explain the behavior of electrons in an atom. According to this principle, no two electrons could exist in the same quantum state and it was for this reason that electrons could not all occupy the lowest energy state in the atomic orbitals but instead had to line up the energy levels in a well ordered manner. The implication of this principle to the electron gas was first considered by Fermi and Dirac and it is for this reason that particles that obey these statistics are called "fermions". In 1926 Dirac noted that the "exclusion principle" could apply to other particles by relating bosons and fermions to the symmetry of the many-particle wavefunction. If the wavefunction changes sign upon exchange of two particles then those particles would be fermions and they would be bosons if the wavefunction did not change sign. This treatment effectively implies the Pauli exclusion principle since if there were to be two fermionic particles occupying the same quantum state, then upon their exchange the wavefunction would change sign; on the other hand, we expect the wavefunction to be identical to the original one before the exchange since nothing must have changed about the quantum state of the system. For this reason the original wavefunction can be nothing but zero if it is to be equal to its negative in this manner. Thus, by contradiction, one can show that no two fermions can exist in the same quantum state. It was only later, in 1928, that Jordan and Wigner proposed that in order to treat fermions in quantum field theory, their field operators had
 to anticommute so that the wavefunction could be antisymmetric. They showed that a consistent second-quantization of fermions implied anticommutation relations on the field operators. This is turn implies that the Fourier coefficients of the field operators that belong to a normal mode also obey anticommutation relations instead of the commutation relations that the bosonic creation and annihilation operators obey.
 
-In this work, we would like to give an alternative derivation of this algebra by only starting from the Pauli exclusion principle and assuming that fermionic particles also have creation and annihilation operators just like the bosonic particles. If this is the case then Pauli exclusion principle tells us that we cannot create a second fermion in the same quantum state, i.e. that $(\adag)^2$, and in turn $a^2$, should be $0$. This relation, however, is not compatible with the commutation relations and thus should be supplemented with another kind of relation. If we define the operator $K$ as the anticommutator of $a$ and $\adag$:
+In this work, we would like to give an alternative derivation of this algebra by only starting from the Pauli exclusion principle and assuming that fermionic particles also have creation and annihilation operators just like the bosonic particles. If this is the case then Pauli exclusion principle tells us that we cannot create a second fermion in the same quantum state, i.e. that $(\adag)^2$, and in turn $a^2$, should be $0$. This relation, however, is not compatible with the commutation relation (\ref{bosonic comm rel}) and thus should be supplemented with another kind of relation. If we define the operator $K$ as the anticommutator of $a$ and $\adag$:
 \beq
-K \equiv a \adag + \adag a 
+K \equiv a \adag + \adag a
 \eeq
 then we find that $K$ is a central element of the algebra, since:
 \bea
@@ -54,6 +54,41 @@ A study of this fermion algebra, similar to the boson algebra, shows that, again
 
 \section{Quantum matrix groups}
 
-\section{Quantum invariance of an algebra}
+A quantum matrix group is defined by a set of $n$ x $n$ matrices $M$:
+\beq
+M = 
+\left(
+\begin{array}{ccc}
+a_{11} & a_{12} & \ldots \\
+a_{21} & \ddots & \\
+\vdots &        & a_{nn}
+\end{array}
+\right)
+\eeq
+such that every element of the matrix belong to a Hopf Algebra $\mathcal{H}$. The matrix group defined in this way naturally becomes a Hopf algebra with the coproduct, counit and coinverse of the matrix algebra being defined as:
+\bea
+\triangle(M) &=& M \dot{\otimes} M \\
+\epsilon(M) &=& \I1 \\
+S(M) &=& M^{-1}
+\eea
+where $\dot{\otimes}$ stands for the operation where the matrix multiplication is performed but the matrix elements are multiplied using the tensor product is instead of the normal product. The relations above imply the definitions of the coproduct, counit and coinverse of the matrix elements:
+\bea
+\triangle(\alpha_{ij}) &=& \sum_k \alpha_{ik} \otimes \alpha_{kj} \\
+\epsilon(\alpha_{ij}) &=& \delta_{ij} \\
+\sum_j S(\alpha_{ij}) \alpha_{jk} &=& \delta_{ij} = \sum_j \alpha_{ij} S(\alpha_{jk}) 
+\eea
 
+\section{Quantum group invariance of an algebra}
+Given an algebra $\mathcal{A}$ with generators $a_1$, $a_2$, $\ldots$, $a_n$, one can construct the column matrix:
+\beq
+A =
+\left(
+\begin{array}{c}
+a_1 \\
+a_2 \\
+\vdots \\
+a_n
+\end{array}
+\right)
+\eeq
 \section{Summary}

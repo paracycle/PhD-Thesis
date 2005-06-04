@@ -66,9 +66,6 @@ section, $FIO(2d + 1, \IR)$, the fermionic inhomogeneous quantum
 orthogonal group in odd number of dimensions, will also be defined
 and its properties examined.
 
-\section{The Bosonic Inhomogeneous Symplectic Quantum Group \BISp}
-
-\section{The Fermionic Inhomogenous Group \FIO}
 A general transformation of a particle algebra can be described in
 the following way: \beq \left(
 \begin{array}{c}
@@ -115,8 +112,354 @@ A & \Gamma \\
 
 We assume that $\alpha_{ij}, \beta_{ij}, \gamma_i$ belong to a
 possibly noncommutative algebra on which a hermitian conjugation
-denoted by $*$ is defined. We also assume that the matrix elements
-of $A$ form a commutative subalgebra.
+denoted by $*$ is defined.
+
+\section{The Bosonic Inhomogeneous Symplectic Quantum Group \BISp}
+
+If we consider the transformation matrix (\ref{M-matrix}) being applied to the boson algebra given by:
+\bea
+c_i c_j - c_j c_i & = & 0 \\
+c_i c^*_j - c^*_j c_i & = & \delta_{ij}
+\eea
+then we require that the transformed operators $c'_i$ and ${c^*}'_i$ are required to satisfy the same algebra in order for the transformation to be an algebra invariance. Thus we require that:
+\bea
+c'_i c'_j - c'_j c'_i & = & 0 \\
+c'_i {c^*}'_j - {c^*}'_j c'_i & = & \delta_{ij}
+\eea
+Explicitly writing out the transformed operators, these relations become:
+\bea
+(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
+(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1) \nonumber \\
+-
+(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1)
+(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
+& = & 0 \\
+(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
+(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1) \nonumber  \\
+-
+(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1)
+(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
+& = & \delta_{ij}
+\eea
+which gives us:
+\bea
+[\alpha_{ik}, \alpha_{jl}]c_l c_k + [\beta_{ik}, \beta_{jl}]c^*_l c^*_k && \nonumber \\
++ [\alpha_{ik}, \gamma_j] c_k + [\beta_{ik}, \gamma_j] c^*_k && \nonumber \\
++ [\gamma_i, \alpha_{jl}] c_l + [\gamma_i, \beta_{jl}] c^*_l && \nonumber \\
++ [\alpha_{ik}, \beta_{jl}] c_k c^*_l + [\beta_{ik}, \alpha_{jl}] c^*_k c_l && \nonumber \\
++ (\alpha_{jk} \beta_{ik} - \beta_{jk} \alpha_{ik} + [\gamma_i, \gamma_j]) &=&  0 \quad ,
+\eea
+and
+\bea
+[\alpha_{ik}, \beta^*_{jl}]c_l c_k + [\beta_{ik}, \alpha^*_{jl}] c^*_l c^*_k && \nonumber \\
++ [\alpha_{ik}, \gamma^*_j] c_k + [\beta_{ik}, \gamma^*_j] c^*_k && \nonumber \\
++ [\gamma_i, \beta^*_{jl}] c_l + [\gamma_i, \alpha_{jl}] c^*_l && \nonumber \\
++ [\beta_{ik}, \beta^*_{jl}] c_k c^*_l + [\alpha_{ik}, \alpha^*_{jl}] c^*_k c_l && \nonumber \\
++ (\alpha^*_{jk} \alpha_{ik} - \beta^*_{jk} \beta_{ik}) &=& \delta_{ij} \quad .
+\eea
+
+In the first of these relations, the coefficients of all the terms that 
+we have written above should be separately equal to zero in order to satisfy the equality.
+In the second one, however, we only have a term that is a multiple of the unit
+element of the boson algebra on the right hand side, thus the coefficient of that term
+should be equal on both sides and the other terms on the left hand side should be
+separately equal to zero.
+ Thus we have the following relations between the transformation elements:
+\bea
+\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} \label{rel1} \\
+\gamma_i \gamma_j - \gamma_j \gamma_i &=& \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \label{rel2} \\
+\alpha_{ij} \gamma_k - \gamma_k \alpha_{ij} & = & 0 \label{rel3} \\
+\beta_{ij} \gamma_k - \gamma_k \beta_{ij} & = & 0 \label{rel4} \\
+\alpha_{ij} \gamma^*_k - \gamma^*_k \alpha_{ij} & = & 0 \label{rel5} \\
+\beta_{ij} \gamma^*_k - \gamma^*_k \beta_{ij} & = & 0 \label{rel6}
+\eea
+and any two elements from the set
+$\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute.
+
+The set of matrices $M$ obeying the above relations form the group
+of inhomogeneous transformations of bosons. We name this group 
+\BISp since it is an inhomogeneous extension of the symplectic group where
+the inhomogeneous part exhibits bosonic behavior. This
+symmetry group, however, is not a classical group like the symplectic group
+but is in fact a quantum groups with a Hopf algebra structure. As shown in
+\cite{ab}, this Hopf algebra has an explicit $R$-matrix
+representation and the coproduct, counit and antipode are defined
+as: 
+\bea
+\Delta(M) & = & M \dot{\otimes} M \label{coproduct} \\
+\epsilon(M) & = & I \label{counit} \\
+S(M) & = & M^{-1} \label{antipode} \quad . \eea In Equation
+\ref{coproduct}, the symbol $\dot{\otimes}$ denotes the usual
+matrix multiplication where when elements of the matrices are
+multiplied, tensor multiplication is used.
+
+The inverse of the matrix $M$ can be defined as: \beq M^{-1} =
+\left(
+\begin{array}{cc}
+A^{-1} & -A^{-1} \Gamma \\
+0 & 1
+\end{array}
+\right) \eeq where $A^{-1}$ is defined in the standard way since
+matrix elements of $A$ are shown to be commutative.
+
+\subsection{Subgroups}
+After having shown that the inhomogeneous transformations of the boson
+algebra forms the symmetry quantum group \BISp,
+one important question is what sub(quantum)groups does this quantum
+group have. For example, we know that the group $ISp(2d, \IR)$ is
+an important special subgroup of \BISp and other
+sub(quantum)groups could turn out to have similarly important
+physical applications. While searching for sub(quantum)groups, we
+would also like to find new (quantum)groups allowed by suitable
+contractions \cite{inonu} of these quantum groups as well.
+
+The sub(quantum)groups are obtained by imposing
+additional relations on the matrix elements of $M$ which obey the
+relations (\ref{rel1}) - (\ref{rel6}). The additional relations
+that we will impose are:
+\begin{enumerate}
+\renewcommand{\labelenumi}{\bf(\alph{enumi})}
+\item $\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} = \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0$
+\item $\gamma_i = 0$
+\item $\beta_{ij} = 0$
+\item $\alpha_{ij} = 0$
+\end{enumerate}
+
+We would like to study the implication of each relation one by one
+in the following subsections.
+
+\subsubsection{Inhomogeneous Subsupergroup}
+
+The relation {\bf(a)}:
+\[
+\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}
+= \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
+\]
+by virtue of (\ref{rel1}) and (\ref{rel2}) implies that $\gamma_i
+\gamma^*_j - \gamma^*_j \gamma_i = 0$ and $\gamma_i \gamma_j -
+\gamma_j \gamma_i = 0$, i.e. that the inhomogeneous transformation
+parameters are commutative variables.
+
+For bosonic particles, the fact that the inhomogeneous elements of the 
+quantum group are commutative elements coupled with the fact that the
+remaining relations between the transformation elements are already 
+commutative gives us a symmetry transformation of the boson algebra
+where all the elements commute. However, we know that such a transformation
+is nothing but the classical symmetry group of the bosonic particle algebra $ISp(2d,
+\IR)$ in which all the parameters, including the inhomogeneous
+elements, are commutative.
+
+\subsubsection{Homogeneous Subgroup}
+The relation {\bf(b)}:
+\[
+\gamma_i = 0
+\]
+practically gets rid of the inhomogeneous part of the
+transformation and also implies the relation {\bf(a)} considered
+in the previous subsection. Since the previous relation is implied
+the resulting group will be a subgroup of $ISp(2d,
+\IR)$ and since the group is not inhomogeneous anymore the resulting
+subgroup is the classical symplectic group $Sp(2d, \IR)$.
+
+\subsubsection{Bosonic Inhomogeneous Unitary Quantum Group}
+The relation {\bf(c)}:
+\[
+\beta_{ij} = 0
+\]
+applied to the transformation gets rid of the off-diagonal members
+of the homogeneous part of it and leaves us with the following
+relation: 
+\beq 
+\gamma_i\gamma^*_j - \gamma^*_j\gamma_i = \delta_{ij} - \alpha_{ik}\alpha^*_{jk}
+\eeq
+
+This equation implies for the homogeneous
+part of the transformation the relation:
+\beq
+\delta_{ij} = \alpha_{ik}\alpha^*_{jk} 
+\eeq
+which tells us that the submatrices
+$\alpha$ and $\alpha^*$ in equation (\ref{M-matrix}) are
+members of $U(d)$. The subgroup we have arrived at thus is an
+inhomogeneous quantum group extension to the classical homogeneous
+group $U(d)$. Since the inhomogeneous elements of the resulting group
+obeys the same relations as \BISp, we will name this quantum group
+ $BIU(d)$, the bosonic inhomogeneous quantum group.
+ 
+\subsubsection{Boson Algebra}
+The relation {\bf(d)}:
+\[
+\alpha_{ij} = 0
+\]
+applied alone onto the transformation gets rid of the diagonal
+members of the homogeneous part and prevents such transformations
+from forming a (quantum)group since the homogeneous parts of these
+set of transformations can never include the identity
+transformation.
+
+However, if this relation is applied together with the previous
+one, relation {\bf(c)}, the resulting relation gets rid of the
+whole homogeneous part of the transformation leaving only the
+inhomogeneous part and leaves us with two relations:
+\bea
+\gamma_i\gamma^*_j - \gamma^*_j\gamma_i = \delta_{ij} \\
+\gamma_i\gamma_j - \gamma_j\gamma_i = 0
+\eea 
+which
+gives us back the boson algebra, $BA(d)$.
+
+We should note, however, that after this condition is applied, the
+resulting set of matrices $M$, which now form $BA(d)$, is
+no longer a quantum or classical group since the antipode defined
+in equation (\ref{antipode}) no longer exits. For this reason,
+this algebra can be considered to be a boundary for the
+subgroups of \BISp.
+
+\subsubsection{Sub(quantum)group Diagram}
+As a result of the above discussion, we get the sub(quantum)group
+diagram:
+\[
+\begin{CD}
+{BISp(2d, \IR)} @>{\bf (a)}>> {ISp(2d, \IR)} @>{\bf (b)}>> {Sp(2d, \IR)} \\
+@V{\bf (c)}VV @V{\bf (c)}VV @V{\bf (c)}VV \\
+{BIU(d)} @>{\bf (a)}>> {IU(d)} @>{\bf (b)}>> {U(d)} \\
+@V{\bf (d)}VV \\
+{BA(d)}
+\end{CD}
+\]
+for the sub(quantum)groups of the \BISp we have introduced in this
+section.
+
+\subsection{Contractions}
+In order to explore the new (quantum)groups that will come about
+as the result of a contraction, we replace $\gamma_i$ by
+$\gamma_i/\hbar$ so that we may consider the case $\hbar
+\rightarrow 0$. After this replacement, the equations (\ref{rel1})
+and (\ref{rel2}) become: 
+\bea
+\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \hbar(\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}) \\
+\gamma_i \gamma_j - \gamma_j \gamma_i &=& \hbar(\beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk}) 
+\eea 
+When we consider the
+case $\hbar \rightarrow 0$, we get the relations: 
+\bea
+\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& 0 \\
+\gamma_i \gamma_j - \gamma_j \gamma_i &=& 0
+\eea
+which imply
+that the inhomogeneous part of the transformation form 
+ordinary complex numbers. What makes this case different 
+from the previous
+case of sub(super)groups is that the homogeneous part of this
+transformation forms a matrix $A$ with non-zero determinant. We
+can transform such a matrix $A$ with a similarity transformation
+given by the unitary matrix: 
+\beq 
+U = \frac{1}{\sqrt{2}}
+\left(
+\begin{array}{cc}
+1 & 1 \\
+i & -i
+\end{array}
+\right) 
+\eeq 
+to put it in a real form. The transformation gives:
+\bea
+A' & = & U A U^\dagger \\
+& = & \frac12 \left(
+\begin{array}{cc}
+1 & 1 \\
+i & -i
+\end{array}
+\right) \left(
+\begin{array}{cc}
+\alpha & \beta \\
+\beta^* & \alpha^*
+\end{array}
+\right) \left(
+\begin{array}{cc}
+1 & -i \\
+1 & i
+\end{array}
+\right) \\
+& = & \left(
+\begin{array}{cc}
+Re(\alpha) + Re(\beta) & Im(\alpha) - Im(\beta) \\
+- Im(\alpha) - Im(\beta) & Re(\alpha) - Re(\beta)
+\end{array}
+\right)
+\eea 
+which is a real matrix that is a member of the
+general linear group $GL(2d, \IR)$. Thus we
+have the group $IGL(2d, \IR)$, the inhomogeneous general linear group.
+
+If we consider the contraction of the subgroups as well then we
+should examine the $\hbar \rightarrow 0$ limit after the relations
+{\bf(c)} and {\bf(d)} are applied.
+
+After we apply relation {\bf(c)}, we get the subgroup $BIU(d)$ 
+as discussed previously. After, the contraction,
+again the inhomogeneous part of this group become 
+complex numbers. However, if we apply the previous similarity
+transformation on the homogeneous part, we get: 
+\bea
+A' & = & U A U^\dagger \\
+& = & \frac12 \left(
+\begin{array}{cc}
+1 & 1 \\
+i & -i
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+\alpha & 0 \\
+0 & \alpha^*
+\end{array}
+\right)
+\left(
+\begin{array}{cc}
+1 & -i \\
+1 & i
+\end{array}
+\right) \\
+& = & \left(
+\begin{array}{cc}
+Re(\alpha) & Im(\alpha) \\
+- Im(\alpha) & Re(\alpha)
+\end{array}
+\right) \\
+& = & Re(\alpha) \I1
+ +
+Im(\alpha) \II 
+\eea 
+where $\I1$ stands for the identity matrix and
+$\II$ stands for the matrix the square of which is minus the
+identity matrix. This way we can see that the matrix $A'$ is a
+actually member of $GL(d, \IC)$. This gives us $IGL(d, \IC)$ 
+as the group we arrive at as the contraction of $BIU(d)$.
+
+We have previously shown that we get the boson
+algebra after applying both of the relations {\bf(c)} and
+{\bf(d)}. We have also discussed that in this case only the
+inhomogeneous part of the transformation survives. After
+applying the contraction, the surviving inhomogeneous part of the
+transformation turns into complex variables. Thus
+in this case, the contraction of $BA(d)$ gives us $\IC^d$.
+
+As a summary, for the contraction considered in this section
+applied onto the subgroups obtained in the previous subsection
+we get the following group diagram:
+\[
+\begin{CD}
+{BISp(2d, \IR)} @>{\bf (e)}>> {IGL(2d, \IR)} \\
+@V{\bf (c)}VV @V{\bf (c)}VV \\
+{BIU(d)} @>{\bf (e)}>> {IGL(d, \IC)} \\
+@V{\bf (d)}VV @V{\bf (d)}VV \\
+{BA(d)} @>{\bf (e)}>> {\IC^d}
+\end{CD}
+\]
+
+\section{The Fermionic Inhomogenous Group \FIO}
 
 Applying this transformation and requiring that the
 bosonic/fermionic particle algebra remains invariant after the
@@ -159,7 +502,7 @@ A^{-1} & -A^{-1} \Gamma \\
 \right) \eeq where $A^{-1}$ is defined in the standard way since
 matrix elements of $A$ were assumed to be commutative.
 
-\section{Subgroups and Contractions}
+\subsection{Subgroups}
 After having shown that the inhomogeneous transformations form the
 symmetry groups \FIO and \BISp and that they are quantum groups,
 one important question is what sub(quantum)groups do these quantum
@@ -185,7 +528,7 @@ that we will impose are:
 We would like to study the implication of each relation one by one
 in the bosonic and the fermionic case.
 
-\subsection{Inhomogeneous Sub(super)groups}
+\subsubsection{Inhomogeneous Subsupergroup}
 The relation {\bf(a)}:
 \[
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} \pm \beta_{ik} \beta^*_{jk}
@@ -219,7 +562,7 @@ classical symmetry group of the bosonic particle algebra $ISp(2d,
 \IR)$ in which all the parameters of the inhomogeneous
 transformation are commutative.
 
-\subsection{Homogeneous Subgroups}
+\subsubsection{Homogeneous Subgroup}
 The relation {\bf(b)}:
 \[
 \gamma_i = 0
@@ -233,7 +576,7 @@ previous subsection without the inhomogeneous part which is the
 classical orthogonal group $O(2d, \IR)$ and similarly, for bosonic
 particles, gives us the classical symplectic group $Sp(2d, \IR)$.
 
-\subsection{Fermionic and Bosonic Inhomogeneous Unitary Quantum Groups}
+\subsubsection{Fermionic Inhomogeneous Unitary Quantum Group}
 The relation {\bf(c)}:
 \[
 \beta_{ij} = 0
@@ -251,7 +594,7 @@ fermions we will name this group $FIU(d)$, the fermionic
 inhomogeneous quantum group, and for bosons we will similarly name
 it $BIU(d)$, the bosonic inhomogeneous quantum group.
 
-\subsection{Fermion and Boson Algebra}
+\subsubsection{Fermion Algebra}
 The relation {\bf(d)}:
 \[
 \alpha_{ij} = 0
@@ -277,7 +620,7 @@ in equation (\ref{antipode}) no longer exits. For this reason,
 these algebras can be considered to be a boundary for the
 subgroups of their corresponding quantum groups.
 
-\subsection{Sub(quantum)group Diagram}
+\subsubsection{Sub(quantum)group Diagram}
 As a result of the above discussion, we get the sub(quantum)group
 diagram:
 \[
@@ -301,7 +644,7 @@ for the fermionic case and the diagram:
 \]
 for the bosonic case.
 
-\subsection{Contractions of \FIO and \BISp}
+\subsection{Contractions}
 In order to explore the new (quantum)groups that will come about
 as the result of a contraction, we replace $\gamma_i$ by
 $\gamma_i/\hbar$ so that we may consider the case $\hbar
