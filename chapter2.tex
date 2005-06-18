@@ -25,7 +25,7 @@ angular momentum algebra by the relations
 \bea
 \anti{J_1}{J_2} & = & J_3 \label{eqn:defrel1} \\
 \anti{J_2}{J_3} & = & J_1 \label{eqn:defrel2} \\
-\anti{J_3}{J_1} & = & J_2 \label{eqn:defrel3} 
+\anti{J_3}{J_1} & = & J_2 \label{eqn:defrel3}
 \eea
 where $J_1$, $J_2$, $J_3$ are hermitian generators of the algebra. We will name this algebra ACSA, the anticommutator spin algebra. In these expressions the curly bracket denotes the anticommutator \beq
 \anti{A}{B} \equiv AB + BA \eeq so (\ref{eqn:defrel1}-\ref{eqn:defrel3}) should be taken as the
@@ -83,73 +83,73 @@ three defining relations of the algebra in one index equation. For
 the angular momentum algebra this is possible by defining the
 totally anti-symmetric rank 3 pseudo-tensor $\epsilon_{ijk}$. A
 similar object for ACSA which we will call the fermionic
-Levi-Civita tensor, $u_{ijk}$, is defined as: 
-\beq 
+Levi-Civita tensor, $u_{ijk}$, is defined as:
+\beq
 u_{ijk} =
 \left\{
 \begin{array}{cl}
 1, & i \neq j \neq k, \\
 0, & \mbox{otherwise.}
 \end{array}
-\right. 
-\eeq 
-Thus the defining relations (\ref{eqn:defrel1}-\ref{eqn:defrel3}) become: 
-\beq 
+\right.
+\eeq
+Thus the defining relations (\ref{eqn:defrel1}-\ref{eqn:defrel3}) become:
+\beq
 \anti{J_i}{J_j} = \sum_k  u_{ijk}\,J_k + 2\delta_{ij}\,J_i^2
-\eeq 
+\eeq
 The second term on the right is needed since when $i = j$ the left-hand side becomes $2J_i^2$. When we apply the transformation (\ref{trans})
-on this relation we get: 
-\beq 
+on this relation we get:
+\beq
 \anti{J'_k}{J'_m} = \sum_p
 u_{kmp}J'_p = \sum_{p,\; j}
-u_{kmp}\,\alpha_{pj}\,J_j\quad\quad\mbox{for}\quad k\neq m. 
+u_{kmp}\,\alpha_{pj}\,J_j\quad\quad\mbox{for}\quad k\neq m.
 \eeq
 However, substituting the transformation equations into the
-left-hand side, we have: 
-\beq 
+left-hand side, we have:
+\beq
 \anti{J'_k}{J'_m} =
 \sum_{i,\;j}\left([\alpha_{ki}, \alpha_{mj}]J_iJ_j +
 \alpha_{mj}\,\alpha_{ki}\,u_{ijn}\,J_n +
-2\alpha_{mj}\,\alpha_{kj}\,J_j^2\right) 
-\eeq 
+2\alpha_{mj}\,\alpha_{kj}\,J_j^2\right)
+\eeq
 These two equations yield the following relations among $\alpha_{ij}$ when $k\neq m$:
 \bea
 \anti{\alpha_{mj}}{\alpha_{kj}} & = & 0 \label{invrel1} \\
 \left[\alpha_{ki}, \alpha_{mj}\right]& = & 0 \quad\quad \mbox{for}\quad i \neq j \label{invrel2} \\
 \sum_{i\; j}\alpha_{mj}\,\alpha_{ki}\,u_{ijn}  & = & \sum_p
-u_{mkp}\,\alpha_{pn} \label{invrel3} 
+u_{mkp}\,\alpha_{pn} \label{invrel3}
 \eea
 
 Now we will define the quantum group $SO_q(3)$ and show that the
 relations above correspond to the case $q=-1$. The quantum group
 $SO_q(3)$ can be defined as the quantum subgroup of $SL_q(3, C)$
-where an element is given by: 
-\beq 
-A = 
+where an element is given by:
+\beq
+A =
 \left(
 \begin{array}{ccc}
 \alpha_{11} & \alpha_{12} & \alpha_{13} \\
 \alpha_{21} & \alpha_{22} & \alpha_{23} \\
 \alpha_{31} & \alpha_{32} & \alpha_{33}
 \end{array}
-\right) 
-\eeq 
-where 
-\beq 
-\alpha_{ij}^* = \alpha_{ij} 
-\eeq 
-\beq 
-A^Tb= A^{-1} 
-\eeq 
-and 
-\beq 
-\label{gl2} 
+\right)
+\eeq
+where
+\beq
+\alpha_{ij}^* = \alpha_{ij}
+\eeq
+\beq
+A^T= A^{-1}
+\eeq
+and
+\beq
+\label{gl2}
 \left(
 \begin{array}{cc}
 \alpha_{mj} & \alpha_{mi} \\
 \alpha_{kj} & \alpha_{ki}
 \end{array}
-\right) \in GL_{q}(2)\quad\mbox{for}\quad k\neq m, i\neq j. 
+\right) \in GL_{q}(2)\quad\mbox{for}\quad k \neq m, i \neq j.
 \eeq
 
 The quantum group $SO_q(3)$ is equivalent to the quantum group
@@ -173,12 +173,12 @@ c & d
 \end{array}
 \right)
 \]
-we have the relations: 
+we have the relations:
 \bea
 a c & = & q c a \label{ac} \\
 a d - q b c & = & d a - q^{-1} c b \label{det} \\
-b c & = & c b \label{bc} 
-\eea 
+b c & = & c b \label{bc}
+\eea
 The relation (\ref{ac}) implies that
 $\alpha_{mj}\;\alpha_{kj} = (-1) \alpha_{kj}\;\alpha_{mj}$, which
 proves equation (\ref{invrel1}) is satisfied, and the relations
@@ -210,47 +210,71 @@ the angular momentum algebra is also $SO_q(3)$ but with $q=1$.
 
 The Anticommutator Spin Algebra is defined by the relations
 (\ref{eqn:defrel1}-\ref{eqn:defrel3}). In order to find the
-representations of this algebra we define the operators: 
+representations of this algebra we define the operators:
 \bea
 J_+ & = & J_1 + J_2 \\
 J_- & = & J_1 - J_2 \\
-J^2 & = & J_1^2 + J_2^2 + J_3^2 
-\eea 
+J^2 & = & J_1^2 + J_2^2 + J_3^2
+\eea
 which obey the following relations:
 \bea
 \anti{J_+}{J_3} & = & J_3 \\
 \anti{J_-}{J_3} & = & -J_3 \\
 J_+^2 & = & J^2 - J_3^2 + J_3 \label{jp^2}\\
-J_-^2 & = & J^2 - J_3^2 - J_3 \label{jm^2} 
-\eea 
-Furthermore, it can easily be shown that $J^2$ is central in the algebra, ie that it commutes with all the elements of the algebra. For this reason, we can label the states in our representation with the eigenvalues of $J^2$ and $J_3$: 
+J_-^2 & = & J^2 - J_3^2 - J_3 \label{jm^2}
+\eea
+Furthermore, it can easily be shown that $J^2$ is central in the algebra, i.e. that it commutes with all the elements of the algebra, by first observing that:
+\bea
+J^2_j \; J_i &=& J_j (J_k - J_i \; J_j) \nonumber \\
+          &=& J_j J_k - (J_k - J_i \; J_j) J_j \nonumber \\
+          &=& (J_j \; J_k - J_k \; J_j) + J_i \; J^2_j \nonumber \\
+          &=& (2J_j \; J_k - J_i) + J_i \; J^2_j \quad \mbox{for}\quad  i \neq j \neq k \neq i.
+\eea
+Using this relation and the fact that $J^2 = \sum_j J_j$, we can see:
+\bea
+J^2 \; J_i &=& \sum_j J^2_j \; J_i \nonumber \\
+        &=& J^3_i + \sum_{j \neq j} J^2_j \; J_i \nonumber \\
+        &=& J^3_i + \sum_{j \neq i} (2J_j \; J_k - J_i + J_i \; J^2_j)
+\eea
+However, in the final form of this expression the sum only contains
+two terms where the two indices $j$ and $k$ are symmetric. Thus the
+whole expression can be written as:
+\bea
+J^2 \; J_i &=& J^3_i + \sum_{j \neq i} (2J_j \; J_k - J_i + J_i \; J^2_j) \nonumber \\
+        &=& J^3_i - 2J_i + 2(J_j \; J_k + J_k \; J_j) + J_i \; J^2_j + J_i \; J^2_k \nonumber \\
+        &=& J_i \; J^2 - 2J_i + 2J_i \nonumber \\
+        &=& J_i \; J^2 \quad \mbox{for}\quad  i \neq j \neq k \neq i,
+\eea
+and therefore showing that $J^2$ commutes with all the elements of the algebra.
+
+For this reason, we can label the states in our representation with the eigenvalues of $J^2$ and $J_3$:
 \bea
 J^2 \ket{\lambda, \mu} & = & \lambda \ket{\lambda, \mu} \\
-J_3 \ket{\lambda, \mu} & = & \mu \ket{\lambda, \mu} 
-\eea 
+J_3 \ket{\lambda, \mu} & = & \mu \ket{\lambda, \mu}
+\eea
 The action of $J_+$ and $J_-$ on the states such defined is easily
-shown to be: 
+shown to be:
 \bea
 J_+ \ket{\lambda, \mu} & = & f(\lambda, \mu) \ket{\lambda,- \mu + 1} \label{jplus}\\
 J_- \ket{\lambda, \mu} & = & g(\lambda, \mu) \ket{\lambda,- \mu -
-1} \label{jminus} 
-\eea 
-It is enough to look at the norm of the states $J_+ \ket{\lambda, \mu}$ and $J_- \ket{\lambda, \mu}$ to find $f(\lambda, \mu)$ and $g(\lambda, \mu)$. Thus: 
+1} \label{jminus}
+\eea
+It is enough to look at the norm of the states $J_+ \ket{\lambda, \mu}$ and $J_- \ket{\lambda, \mu}$ to find $f(\lambda, \mu)$ and $g(\lambda, \mu)$. Thus:
 \bea
 \bra{\lambda, \mu} J_+^2 \ket{\lambda, \mu} & = & |f(\lambda, \mu)|^2 \\
 \bra{\lambda, \mu} J^2 - J_3^2 + J_3 \ket{\lambda, \mu} & = & |f(\lambda, \mu)|^2 \\
 \lambda - \mu^2 + \mu & = & |f(\lambda, \mu)|^2 \\
-f(\lambda, \mu) & = & \sqrt{\lambda - \mu^2 + \mu} 
-\eea 
+f(\lambda, \mu) & = & \sqrt{\lambda - \mu^2 + \mu}
+\eea
 and, similarly, $g(\lambda, \mu) = \sqrt{\lambda - \mu^2 - \mu}$. These coefficients must be real due to the fact that $J_+$ and $J_-$ are hermitian operators. This constraint imposes the following
-conditions on $\lambda$ and $\mu$: 
+conditions on $\lambda$ and $\mu$:
 \bea
 \lambda - \mu^2 + \mu & \geq & 0 \\
-\lambda - \mu^2 - \mu & \geq & 0 
-\eea 
-which can be satisfied by letting $\lambda = j(j+1)$ for some $j$ with: 
-\beq 
-j \geq \mu \geq -j. \label{muspec} 
+\lambda - \mu^2 - \mu & \geq & 0
+\eea
+which can be satisfied by letting $\lambda = j(j+1)$ for some $j$ with:
+\beq
+j \geq \mu \geq -j. \label{muspec}
 \eeq
 
 Note that equation (\ref{jplus}) shows that the action of $J_+$ is
@@ -300,3 +324,74 @@ For $\mathbf{j=\frac{5}{2}}$ the two representations are given by:
 
 \end{itemize}
 
+\section{Hopf Algebra Structure with braiding}
+
+One natural question to ask having considered this associative algebra is whether or not it has a Hopf algebra structure. On the surface, this algebra shares a lot with its sister algebra, the $SU(2)$ Lie algebra, which has a Hopf algebra structure and one would expect ACSA to similarly have one. It turns out, however, that naively trying the same coproduct rule for ACSA does not work due to the symmetric nature of the product defined on ACSA since the product is defined in terms of anticommutators. As was noted in the Introduction of this work, the coproduct of the Lie algebra requires the product on the Lie algebra to be anti-symmetric. For this reason, the coproduct of the $SU(2)$ Lie algebra is not suitable for ACSA.
+
+In our quest for a Hopf algebra structure for ACSA, it would be more fruitful to understand the nature of the relationship of ACSA with the $SU(2)$ Lie algebra. If one names the generators of the $SU(2)$ algebra $I_i$, then it can easily be shown that $\tilde{J_i}$ defined as
+\beq
+\tilde{J}_i = - I_i \otimes \sigma_i
+\eeq
+satisfy the defining relation of ACSA since:
+\bean
+\tilde{J}_i \tilde{J}_j + \tilde{J}_j \tilde{J}_i &=& I_i I_j \otimes \sigma_i \sigma_j + I_j I_i \otimes \sigma_j \sigma_i\\
+&=& I_i I_j \otimes i \sigma_k + I_j I_i \otimes -i \sigma_k \\
+&=& i(I_i I_j - I_j I_i) \otimes \sigma_k \\
+&=& i(iI_k) \otimes \sigma_k \\
+&=& - I_k \otimes \sigma_k \\
+&=& \tilde{J}_k
+\quad \mbox{for}\quad  i \neq j \neq k \neq i.
+\eean
+
+Similarly, the generators satisfying the $SU(2)$ Lie algebra can be written in terms of ACSA generators as:
+\beq
+\tilde{I}_i = J_i \otimes \sigma_i
+\eeq
+since:
+\bean
+\tilde{I}_i \tilde{I}_j - \tilde{I}_j \tilde{I}_i &=& J_i J_j \otimes \sigma_i \sigma_j - J_j J_i \otimes \sigma_j \sigma_i\\
+&=& J_i J_j \otimes i \sigma_k - J_j J_i \otimes -i \sigma_k \\
+&=& i(J_i J_j + J_j J_i) \otimes \sigma_k \\
+&=& i(J_k) \otimes \sigma_k \\
+&=& \tilde{I}_k
+\quad \mbox{for}\quad  i \neq j \neq k \neq i.
+\eean
+
+These two relations show that the $SU(2)$ algebra and ACSA are so closely related that it is not even possible to identify which one of these algebras is more fundamental. Both of them can be written in terms of the generators of the other and their algebraic structure can be derived from the structure of the other one. However, as mentioned, the Hopf algebra structure of ACSA cannot be derived from the Hopf algebra structure of the $SU(2)$ algebra. Specifically, ACSA does not admit a coproduct defined in a normal way using the usual tensor products. Such a coproduct can be defined if one were to extend the permutation operator $\tau$ used in the connecting relation. Normally the operation of $\tau$ is defined as:
+\beq
+\tau(A \otimes B) = B \otimes A \quad ,
+\eeq
+however, if one considers the algebra to be graded and one were to define a degree operator ($deg$) which is $0$ for bosonic variables and is $1$ for fermionic variables, then the natural redefinition of the $\tau$ operator is
+\beq
+\tau(A \otimes B) = (-1)^{deg\;A\; deg\;B\;} B \otimes A \quad .
+\eeq
+Using this redefined permutation operator, one can still write down the Hopf algebra relations and only the connecting relation will be the one that will be redefined; thus, we arrive at a braided Hopf algebra structure.
+
+When the permutation operator is redefined in this way, the product of two tensor product terms is given by $(A\otimes B) (C\otimes D) = (-1)^{deg\;B\; deg\;C\;} (AC \otimes BD)$ where the $-1$ factor comes in because of the reordering of the $B$ and $C$ terms. Using this rule and defining the degree of $1$ as $0$ and the degrees of $J_1, J_2, J_3$ as $1$, we can see that the coproduct defined as:
+\bea
+\Delta(J_i) &=& 1 \otimes J_i + J_i \otimes 1 \\
+\Delta(1) &=& 1 \otimes 1
+\eea
+satisfies the algebra structure relations since:
+\bean
+\Delta(J_i)\Delta(J_j)
+&=& (1 \otimes J_i + J_i \otimes 1)(1 \otimes J_j + J_j \otimes 1) \\
+&=& 1 \otimes J_i J_j - 1 J_j \otimes J_i 1 + J_i 1 \otimes 1 J_j + J_i J_j \otimes 1 \\
+&=& 1 \otimes J_i J_j - J_j \otimes J_i + J_i \otimes J_j + J_i J_j \otimes 1
+\eean
+and
+\bean
+\Delta(J_i)\Delta(J_j) + \Delta(J_j)\Delta(J_i)
+&=& 1 \otimes J_i J_j - J_j \otimes J_i + J_i \otimes J_j + J_i J_j \otimes 1 \\
+& & + 1 \otimes J_j J_i - J_i \otimes J_j + J_j \otimes J_i + J_j J_i \otimes 1 \\
+&=& 1 \otimes J_i J_j + J_i J_j \otimes 1 \\
+&=& 1 \otimes J_k + J_k \otimes 1 \\
+&=& \Delta(J_k)
+\quad \mbox{for}\quad  i \neq j \neq k \neq i.
+\eean
+The counit and coinverse are simpler and they match with the definitions for the normal Lie algebra, i.e.:
+\bea
+\epsilon(J_i) &=& 0 \\
+S(J_i) &=& -J_i
+\eea
+These definitions of the coproduct, the counit and the coinverse give us a braided Hopf algebra structure for ACSA.

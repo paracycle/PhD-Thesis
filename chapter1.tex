@@ -50,18 +50,21 @@ This derivation of the fermion algebra also shows clearly that the physically mo
 
 A study of this fermion algebra, similar to the boson algebra, shows that, again, a hermitian positive-definite number operator $N = \adag a$ can be defined and has eigenvalues $0$ and $1$ that correspond to the states $\ket{0}$ and $\ket{1}$, respectively. In harmony with our original assumption, the operator $\adag$ takes the state $\ket{0}$ to the state $\ket{1}$ thus fulfilling the interpretation of it as a creation operator. Similarly, the operator $a$ acts as an annihilation operator of the algebra.
 
-\section{Hopf algebras}
+\section{Quantum groups and Hopf algebras}
+
+The discovery of quantum groups has historically been motivated by the study of quantization of non-linear completely integrable systems \cite{sklyanin}.
 
 \section{Quantum matrix groups}
 
 A quantum matrix group is defined by a set of $n$ x $n$ matrices $M$:
 \beq
-M = 
+M =
 \left(
-\begin{array}{ccc}
-a_{11} & a_{12} & \ldots \\
-a_{21} & \ddots & \\
-\vdots &        & a_{nn}
+\begin{array}{cccc}
+a_{11} & a_{12} & \ldots & a_{1n}  \\
+a_{21} & \ddots &        &  \vdots \\
+\vdots &        & \ddots &  \vdots \\
+a_{n1} & \ldots & \ldots & a_{nn}
 \end{array}
 \right)
 \eeq
@@ -71,11 +74,11 @@ such that every element of the matrix belong to a Hopf Algebra $\mathcal{H}$. Th
 \epsilon(M) &=& \I1 \\
 S(M) &=& M^{-1}
 \eea
-where $\dot{\otimes}$ stands for the operation where the matrix multiplication is performed but the matrix elements are multiplied using the tensor product is instead of the normal product. The relations above imply the definitions of the coproduct, counit and coinverse of the matrix elements:
+where $\dot{\otimes}$ stands for the operation where when the matrix multiplication is performed but the matrix elements are multiplied using the tensor product is instead of the normal product. The relations above imply the definitions of the coproduct, counit and coinverse of the matrix elements:
 \bea
 \triangle(\alpha_{ij}) &=& \sum_k \alpha_{ik} \otimes \alpha_{kj} \\
 \epsilon(\alpha_{ij}) &=& \delta_{ij} \\
-\sum_j S(\alpha_{ij}) \alpha_{jk} &=& \delta_{ij} = \sum_j \alpha_{ij} S(\alpha_{jk}) 
+\sum_j S(\alpha_{ij}) \alpha_{jk} &=& \delta_{ij} = \sum_j \alpha_{ij} S(\alpha_{jk})
 \eea
 
 \section{Quantum group invariance of an algebra}
