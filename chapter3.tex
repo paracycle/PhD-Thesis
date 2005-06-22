@@ -116,7 +116,7 @@ denoted by $*$ is defined.
 
 \section{The Bosonic Inhomogeneous Symplectic Quantum Group \BISp}
 
-If we consider the transformation matrix (\ref{M-matrix}) being applied to the boson algebra given by:
+If we consider the transformation matrix \eqref{M-matrix} being applied to the boson algebra given by:
 \bea
 c_i c_j - c_j c_i & = & 0 \\
 c_i c^*_j - c^*_j c_i & = & \delta_{ij}
@@ -162,7 +162,7 @@ In the first of these relations, for the equality to be satisfied, it is suffici
 the coefficients of all the terms on the left hand side to be equal to zero.
 In the second one, however, we only have a term that is a multiple of the unit
 element of the boson algebra on the right hand side, thus the coefficient of that term
-should be equal on both sides and it is sufficient for the coefficients of the 
+should be equal on both sides and it is sufficient for the coefficients of the
 other terms on the left hand side to be separately equal to zero.
 
 Thus we have the following relations between the transformation elements:
@@ -179,7 +179,7 @@ $\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute.
 
 The set of matrices $M$ obeying the above relations form the group
 of inhomogeneous transformations of bosons. We name this quantum group
-as the bosonic inhomogeneous symplectic quantum group \BISp 
+as the bosonic inhomogeneous symplectic quantum group \BISp
 since it is an inhomogeneous extension of the symplectic group where
 the inhomogeneous part exhibits bosonic behavior. This
 symmetry group, however, is not a classical group like the symplectic group
@@ -191,7 +191,7 @@ as:
 \Delta(M) & = & M \dot{\otimes} M \label{coproduct} \\
 \epsilon(M) & = & I \label{counit} \\
 S(M) & = & M^{-1} \label{antipode} \quad . \eea In Equation
-\ref{coproduct}, the symbol $\dot{\otimes}$ denotes the usual
+\eqref{coproduct}, the symbol $\dot{\otimes}$ denotes the usual
 matrix multiplication where when elements of the matrices are
 multiplied, tensor multiplication is used.
 
@@ -219,24 +219,26 @@ The sub(quantum)groups are obtained by imposing
 additional relations on the matrix elements of $M$ which obey the
 relations (\ref{rel1}) - (\ref{rel6}). The additional relations
 that we will impose are:
+\begin{subequations}
 \bea
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} = \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0 \label{suba} \\
 \gamma_i = 0  \label{subb} \\
 \beta_{ij} = 0  \label{subc} \\
 \alpha_{ij} = 0  \label{subd}
 \eea
+\end{subequations}
 
 We would like to study the implication of each relation one by one
 in the following subsections.
 
 \subsubsection{Inhomogeneous Subgroup}
 
-The relation (\ref{suba}):
+The relation \eqref{suba}:
 \[
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}
 = \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
 \]
-by virtue of (\ref{rel1}) and (\ref{rel2}) implies that $\gamma_i
+by virtue of \eqref{rel1} and \eqref{rel2} implies that $\gamma_i
 \gamma^*_j - \gamma^*_j \gamma_i = 0$ and $\gamma_i \gamma_j -
 \gamma_j \gamma_i = 0$, i.e. that the inhomogeneous transformation
 parameters are commutative variables.
@@ -252,19 +254,19 @@ elements, are commutative.
 
 \subsubsection{Homogeneous Subgroup}
 
-The relation (\ref{subb}):
+The relation \eqref{subb}:
 \[
 \gamma_i = 0
 \]
 practically gets rid of the inhomogeneous part of the
-transformation and also implies the relation (\ref{suba}) considered
+transformation and also implies the relation \eqref{suba} considered
 in the previous subsection. Since the previous relation is implied
 the resulting group will be a subgroup of $ISp(2d,
 \IR)$ and since the group is not inhomogeneous anymore the resulting
 subgroup is the classical symplectic group $Sp(2d, \IR)$.
 
 \subsubsection{Bosonic Inhomogeneous Unitary Quantum Group}
-The relation (\ref{subc}):
+The relation \eqref{subc}:
 \[
 \beta_{ij} = 0
 \]
@@ -282,7 +284,7 @@ part of the transformation the relation:
 \delta_{ij} = \alpha_{ik}\alpha^*_{jk}
 \eeq
 which tells us that the submatrices
-$\alpha$ and $\alpha^*$ in equation (\ref{M-matrix}) are
+$\alpha$ and $\alpha^*$ in equation \eqref{M-matrix} are
 members of $U(d)$. The subgroup we have arrived at thus is an
 inhomogeneous quantum group extension to the classical homogeneous
 group $U(d)$. Since the inhomogeneous elements of the resulting group
@@ -291,7 +293,7 @@ obeys the same relations as \BISp, we will name this quantum group
 
 \subsubsection{Boson Algebra}
 
-The relation (\ref{subd}):
+The relation \eqref{subd}:
 \[
 \alpha_{ij} = 0
 \]
@@ -302,7 +304,7 @@ set of transformations can never include the identity
 transformation.
 
 However, if this relation is applied together with the previous
-one, relation (\ref{subc}), the resulting relation gets rid of the
+one, relation \eqref{subc}, the resulting relation gets rid of the
 whole homogeneous part of the transformation leaving only the
 inhomogeneous part and leaves us with two relations:
 \bea
@@ -315,7 +317,7 @@ gives us back the boson algebra, $BA(d)$.
 We should note, however, that after this condition is applied, the
 resulting set of matrices $M$, which now form $BA(d)$, is
 no longer a quantum or classical group since the antipode defined
-in equation (\ref{antipode}) no longer exits. For this reason,
+in equation \eqref{antipode} no longer exits. For this reason,
 the boson algebra can be considered to be a boundary for the
 sub(quantum)groups of \BISp.
 
@@ -324,10 +326,10 @@ As a result of the above discussion, we get the sub(quantum)group
 diagram:
 \[
 \begin{CD}
-{BISp(2d, \IR)} @>(\ref{suba})>> {ISp(2d, \IR)} @>(\ref{subb})>> {Sp(2d, \IR)} \\
-@V(\ref{subc})VV @V(\ref{subc})VV @V(\ref{subc})VV \\
-{BIU(d)} @>(\ref{suba})>> {IU(d)} @>(\ref{subb})>> {U(d)} \\
-@V(\ref{subd})VV \\
+{BISp(2d, \IR)} @>\eqref{suba}>> {ISp(2d, \IR)} @>\eqref{subb}>> {Sp(2d, \IR)} \\
+@V\eqref{subc}VV @V\eqref{subc}VV @V\eqref{subc}VV \\
+{BIU(d)} @>\eqref{suba}>> {IU(d)} @>\eqref{subb}>> {U(d)} \\
+@V\eqref{subd})VV \\
 {BA(d)}
 \end{CD}
 \]
@@ -338,8 +340,8 @@ section.
 In order to explore the new (quantum)groups that will come about
 as the result of a contraction, we replace $\gamma_i$ by
 $\gamma_i/\sqrt{\hbar}\;$ so that we may consider the case $\hbar
-\rightarrow 0$. After this replacement, the equations (\ref{rel1})
-and (\ref{rel2}) become:
+\rightarrow 0$. After this replacement, the equations \eqref{rel1}
+and \eqref{rel2} become:
 \bea
 \gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \hbar(\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}) \\
 \gamma_i \gamma_j - \gamma_j \gamma_i &=& \hbar(\beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk})
@@ -399,9 +401,9 @@ have the group $IGL(2d, \IR)$, the inhomogeneous general linear group.
 
 If we consider the contraction of the subgroups as well then we
 should examine the $\hbar \rightarrow 0$ limit after the relations
-(\ref{subc}) and (\ref{subd}) are applied.
+\eqref{subc} and \eqref{subd} are applied.
 
-After we apply relation (\ref{subc}), we get the subgroup $BIU(d)$
+After we apply relation \eqref{subc}, we get the subgroup $BIU(d)$
 as discussed previously. After the contraction,
 again, the inhomogeneous part of this group become
 complex numbers. However, if we apply the previous similarity
@@ -443,8 +445,8 @@ actually member of $GL(d, \IC)$. This gives us $IGL(d, \IC)$
 as the group we arrive at as the contraction of $BIU(d)$.
 
 We have previously shown that we get the boson
-algebra after applying both of the relations (\ref{subc}) and
-(\ref{subd}). We have also discussed that in this case only the
+algebra after applying both of the relations \eqref{subc} and
+\eqref{subd}. We have also discussed that in this case only the
 inhomogeneous part of the transformation survives. After
 applying the contraction, the surviving inhomogeneous part of the
 transformation turns into complex variables. Thus
@@ -456,24 +458,24 @@ we get the following group diagram:
 \[
 \begin{CD}
 {BISp(2d, \IR)} @>\hbar \rightarrow 0>> {IGL(2d, \IR)} \\
-@V(\ref{subc})VV @V(\ref{subc})VV \\
+@V\eqref{subc}VV @V\eqref{subc}VV \\
 {BIU(d)} @>\hbar \rightarrow 0>> {IGL(d, \IC)} \\
-@V(\ref{subd})VV @V(\ref{subd})VV \\
+@V\eqref{subd}VV @V\eqref{subd}VV \\
 {BA(d)} @>\hbar \rightarrow 0>> {\IC^d}
 \end{CD}
 \]
 
 \section{The Fermionic Inhomogenous Group \FIO}
 
-Similarly to how it was done in the bosonic case one can also 
-consider the transformation matrix 
-(\ref{M-matrix}) being applied to the fermion algebra given by:
+Similarly to how it was done in the bosonic case one can also
+consider the transformation matrix
+\eqref{M-matrix} being applied to the fermion algebra given by:
 \bea
 c_i c_j + c_j c_i & = & 0 \\
 c_i c^*_j + c^*_j c_i & = & \delta_{ij}
 \eea
-and then require that the transformed operators $c'_i$ and ${c^*}'_i$ satisfy 
-the same algebra in order for the transformation to be an algebra invariance. 
+and then require that the transformed operators $c'_i$ and ${c^*}'_i$ satisfy
+the same algebra in order for the transformation to be an algebra invariance.
 Thus the requirement is that:
 \bea
 c'_i c'_j + c'_j c'_i & = & 0 \\
@@ -535,7 +537,7 @@ of inhomogeneous transformations of fermions. We call this quantum group
 the fermionic inhomogeneous orthogonal quantum group \FIO
 since it is an inhomogeneous extension of the orthogonal group where
 the inhomogeneous part exhibits fermionic behavior. This
-symmetry group, like its sister \BISp, is not a classical group 
+symmetry group, like its sister \BISp, is not a classical group
 but is a quantum group with a Hopf algebra structure. Similar to
 the case with \BISp, this Hopf algebra has an explicit $R$-matrix
 representation and the coproduct, counit and coinverse are defined
@@ -550,71 +552,64 @@ We have shown that there is a rich sub(quantum)group structure for
 \BISp and it should naturally follow that there should be a similarly
 rich sub(quantum)group structure for the fermionic counterpart \FIO.
 
-In this subsection this sub(quantum)group structure will be explored using
-the following relations to obtain the sub(quantum)groups:
-\bea
-\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0 \label{subfa} \\
-\gamma_i = 0  \label{subfb} \\
-\beta_{ij} = 0  \label{subfc} \\
-\alpha_{ij} = 0  \label{subfd}
-\eea
-
-The implication of each of these relations will be explored in 
+In this subsection this sub(quantum)group structure will be explored again using
+the relations introduced in equations \eqref{suba} - \eqref{subd}.The
+implication of each of these relations will be explored in
 the following subsections.
 
 \subsubsection{Inhomogeneous Subsupergroup}
-The relation (\ref{subfa}):
+The relation \eqref{suba}:
 \[
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk}
 = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
 \]
-by virtue of (\ref{rel1}) and (\ref{rel2}) implies that $\gamma_i
+by virtue of \eqref{rel1} and \eqref{rel2} implies that $\gamma_i
 \gamma^*_j + \gamma^*_j \gamma_i = 0$ and $\gamma_i \gamma_j +
 \gamma_j \gamma_i = 0$, i.e. that the inhomogeneous transformation
 parameters are anticommutative variables.
 
 Thus we end up with an
 inhomogeneous orthogonal algebra where the inhomogeneous
-parameters are grassmanian variables giving us the Grassmanian 
-inhomogeneous orthogonal group, $GrIO(2d, \IR)$, as the resulting 
-subgroup of \FIO. This subgroup of \FIO can also be considered 
+parameters are grassmanian variables giving us the Grassmanian
+inhomogeneous orthogonal group, $GrIO(2d, \IR)$, as the resulting
+subgroup of \FIO. This subgroup of \FIO can also be considered
 as an inhomogeneous supergroup. Actually, more generally, the
 transformation elements $\alpha_{ij}$, $\beta_{ij}$, $\alpha^*_{ij}$
 and $\beta^*_{ij}$ anticommute with
 $\gamma_i$, $\gamma^*_i$ and the \FIO matrices $M$ are multiplied
 with each other using the standard tensor product. One can also show
-that $\alpha_{ij}$, $\beta_{ij}$, $\alpha^*_{ij}$ and $\beta^*_{ij}$ can 
-be taken to commute with $\gamma_i$, $\gamma^*_i$ provided that 
+that $\alpha_{ij}$, $\beta_{ij}$, $\alpha^*_{ij}$ and $\beta^*_{ij}$ can
+be taken to commute with $\gamma_i$, $\gamma^*_i$ provided that
 the matrices $M$ are multiplied with a braided \cite{majid} tensor product,
 eg. \beq (A \otimes B)(C \otimes D) = - AC \otimes BD \eeq whenever $B$ and
 $C$ are both fermionic. This approach is similar to the approach that was
 taken with ACSA to obtain a Hopf algebra structure. As a result of this
-redefinition the treatment of the transformation elements corresponds to 
-the usual superalgebra approach, i.e. that the elements $\alpha_{ij}$, 
+redefinition the treatment of the transformation elements corresponds to
+the usual superalgebra approach, i.e. that the elements $\alpha_{ij}$,
 $\beta_{ij}$, $\alpha^*_{ij}$ and $\beta^*_{ij}$ are bosonic and the elements
 $\gamma_i$, $\gamma^*_i$ are fermionic.
 
 \subsubsection{Homogeneous Subgroup}
-The relation (\ref{subfb}):
+The relation \eqref{subb}:
 \[
 \gamma_i = 0
 \]
 practically gets rid of the inhomogeneous part of the
-transformation and also implies the relation (\ref{subfa}) considered
+transformation and also implies the relation \eqref{suba} considered
 in the previous subsection.
 
-This gives us the subgroup in the previous subsection 
+This gives us the subgroup in the previous subsection
 without the inhomogeneous part which is basically the
 classical orthogonal group $O(2d, \IR)$.
 
 \subsubsection{Fermionic Inhomogeneous Unitary Quantum Group}
-The relation (\ref{subfc}):
+The relation \eqref{subc}:
 \[
 \beta_{ij} = 0
 \]
 applied to the transformation gets rid of the off-diagonal members
 of the homogeneous part of it and leaves us with the following
-relation: 
+relation:
 \bea
 \gamma_i\gamma^*_j + \gamma^*_j\gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} \\
 \gamma_i\gamma_j + \gamma_j\gamma_i &=& 0
@@ -623,7 +618,7 @@ relation:
 For the homogeneous
 part of the transformation, this equation implies $ \delta_{ij} =
 \alpha_{ik}\alpha^*_{jk} $ which tells us that the submatrices
-$\alpha$ and $\alpha^*$ in equation (\ref{M-matrix}) are both
+$\alpha$ and $\alpha^*$ in equation \eqref{M-matrix} are both
 members of $U(d)$. The subgroup we have arrived at thus is an
 inhomogeneous quantum group whose homogeneous part is $U(d)$.
 For fermions we will name this group the fermionic
@@ -631,7 +626,7 @@ inhomogeneous quantum group, $FIU(d)$, since the inhomogeneous part of
 the transformation exhibits fermionic behavior.
 
 \subsubsection{Fermion Algebra}
-The relation (\ref{subfd}):
+The relation \eqref{subd}:
 \[
 \alpha_{ij} = 0
 \]
@@ -642,48 +637,98 @@ set of transformations can never include the identity
 transformation.
 
 However, if this relation is applied together with the previous
-one, relation (\ref{subfc}), the resulting relation gets rid of the
+one, relation \eqref{subc}, the resulting relation gets rid of the
 whole homogeneous part of the transformation leaving only the
 inhomogeneous part and gives us a single relation:
 \bea
 \gamma_i\gamma^*_j + \gamma^*_j\gamma_i &=& \delta_{ij} \\
 \gamma_i\gamma_j + \gamma_j\gamma_i &=& 0
-\eea 
+\eea
 which
 gives us back the fermion algebra, $FA(d)$.
 
-We should note, however, that after this condition is applied, the
-resulting set of matrices $M$, which form $FA(d)$, are
-no longer quantum or classical groups since the antipode defined
-in equation (\ref{antipode}) no longer exits. For this reason,
-this algebra can be considered to be a boundary for the
-subgroups of \FIO.
+It should be noted that the fermion algebra in $d$ dimensions is isomorphic
+with the Clifford algebra in $2d$ dimensions. If one considers operators $\psi_i$
+defined as:
+\bea
+\psi_i =
+\begin{cases}
+   i (c_{i/2} - c^*_{i/2}) & \text{when $i$ is even} \\
+   (c_{(i + 1)/2} + c^*_{(i + 1)/2}) & \text{when $i$ is odd} \\
+\end{cases}
+\eea
+where $i = 1, 2,  \ldots, 2d$ and $c_j$ are elements of the fermion algebra,
+then one can show that $\psi_i$ satisfy the Clifford algebra rule:
+\beq
+\{\psi_i, \psi_j\} = 2\delta_{ij}
+\eeq
+In order to show this, one only needs to prove the cases:
+\beq
+\{\psi_i, \psi_j\} =
+\begin{cases}
+  2\delta_{ij} & \text{$i$ and $j$ odd} \\
+  2\delta_{ij} & \text{$i$ and $j$ even} \\
+  0            & \text{$i$ odd, $j$ even} \\
+\end{cases}
+\eeq
+
+For $i$ and $j$ both odd, $\{\psi_i, \psi_j\}$ becomes:
+\bea
+\{\psi_i, \psi_j\} &=& (c_{(i + 1)/2} + c^*_{(i + 1)/2}) (c_{(j + 1)/2} + c^*_{(j + 1)/2}) \\
+& & + (c_{(j + 1)/2} + c^*_{(j + 1)/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
+&=& \{c_{(i + 1)/2}, c_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c^*_{(j + 1)/2}\} \\
+& & + \{c_{(i + 1)/2}, c^*_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c_{(j + 1)/2}\} \\
+&=& 0 + 0 + \delta_{ij} + \delta_{ij} \\
+&=& 2 \delta_{ij}
+\eea
+Similarly, when $i$ and $j$ are both even, one gets:
+\bea
+\{\psi_i, \psi_j\} &=& i (c_{i/2} - c^*_{i/2}) i (c_{j/2} - c^*_{j/2}) \\
+& & + i (c_{j/2} - c^*_{j/2}) i (c_{i/2} - c^*_{i/2}) \\
+&=& - \{c_{i/2}, c_{j/2}\} - \{c^*_{i/2}, c^*_{j/2}\} \\
+& & + \{c_{i/2}, c^*_{j/2}\} + \{c^*_{i/2}, c_{j/2}\} \\
+&=& - 0 - 0 + \delta_{ij} + \delta_{ij} \\
+&=& 2 \delta_{ij}
+\eea
+Finally, when $i$ is odd and $j$ is even, the anticommutator becomes:
+\bea
+\{\psi_i, \psi_j\} &=& (c_{(i + 1)/2} + c^*_{(i + 1)/2}) i (c_{j/2} - c^*_{j/2}) \\
+& & + i (c_{j/2} - c^*_{j/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
+&=& i \{c_{(i + 1)/2}, c_{j/2}\} - i \{c^*_{(i + 1)/2}, c^*_{j/2}\} \\
+& & - i \{c_{(i + 1)/2}, c^*_{j/2}\} + i \{c^*_{(i + 1)/2}, c_{j/2}\} \\
+&=& 0 - 0 - \delta_{i+1,j} + \delta_{i+1,j} \\
+&=& 0
+\eea
+thereby completing the proof that the operators $\psi_i$ form the elements of a Clifford algebra
+of $2d$ dimensions. If one also considers that fact that the definition of $\psi_i$
+is invertible and that $c_i$ can also be defined in terms of $\psi_i$, one can
+conclude that the algebras $FA(d)$ and $Cliff(2d)$ are isomorphic.
 
 \subsubsection{Sub(quantum)group Diagram}
 As a result of the above discussion, we get the sub(quantum)group
 diagram:
 \[
 \begin{CD}
-{FIO(2d, \IR)} @>{\bf (a)}>> {GrIO(2d, \IR)} @>{\bf (b)}>> {O(2d, \IR)} \\
-@V{\bf (c)}VV @V{\bf (c)}VV @V{\bf (c)}VV \\
-{FIU(d)}  @>{\bf (a)}>> {GrIU(d)} @>{\bf (b)}>> {U(d)} \\
-@V{\bf (d)}VV \\
-{FA(d)}
+{FIO(2d, \IR)}   @> \eqref{suba} >> {GrIO(2d, \IR)} @> \eqref{subb} >> {O(2d, \IR)} \\
+@V\eqref{subc}VV                    @V\eqref{subc}VV                   @V\eqref{subc}VV \\
+{FIU(d)}         @> \eqref{suba} >> {GrIU(d)}       @> \eqref{subb} >> {U(d)} \\
+@V\eqref{subd}VV \\
+{FA(d) \approx Clif(2d)}
 \end{CD}
 \]
-for the for the sub(quantum)groups of \FIO that have been introduced in 
+for the for the sub(quantum)groups of \FIO that have been introduced in
 this section.
 
 \subsection{Contractions}
 
 It was observed for \BISp that using a suitable contraction one can
 obtain new sub(quantum)groups. This should also be possible for \FIO and
-the resulting structures will be examined in this section. 
+the resulting structures will be examined in this section.
 
 Similar to the bosonic treatment, we replace $\gamma_i$ by
 $\gamma_i/\sqrt{\hbar}\;$ so that we may consider the case $\hbar
-\rightarrow 0$. After this replacement, the equations (\ref{rel1})
-and (\ref{rel2}) become:
+\rightarrow 0$. After this replacement, the equations \eqref{rel1}
+and \eqref{rel2} become:
 \bea
 \gamma_i \gamma^*_j + \gamma^*_j \gamma_i &=& \hbar(\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk}) \\
 \gamma_i \gamma_j + \gamma_j \gamma_i &=& \hbar(-\beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk})
@@ -708,55 +753,67 @@ where the inhomogeneous part of the group are Grassmanian.
 
 If we consider the contraction of the subgroups as well then we
 should examine the $\hbar \rightarrow 0$ limit after the relations
-(\ref{subfc}) and (\ref{subfd}) are applied.
+\eqref{subc} and \eqref{subd} are applied.
 
-After we apply relation (\ref{subfc}), we get the subgroup $FIU(d)$
+After we apply relation \eqref{subc}, we get the subgroup $FIU(d)$
 as discussed previously. After the contraction,
 again, the inhomogeneous part of this group become
-Grassmanian variables. However, as was shown, if we apply the previous similarity
-transformation on the homogeneous part, one can see that the
-homogeneous part of the transformation is a member of the general 
+Grassmanian variables. However, as was shown during the contraction
+of \BISp, if we apply the previous similarity
+transformation on the homogeneous part of the resulting transformation
+matrix after contraction, one can see that the
+homogeneous part of the transformation is a member of the general
 linear group $GL(d, \IC)$. Similarly this gives us $GrIGL(d, \IC)$.
 
 We have previously shown that we get the fermion
-algebra after applying both of the relations (\ref{subfc}) and
-(\ref{subfd}). We have also discussed that in this case only the
+algebra after applying both of the relations \eqref{subc} and
+\eqref{subd}. We have also discussed that in this case only the
 inhomogeneous part of the transformation survives. After
 applying the contraction, the surviving inhomogeneous part of the
 transformation turns into Grassmanian variables. Thus
-in this case, the contraction of $FA(d)$ gives us $Gr(d, \IC)$, 
+in this case, the contraction of $FA(d)$ gives us $Gr(d, \IC)$,
 the $d$ dimensional Grassman algebra.
 
 As a summary, for the contraction considered combined with the
 remaining subgroup relations we get the table:
 \[
 \begin{CD}
-{FIO(2d, \IR)} @>{\bf (e)}>> {GrIGL(2d, \IR)} \\
-@V{\bf (c)}VV @V{\bf (c)}VV \\
-{FIU(d)} @>{\bf (e)}>> {GrIGL(d, \IC)} \\
-@V{\bf (d)}VV @V{\bf (d)}VV \\
-{FA(d)} @>{\bf (e)}>> {Gr(d, \IC)}
+{FIO(2d, \IR)}            @> \hbar \rightarrow 0 >> {GrIGL(2d, \IR)} \\
+@V\eqref{subc}VV                                    @V\eqref{subc}VV \\
+{FIU(d)}                  @> \hbar \rightarrow 0 >> {GrIGL(d, \IC)} \\
+@V\eqref{subd}VV                                    @V\eqref{subd}VV \\
+{FA(d) \approx Clif(2d)} @> \hbar \rightarrow 0 >> {Gr(d, \IC)}
 \end{CD}
 \]
 
 \section{The Fermionic Inhomogeneous
 Orthogonal Quantum Group of Odd Dimension}
 
-When we consider a unitary transformation of the \FIO matrix as:
+The bosonic transformation quantum group \BISp can only be defined
+in even dimensions and it is not possible to extend this definition
+to odd dimension. However, as will be shown in this section, it is
+possible to define the fermionic inhomogeneous orthogonal quantum
+group of odd dimension. In order to show this, one should first
+consider a unitary transformation of the \FIO matrix:
 \[
 M \rightarrow UMU^{-1}
 \]
-using the unitary matrix: \beq U = \left(
+using the unitary matrix:
+\beq U = \left(
 \begin{tabular}{cc|c}
 $\frac{1}{\sqrt{2}}$ & $\frac{1}{\sqrt{2}}$ & $0$ \\
 $\frac{i}{\sqrt{2}}$ & $\frac{-i}{\sqrt{2}}$ & $0$ \\
 \hline $0$ & $0$ & $1$
 \end{tabular}
-\right) \eeq we can see that we can put $M$ in the real form: \beq
+\right)
+\eeq
+If one applies this unitary transformation, it can be seen that
+$M$ can be put in the real form:
+\beq
 \left(
 \begin{tabular}{cc|c}
 $Re(\alpha + \beta)$ & $Im(\alpha - \beta)$ & $\sqrt{2}Re(\gamma)$ \\
-$Im(-\alpha - \beta)$ & $Re(\alpha - \beta)$ & $\sqrt{2}Im(\gamma)$ \\
+$-Im(\alpha + \beta)$ & $Re(\alpha - \beta)$ & $-\sqrt{2}Im(\gamma)$ \\
 \hline $0$ & $0$ & $1$
 \end{tabular}
 \right) = \left(
@@ -764,18 +821,114 @@ $Im(-\alpha - \beta)$ & $Re(\alpha - \beta)$ & $\sqrt{2}Im(\gamma)$ \\
 $A$ & $\Gamma$ \\
 \hline $0$ & $1$
 \end{tabular}
-\right) \eeq where $A$ and $\Gamma$ matrices are defined as in
-(\ref{M-matrix}), and $Re$ and $Im$ denote the hermitian and
+\right)
+\eeq
+where $A$ and $\Gamma$ matrices are defined as in
+\eqref{M-matrix}, and $Re$ and $Im$ denote the hermitian and
 anti-hermitian parts.
 
-Using this form it is found that for \FIO, the transformation
-relations (\ref{rel1}) and (\ref{rel2}) together become:
-
-\beq [\Gamma_i, \Gamma_j]_+ = \delta_{ij} - A_{ik} A_{jk}
-\quad\quad, i, j = 1, 2, \ldots , 2d . \eeq By extending the range
-of the indices in this relation to odd-dimensions it is possible
+Using this form it is not too hard to show that for \FIO,
+the transformation relations \eqref{rel1} and \eqref{rel2}
+together transform into the single equation:
+\beq
+\{\Gamma_i, \Gamma_j\} = \delta_{ij} - A_{ik} A_{jk} \quad,\quad i, j = 1, 2, \ldots , 2d .
+\label{relcombined}
+\eeq
+By extending the range of the indices in this relation to
+odd-dimensions it is possible
 to define $FIO(2d + 1, \IR)$, the fermionic inhomogeneous
 orthogonal algebra of odd dimension.
+
+In order to show the validity of \eqref{relcombined}, one needs
+to consider the three cases:
+\[
+\{\Gamma_i, \Gamma_j\} =
+\begin{cases}
+  2\{Re(\gamma_i), Re(\gamma_j) \} & \text{for $1 \leq i,j \leq d$} \\
+  2\{Im(\gamma_i), Im(\gamma_j) \} & \text{for $d + 1 \leq i,j \leq 2d$} \\
+  - 2\{Re(\gamma_i), Im(\gamma_j) \} & \text{for $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$} \\
+\end{cases}
+\]
+For the case when $1 \leq i,j \leq d$, the above form becomes:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& 2\{Re(\gamma_i), Re(\gamma_j) \} \\
+&=& \frac12 \left[\{\gamma_i,\gamma_j\} + \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
+&=& \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) + (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+& & \quad   \left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&=& \frac12 \left[2\delta_{ij} - (\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
+&=& \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right]
+\eea
+however, for this case, the form of $A_{ik}A_{jk}$ is:
+\bea
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&=& \sum^{d}_{k = 1} \left[Re(\alpha_{ik} + \beta_{ik})Re(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Im(\alpha_{jk} - \beta_{jk})\right] \\
+&=& \frac14 \left[(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} + \alpha^*_{jk} + \beta^*_{jk}) \right.\\
+& & \quad   \left.-(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} - \alpha^*_{jk} + \beta^*_{jk}) \right] \\
+&=& \frac14 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta^*_{jk}) \right. \\
+& & \quad   \left.(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right. \\
+& & \quad   \left.(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik}) (\alpha_{jk} + \beta^*_{jk}) \right. \\
+& & \quad   \left.(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right] \\
+&=& \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk})\right]
+\eea
+and using this in the previous expression gives us:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
+&=& \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i,j \leq d$}
+\eea
+
+For the case when $d + 1 \leq i,j \leq 2d$, the above form becomes:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& 2\{Im(\gamma_i), Im(\gamma_j) \} \\
+&=& - \frac12 \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} - \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
+&=& - \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+& &   \quad   \left. - (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&=& - \frac12 \left[-2\delta_{ij} + (\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\beta^*_{ik} - \alpha_{ik})(\beta_{jk} - \alpha^*_{jk})\right] \\
+&=& \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
+\eea
+however, for this case, the form of $A_{ik}A_{jk}$ is:
+\bea
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&=& \sum^{d}_{k = 1} \left[Im(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Re(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
+&=& \frac14 \left[-(\alpha_{ik} + \beta_{ik} - \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
+& & \quad   \left.+(\alpha_{ik} - \beta_{ik} + \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
+&=& \frac14 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+& & \quad   \left.(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+& & \quad   \left.(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+& & \quad   \left.(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right] \\
+&=& \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
+\eea
+and using this in the previous expression gives us:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right] \\
+&=& \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $d + 1 \leq i,j \leq 2d$}
+\eea
+
+Finally, for the case when $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$, the above form becomes:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& - 2\{Re(\gamma_i), Im(\gamma_j) \} \\
+&=& - \frac1{2i} \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} - \{\gamma^*_i,\gamma^*_j\}\right] \\
+&=& - \frac1{2i} \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+& &   \quad      \left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) - (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&=& - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
+\eea
+however, for this case, the form of $A_{ik}A_{jk}$ is:
+\bea
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&=& \sum^{d}_{k = 1} \left[-Re(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
+&=& \frac1{4i} \left[-(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
+& & \quad      \left.+(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
+&=& \frac1{4i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+& & \quad      \left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+& & \quad      \left.(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+& & \quad      \left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right] \\
+&=& \frac12    \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
+\eea
+and using this in the previous expression gives us:
+\bea
+\{\Gamma_i, \Gamma_j\} &=& - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right] \\
+&=& - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$}
+\eea
+which completes the derivation of equation \eqref{relcombined}.
 
 Similar to the analysis that went into finding the
 sub(quantum)groups of \FIO, we can also investigate the
@@ -786,21 +939,19 @@ the $A$ matrix but is rather described by the whole matrix itself.
 Thus, we cannot set $\alpha$ or $\beta$ to zero on their own, we
 can only restrict the algebra by setting the whole of $A$ to zero.
 Thus the resulting sub(quantum)algebra relations are:
-
-\begin{enumerate}
-\renewcommand{\labelenumi}{\bf(\alph{enumi})}
-\item $\delta_{ij} - A_{ik}A_{jk} = 0$
-\item $\Gamma_i = 0$
-\item $A_{ij} = 0$
-\end{enumerate}
+\begin{subequations}
+\bea
+\delta_{ij} - A_{ik}A_{jk} = 0 \label{subfa} \\
+\Gamma_i = 0 \label{subfb} \\
+A_{ij} = 0 \label{subfc}
+\eea
+\end{subequations}
 which, through a similar analysis to the even dimensional case,
 gives us the following sub(quantum)group diagram:
-
 \[
 \begin{CD}
-{FIO(2d + 1, \IR)} @>{\bf (a)}>> {GrIO(2d + 1, \IR)} @>{\bf (b)}>> {O(2d + 1, \IR)} \\
-@V{\bf (c)}VV\\
+{FIO(2d + 1, \IR)} @>\eqref{subfa}>> {GrIO(2d + 1, \IR)} @>\eqref{subfb}>> {O(2d + 1, \IR)} \\
+@V\eqref{subfc}VV\\
 {Clif(2d + 1)}
 \end{CD}
 \]
-
