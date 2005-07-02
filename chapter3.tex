@@ -173,12 +173,12 @@ other terms on the left hand side to be separately equal to zero.
 
 Thus we have the following relations between the transformation elements:
 \bea
-\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} \label{rel1} \\
-\gamma_i \gamma_j - \gamma_j \gamma_i &=& \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \label{rel2} \\
-\alpha_{ij} \gamma_k - \gamma_k \alpha_{ij} & = & 0 \label{rel3} \\
-\beta_{ij} \gamma_k - \gamma_k \beta_{ij} & = & 0 \label{rel4} \\
-\alpha_{ij} \gamma^*_k - \gamma^*_k \alpha_{ij} & = & 0 \label{rel5} \\
-\beta_{ij} \gamma^*_k - \gamma^*_k \beta_{ij} & = & 0 \label{rel6}
+\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} \label{rel1bos} \\
+\gamma_i \gamma_j - \gamma_j \gamma_i &=& \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \label{rel2bos} \\
+\alpha_{ij} \gamma_k - \gamma_k \alpha_{ij} & = & 0 \label{rel3bos} \\
+\beta_{ij} \gamma_k - \gamma_k \beta_{ij} & = & 0 \label{rel4bos} \\
+\alpha_{ij} \gamma^*_k - \gamma^*_k \alpha_{ij} & = & 0 \label{rel5bos} \\
+\beta_{ij} \gamma^*_k - \gamma^*_k \beta_{ij} & = & 0 \label{rel6bos}
 \eea
 and any two elements from the set
 $\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute.
@@ -194,10 +194,10 @@ but is in fact a quantum group with a Hopf algebra structure. As shown in
 representation and the coproduct, counit and coinverse are defined
 as:
 \bea
-\Delta(M) & = & M \dot{\otimes} M \label{coproduct} \\
-\epsilon(M) & = & I \label{counit} \\
-S(M) & = & M^{-1} \label{antipode} \quad . \eea In Equation
-\eqref{coproduct}, the symbol $\dot{\otimes}$ denotes the usual
+\Delta(M) & = & M \dot{\otimes} M \label{coproductbos} \\
+\epsilon(M) & = & I \label{counitbos} \\
+S(M) & = & M^{-1} \label{antipodebos} \quad . \eea In Equation
+\eqref{coproductbos}, the symbol $\dot{\otimes}$ denotes the usual
 matrix multiplication where when elements of the matrices are
 multiplied, tensor multiplication is used.
 
@@ -223,7 +223,7 @@ contractions \cite{inonu} of these quantum groups as well.
 
 The sub(quantum)groups are obtained by imposing
 additional relations on the matrix elements of $M$ which obey the
-relations (\ref{rel1}) - (\ref{rel6}). The additional relations
+relations (\ref{rel1bos}) - (\ref{rel6bos}). The additional relations
 that we will impose are:
 \begin{subequations}
 \bea
@@ -244,7 +244,7 @@ The relation \eqref{suba}:
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}
 = \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
 \]
-by virtue of \eqref{rel1} and \eqref{rel2} implies that $\gamma_i
+by virtue of \eqref{rel1bos} and \eqref{rel2bos} implies that $\gamma_i
 \gamma^*_j - \gamma^*_j \gamma_i = 0$ and $\gamma_i \gamma_j -
 \gamma_j \gamma_i = 0$, i.e. that the inhomogeneous transformation
 parameters are commutative variables.
@@ -323,7 +323,7 @@ gives us back the boson algebra, $BA(d)$.
 We should note, however, that after this condition is applied, the
 resulting set of matrices $M$, which now form $BA(d)$, is
 no longer a quantum or classical group since the antipode defined
-in equation \eqref{antipode} no longer exits. For this reason,
+in equation \eqref{antipodebos} no longer exits. For this reason,
 the boson algebra can be considered to be a boundary for the
 sub(quantum)groups of \BISp.
 
@@ -346,8 +346,8 @@ section.
 In order to explore the new (quantum)groups that will come about
 as the result of a contraction, we replace $\gamma_i$ by
 $\gamma_i/\sqrt{\hbar}\;$ so that we may consider the case $\hbar
-\rightarrow 0$. After this replacement, the equations \eqref{rel1}
-and \eqref{rel2} become:
+\rightarrow 0$. After this replacement, the equations \eqref{rel1bos}
+and \eqref{rel2bos} become:
 \bea
 \gamma_i \gamma^*_j - \gamma^*_j \gamma_i &=& \hbar(\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk}) \\
 \gamma_i \gamma_j - \gamma_j \gamma_i &=& \hbar(\beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk})
@@ -530,12 +530,12 @@ other terms on the left hand side to be separately equal to zero.
 
 Thus we have the following relations between the transformation elements:
 \bea
-\gamma_i \gamma^*_j + \gamma^*_j \gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} \label{rel1} \\
-\gamma_i \gamma_j + \gamma_j \gamma_i &=& - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \label{rel2} \\
-\alpha_{ij} \gamma_k + \gamma_k \alpha_{ij} & = & 0 \label{rel3} \\
-\beta_{ij} \gamma_k + \gamma_k \beta_{ij} & = & 0 \label{rel4} \\
-\alpha_{ij} \gamma^*_k + \gamma^*_k \alpha_{ij} & = & 0 \label{rel5} \\
-\beta_{ij} \gamma^*_k + \gamma^*_k \beta_{ij} & = & 0 \label{rel6}
+\gamma_i \gamma^*_j + \gamma^*_j \gamma_i &=& \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} \label{rel1fer} \\
+\gamma_i \gamma_j + \gamma_j \gamma_i &=& - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \label{rel2fer} \\
+\alpha_{ij} \gamma_k + \gamma_k \alpha_{ij} & = & 0 \label{rel3fer} \\
+\beta_{ij} \gamma_k + \gamma_k \beta_{ij} & = & 0 \label{rel4fer} \\
+\alpha_{ij} \gamma^*_k + \gamma^*_k \alpha_{ij} & = & 0 \label{rel5fer} \\
+\beta_{ij} \gamma^*_k + \gamma^*_k \beta_{ij} & = & 0 \label{rel6fer}
 \eea
 and any two elements from the set
 $\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute.
@@ -551,9 +551,9 @@ the case with \BISp, this Hopf algebra has an explicit $R$-matrix
 representation and the coproduct, counit and coinverse are defined
 as:
 \bea
-\Delta(M) & = & M \dot{\otimes} M \label{coproduct} \\
-\epsilon(M) & = & I \label{counit} \\
-S(M) & = & M^{-1} \label{antipode} \quad . \eea
+\Delta(M) & = & M \dot{\otimes} M \label{coproductfer} \\
+\epsilon(M) & = & I \label{counitfer} \\
+S(M) & = & M^{-1} \label{antipodefer} \quad . \eea
 
 \subsection{Subgroups}
 We have shown that there is a rich sub(quantum)group structure for
@@ -579,7 +579,7 @@ The relation \eqref{subafer}:
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk}
 = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
 \]
-by virtue of \eqref{rel1} and \eqref{rel2} implies that $\gamma_i
+by virtue of \eqref{rel1fer} and \eqref{rel2fer} implies that $\gamma_i
 \gamma^*_j + \gamma^*_j \gamma_i = 0$ and $\gamma_i \gamma_j +
 \gamma_j \gamma_i = 0$, i.e. that the inhomogeneous transformation
 parameters are anticommutative variables.
@@ -752,8 +752,8 @@ the resulting structures will be examined in this section.
 
 Similar to the bosonic treatment, we replace $\gamma_i$ by
 $\gamma_i/\sqrt{\hbar}\;$ so that we may consider the case $\hbar
-\rightarrow 0$. After this replacement, the equations \eqref{rel1}
-and \eqref{rel2} become:
+\rightarrow 0$. After this replacement, the equations \eqref{rel1fer}
+and \eqref{rel2fer} become:
 \bea
 \gamma_i \gamma^*_j + \gamma^*_j \gamma_i &=& \hbar(\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk}) \\
 \gamma_i \gamma_j + \gamma_j \gamma_i &=& \hbar(-\beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk})
@@ -853,7 +853,7 @@ where $A$ and $\Gamma$ matrices are defined as in
 anti-hermitian parts.
 
 Using this form it is not too hard to show that for \FIO,
-the transformation relations \eqref{rel1} and \eqref{rel2}
+the transformation relations \eqref{rel1fer} and \eqref{rel2fer}
 together transform into the single equation:
 \beq
 \{\Gamma_i, \Gamma_j\} = \delta_{ij} - A_{ik} A_{jk} \quad,\quad i, j = 1, 2, \ldots , 2d .
