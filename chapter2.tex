@@ -71,10 +71,13 @@ is reserved for conclusions and discussion.
 \section{The invariance quantum group $SO_{q = -1}(3)$}
 
 In order to find the invariance quantum group of this algebra, we
-transform the generators $J_i$ to $J'_i$ by: \beq \label{trans}
-J'_i = \sum_j\alpha_{ij} J_j \quad . \eeq The matrix elements
+transform the generators $J_i$ to $J'_i$ by:
+\beq \label{trans}
+J'_i = \sum_j\alpha_{ij} J_j \quad .
+\eeq
+The matrix elements
 $\alpha_{ij}$ are hermitian since $J_i$'s are hermitian and they
-commute with $J_i$'s but do not commute with each other. For the
+commute with $J_i$'s but are not assumed to commute with each other. For the
 transformed operators to obey the original relations, there should
 exist some conditions on the $\alpha$'s which define the
 invariance quantum group of the algebra. It is very convenient at
@@ -86,119 +89,196 @@ similar object for ACSA which we will call the fermionic
 Levi-Civita tensor, $u_{ijk}$, is defined as:
 \beq
 u_{ijk} =
-\left\{
-\begin{array}{cl}
-1, & i \neq j \neq k, \\
-0, & \mbox{otherwise.}
-\end{array}
-\right.
+  \begin{cases}
+    1, & \text{for $i \neq j \neq k \neq i$,} \\
+    0, & \text{otherwise.}
+  \end{cases}
 \eeq
 Thus the defining relations (\ref{eqn:defrel1}-\ref{eqn:defrel3}) become:
 \beq
 \anti{J_i}{J_j} = \sum_k  u_{ijk}\,J_k + 2\delta_{ij}\,J_i^2
 \eeq
-The second term on the right is needed since when $i = j$ the left-hand side becomes $2J_i^2$. When we apply the transformation (\ref{trans})
-on this relation we get:
+The second term on the right is needed since when $i = j$ the left-hand side becomes $2J_i^2$.
+Upon transformation (\ref{trans}) we require the algebra relations to remain invariant which means:
 \beq
-\anti{J'_k}{J'_m} = \sum_p
-u_{kmp}J'_p = \sum_{p,\; j}
-u_{kmp}\,\alpha_{pj}\,J_j\quad\quad\mbox{for}\quad k\neq m.
+\anti{J'_i}{J'_j} = J'_k\quad\quad\text{for $i \neq j \neq k \neq i$}.
 \eeq
 However, substituting the transformation equations into the
 left-hand side, we have:
 \beq
-\anti{J'_k}{J'_m} =
-\sum_{i,\;j}\left([\alpha_{ki}, \alpha_{mj}]J_iJ_j +
-\alpha_{mj}\,\alpha_{ki}\,u_{ijn}\,J_n +
-2\alpha_{mj}\,\alpha_{kj}\,J_j^2\right)
+\anti{J'_i}{J'_j} =
+\sum_{k,\;m} \left(\alpha_{ik} \alpha_{jm} J_k J_m + \alpha_{jm} \alpha_{ik} J_m J_k \right)
 \eeq
-These two equations yield the following relations among $\alpha_{ij}$ when $k\neq m$:
-\bea
-\anti{\alpha_{mj}}{\alpha_{kj}} & = & 0 \label{invrel1} \\
-\left[\alpha_{ki}, \alpha_{mj}\right]& = & 0 \quad\quad \mbox{for}\quad i \neq j \label{invrel2} \\
-\sum_{i\; j}\alpha_{mj}\,\alpha_{ki}\,u_{ijn}  & = & \sum_p
-u_{mkp}\,\alpha_{pn} \label{invrel3}
-\eea
+If one considers the quadratic forms in the universal enveloping algebra of ACSA, then
+one can see that the symmetric part of these forms resolve to linear forms owing to
+the defining relations of the algebra. Thus the independent quadratic forms in the
+algebra are the antisymmetric forms, $[J_m, J_k]$ where $m \neq k$, and the square forms,
+$J^2_k$. Using this observation we put the above relation in the form of a
+linear sum over independent algebra elements:
+\beq
+\begin{split}
+\anti{J'_i}{J'_j}
+& = \sum_{n,\;m} \left(\alpha_{in} \alpha_{jm} J_n J_m + \alpha_{jm} \alpha_{in} J_m J_n \right)\\
+& = \frac12 \sum_{n,\;m} \left(\alpha_{in} \alpha_{jm} (\anti{J_n}{J_m} + [J_n, J_m])
+  + \alpha_{jm} \alpha_{in} (\anti{J_m}{J_n} + [J_m, J_n]) \right) \\
+& = \frac12 \sum_{\substack{n,\;m \\n \neq m}} \left(\sum_{l}(\alpha_{in} \alpha_{jm} + \alpha_{jm} \alpha_{in}) u_{nml} J_l
+    + (\alpha_{in} \alpha_{jm} - \alpha_{jm} \alpha_{in}) [J_n, J_m]\right) \\
+& \quad + \sum_{n} \left(\alpha_{in} \alpha_{jn} + \alpha_{jn} \alpha_{in}\right) J^2_n
+\end{split}
+\eeq
+which should be equal to $J'_k$ for $i \neq j \neq k \neq i$, which in turn gives:
+\begin{gather}
+\anti{J'_i}{J'_j} = J'_k    \\
+\begin{split}
+&\sum_{n} \left(\alpha_{in} \alpha_{jn} + \alpha_{jn} \alpha_{in}\right) J^2_n \\
+& \quad + \frac12 \sum_{\substack{n,\;m \\n \neq m}} \left(\sum_{l}(\alpha_{in} \alpha_{jm} + \alpha_{jm} \alpha_{in}) u_{nml} J_l
+    + (\alpha_{in} \alpha_{jm} - \alpha_{jm} \alpha_{in}) [J_n, J_m]\right) \\
+& \qquad \qquad = \sum_{l} \alpha_{kl} J_l \qquad \text{for $i \neq j \neq k \neq i$.}\\
+\end{split}
+\end{gather}
+This final equation yields the following relations among $\alpha_{ij}\;$:
+\begin{align}
+\alpha_{in} \alpha_{jn} + \alpha_{jn} \alpha_{in} & = 0  && \text{for $i \neq j$} \label{invrel1'} \\
+\alpha_{in} \alpha_{jm} - \alpha_{jm} \alpha_{in}& = 0 && \text{for $i \neq j$ and $n \neq m$} \label{invrel2'} \\
+\frac12 \sum_{\substack{n,\;m \\n \neq m}}(\alpha_{in} \alpha_{jm} + \alpha_{jm} \alpha_{in}) u_{nml} & = \alpha_{kl} && \text{for $i \neq j \neq k \neq i$} \label{invrel3'}
+\end{align}
+However, by virtue of \eqref{invrel2'} and the fact that $u_{ijk} = 0$ if
+any two indices are the same, the relation \eqref{invrel3'} can be written as:
+\beq
+\begin{split}
+\alpha_{kl} & = \frac12 \sum_{n,\;m}(\alpha_{in} \alpha_{jm} + \alpha_{jm} \alpha_{in}) u_{nml} \\
+& = \frac12 \sum_{n,\;m}2 \alpha_{in} \alpha_{jm} u_{nml} \\
+& = \sum_{n,\;m}\alpha_{in} \alpha_{jm} u_{nml} \quad \text{for $i \neq j \neq k \neq i$} \label{invrel3}
+\end{split}
+\eeq
+Therefore the resulting relations between the $\alpha_{ij}$ that define the invariance
+group of this algebra becomes:
+\begin{align}
+\alpha_{in} \alpha_{jn} + \alpha_{jn} \alpha_{in} & = 0  && \text{for $i \neq j$} \label{invrel1} \\
+\alpha_{in} \alpha_{jm} - \alpha_{jm} \alpha_{in}& = 0 && \text{for $i \neq j$ and $n \neq m$} \label{invrel2} \\
+\sum_{n,\;m} \alpha_{in} \alpha_{jm} u_{nml} & = \alpha_{kl} && \text{for $i \neq j \neq k \neq i$} \label{invrel3}
+\end{align}
 
-Now we will define the quantum group $SO_q(3)$ and show that the
-relations above correspond to the case $q=-1$. The quantum group
-$SO_q(3)$ can be defined as the quantum subgroup of $SL_q(3, C)$
-where an element is given by:
+Before we define the quantum group $SO_q(3)$ and show that the
+relations above correspond to the case $q=-1$, we first define the quantum
+general linear group $GL_{q}(2)$. This group is defined by the elements:
 \beq
-A =
-\left(
-\begin{array}{ccc}
-\alpha_{11} & \alpha_{12} & \alpha_{13} \\
-\alpha_{21} & \alpha_{22} & \alpha_{23} \\
-\alpha_{31} & \alpha_{32} & \alpha_{33}
-\end{array}
-\right)
+M =
+  \begin{pmatrix}
+    a & b \\
+    c & d
+  \end{pmatrix}
 \eeq
-where
-\beq
-\alpha_{ij}^* = \alpha_{ij}
-\eeq
-\beq
-A^T= A^{-1}
-\eeq
-and
-\beq
-\label{gl2}
-\left(
-\begin{array}{cc}
-\alpha_{mj} & \alpha_{mi} \\
-\alpha_{kj} & \alpha_{ki}
-\end{array}
-\right) \in GL_{q}(2)\quad\mbox{for}\quad k \neq m, i \neq j.
-\eeq
-
-The quantum group $SO_q(3)$ is equivalent to the quantum group
-\break\mbox{$SL_q(3, R) \cap SU_q(3)$}. However one can show for
-$SL_q(3)$ that $q= e^{i\beta}$ for some $\beta \in R$ and
-similarly for $SU_q(3)$ that $q \in R$. Thus one finds that $q =
-\pm 1$ for $SO_q(3)$. When $q = 1$ the quantum group becomes the
-usual $SO(3)$ group; the interesting case is when $q = -1$ which,
-as we will show, is the invariance quantum group of ACSA.
-
-Equations (\ref{invrel1}) and (\ref{invrel2}) are easily shown to
-be satisfied by the matrix $A \in SO_{q=-1}(3)$ by recognizing
-that the quantities involved belong to a submatrix that is an
-element of $GL_{q=-1}(2)$, as in equation (\ref{gl2}). For a
-general matrix $M \in GL_q(2)$ where:
-\[
-M = \left(
-\begin{array}{cc}
-a & b \\
-c & d
-\end{array}
-\right)
-\]
-we have the relations:
+such that the matrix elements satisfy the following relations:
 \bea
 a c & = & q c a \label{ac} \\
 a d - q b c & = & d a - q^{-1} c b \label{det} \\
 b c & = & c b \label{bc}
 \eea
-The relation (\ref{ac}) implies that
-$\alpha_{mj}\;\alpha_{kj} = (-1) \alpha_{kj}\;\alpha_{mj}$, which
-proves equation (\ref{invrel1}) is satisfied, and the relations
-(\ref{det}) and (\ref{bc}) show $ a d = d a$ for $q=-1$ which
-implies $\alpha_{ki}\;\alpha_{mj} = \alpha_{mj}\;\alpha_{ki}$ thus
-proving that equation (\ref{invrel2}) is satisfied by the elements
-of an $SO_{q=-1}(3)$ matrix.
+Using this definition of $GL_q(2)$, we can define the quantum special
+orthogonal group $SO_q(3)$ as the quantum subgroup of $SL_q(3, \IC)$
+where an element is given by:
+\beq
+A =
+  \begin{pmatrix}
+    A_{11} & A_{12} & A_{13} \\
+    A_{21} & A_{22} & A_{23} \\
+    A_{31} & A_{32} & A_{33}
+  \end{pmatrix}
+\eeq
+where
+\begin{gather}
+A_{ij}^* = A_{ij} \quad , \\
+A^T= A^{-1} \quad , \\
+\intertext{and}
+\label{gl2}
+\begin{pmatrix}
+  A_{in} & A_{im} \\
+  A_{jn} & A_{jm}
+\end{pmatrix}
+\in GL_{q}(2) \quad \text{for $i \neq j$ and $m \neq n$}\quad .
+\end{gather}
 
-It is a little harder to show that equation (\ref{invrel3}) is
-satisfied by elements of $SO_{q=-1}(3)$ matrices. However, if one
-writes out the indices of the equation, one finds that equation
-(\ref{invrel3}) implies that each matrix element is equal to the
-$GL_{q=-1}(2)$-determinant of its minor. This fact is indeed
-satisfied by $SO_{q=-1}(3)$ matrices since $\mathrm{det} A = 1$
-and ${A^{-1}}^T = A$, one can show that $A = Co(A)$ which itself
-means that every element is equal to the determinant of its minor.
-Note that since $q = -1$, the cofactor of an element is always
-equal to the minor without any alternation of signs. This type of
+The quantum group $SO_q(3)$ is equivalent to the quantum group
+\mbox{$SL_q(3, \IR) \cap SU_q(3)$}. However one can show for
+$SL_q(3)$ that $q= e^{i\beta}$ for some $\beta \in \IR$ and
+similarly for $SU_q(3)$ that $q \in \IR$. Thus one finds that $q =
+\pm 1$ for $SO_q(3)$. When $q = 1$ the quantum group becomes the
+usual $SO(3)$ group; the interesting case is when $q = -1$ which,
+as we will show, is the invariance quantum group of ACSA.
+
+By virtue of the relation \eqref{gl2} and the relations \eqref{ac} - \eqref{bc}
+between the matrix elements of a $GL_q(2)$ matrix, we can see that for
+the case when $q = -1$, we have the following relations between the matrix
+elements of $SO_q(3)$:
+\bea
+A_{in} A_{jn} & = & - A_{jn} A_{in} \label{gl2-res1} \\
+A_{in} A_{jm} + A_{im} A_{jn} & = & A_{jm} A_{in} + A_{jn} A_{im} \label{gl2-res2} \\
+A_{im} A_{jn} & = & A_{jn} A_{im} \label{gl2-res3}
+\eea
+for $i \neq j$ and $n \neq m$. Furthermore, using \eqref{gl2-res3} in \eqref{gl2-res2} one finds:
+\beq \label{gl2-res4}
+A_{in} A_{jm} = A_{jm} A_{in}
+\eeq
+again for $i \neq j$ and $n \neq m$.
+
+Thus for a matrix $A \in SO_{q=-1}(3)$, the transformation invariance relation
+\eqref{invrel1} is shown to be satisfied by virtue of relation \eqref{gl2-res1}.
+Similarly, the elements of such a matrix satisfy the relation \eqref{invrel2}
+by virtue of the $GL_q(2)$ relations \eqref{gl2-res3} and \eqref{gl2-res4}.
+
+It is a little harder to show that equation \eqref{invrel3} is
+satisfied by elements of $SO_{q=-1}(3)$ matrices. However, if one considers
+a particular choice of $k$ and $l$ on the right hand side of this equation, one
+can see that on the left hand side one has the freedom to choose $i$ and $j$ in two
+different ways. This implies that a particular $\alpha_{kl}$ is
+equal to two separate forms. Given explicitly, for a given choice of $k$ and
+$l$, we get:
+\bea
+\alpha_{kl} &=& \sum_{r,\; q} \alpha_{ir} \alpha_{jq} u_{rql} \\
+\alpha_{kl} &=& \sum_{r,\; q} \alpha_{jr} \alpha_{iq} u_{rql}
+\eea
+for a particular choice of $i$ and $j$ such that $i, j, k$ are all different.
+In each of these sums only two terms survive, one where $r = n$, $q = m$
+and the other one where $r = m$, $q = n$, such that $n, m, l$ all different. This
+is due to the nature of $u_{ijk}$ which is non-zero only if all the indices are
+different. Finally we arrive at the explicit form of relation \eqref{invrel3}:
+\beq
+\alpha_{kl} = \alpha_{in} \alpha_{jm} + \alpha_{im} \alpha_{jn} = \alpha_{jm} \alpha_{in} +  \alpha_{jn} \alpha_{im}
+\eeq
+for $i, j, k$ all different and $n, m, l$ all different. Written in this form, it is obvious
+that due to the $GL_q(2)$ relation \eqref{gl2-res2}, part of the above equality is satisfied by the
+matrix elements of a matrix in $SO_{q=-1}(3)$. The fact that both sides of this relation
+is equal to another matrix element does not rise form the $GL_q(2)$ relations but is
+due to the fact that the matrix is special and orthogonal, i.e. it is due to the fact that
+$A^T = A^{-1}$ and that $\det_{q=-1}A = 1$. In order to show this, we should first note that
+$\det_q$ where $q = -1$ is the same as the normal determinant except there is no alternation
+of signs as there is in the normal determinant; this type of
 determinant with no alternation of signs is also called a
-permanent.
+permanent. Given this fact, one can notice that the $GL_{q=-1}(2)$
+relation \eqref{gl2-res2} is equal to the determinant of the $GL_{q=-1}(2)$ submatrix and
+is nothing but the statement that this determinant is defined and unique.
+The inverse of a matrix, $A^{-1}$, is defined as:
+\beq \label{matinverse}
+A^{-1} = \frac{1}{\det A} adj(A)^T
+\eeq
+where $adj(A)$ stands for the adjoint matrix where each matrix element is equal to the
+cofactor of the same position element in the original matrix A.
+For a matrix $A \in SO_{q=-1}(3)$; however, we have the fact that $A^{-1} = A^T$ and
+$\det_{q = -1} A = 1$, thus for such a matrix, the relation \eqref{matinverse} becomes:
+\beq
+A^T = adj(A)^T \qquad \Rightarrow \qquad A = adj(A)
+\eeq
+which implies that the matrix elements of $A$ and $adj(A)$ are equal. This further implies
+that each matrix element of $A$ is equal to the cofactor of itself. For $SO_{q=-1}(3)$
+matrices, the cofactor of a matrix element is equal to the $q = -1$ determinant of its
+$GL_{q=-1}(2)$ minor submatrix.
+Thus, as a result of this argument, we have:
+\beq
+A_{kl} = cof_{kl}(A) = A_{in} A_{jm} + A_{im} A_{jn} = A_{jm} A_{in} +  A_{jn} A_{im} \quad ,
+\eeq
+thereby, showing that matrices which are elements of $SO_{q=-1}(3)$ fully satisfy the
+transformation relations that leave ACSA invariant.
 
 Thus, we have found that the invariance quantum group of ACSA is
 the quantum group $SO_q(3)$ with $q=-1$. Strictly speaking, ACSA
@@ -394,4 +474,4 @@ The counit and coinverse are simpler and they match with the definitions for the
 \epsilon(J_i) &=& 0 \\
 S(J_i) &=& -J_i
 \eea
-These definitions of the coproduct, the counit and the coinverse give us a braided Hopf algebra structure for ACSA.
+These definitions of the coproduct, the counit and the coinverse give us a braided Hopf algebra structure for ACSA. 

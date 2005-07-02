@@ -127,36 +127,42 @@ c'_i c'_j - c'_j c'_i & = & 0 \\
 c'_i {c^*}'_j - {c^*}'_j c'_i & = & \delta_{ij}
 \eea
 Explicitly writing out the transformed operators, these relations become:
-\bea
+\begin{align}
+\begin{split}
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1) \nonumber \\
--
-(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1)
+(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1) \\
+- (\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1)
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-& = & 0 \\
+&=  0
+\end{split}
+\\
+\begin{split}(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
+(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1) \\
+- (\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1)
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1) \nonumber  \\
--
-(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1)
-(\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-& = & \delta_{ij}
-\eea
+& =  \delta_{ij}
+\end{split}
+\end{align}
 which gives us:
-\bea
-[\alpha_{ik}, \alpha_{jl}]c_l c_k + [\beta_{ik}, \beta_{jl}]c^*_l c^*_k && \nonumber \\
-+ [\alpha_{ik}, \gamma_j] c_k + [\beta_{ik}, \gamma_j] c^*_k && \nonumber \\
-+ [\gamma_i, \alpha_{jl}] c_l + [\gamma_i, \beta_{jl}] c^*_l && \nonumber \\
-+ [\alpha_{ik}, \beta_{jl}] c_k c^*_l + [\beta_{ik}, \alpha_{jl}] c^*_k c_l && \nonumber \\
-+ (\alpha_{jk} \beta_{ik} - \beta_{jk} \alpha_{ik} + [\gamma_i, \gamma_j]) &=&  0 \quad ,
-\eea
+\beq
+\begin{split}
+& [\alpha_{ik}, \alpha_{jl}]c_l c_k + [\beta_{ik}, \beta_{jl}]c^*_l c^*_k \\
+& + [\alpha_{ik}, \gamma_j] c_k + [\beta_{ik}, \gamma_j] c^*_k \\
+& + [\gamma_i, \alpha_{jl}] c_l + [\gamma_i, \beta_{jl}] c^*_l \\
+& + [\alpha_{ik}, \beta_{jl}] c_k c^*_l + [\beta_{ik}, \alpha_{jl}] c^*_k c_l \\
+& + (\alpha_{jk} \beta_{ik} - \beta_{jk} \alpha_{ik} + [\gamma_i, \gamma_j]) =  0 \quad ,
+\end{split}
+\eeq
 and
-\bea
-[\alpha_{ik}, \beta^*_{jl}]c_l c_k + [\beta_{ik}, \alpha^*_{jl}] c^*_l c^*_k && \nonumber \\
-+ [\alpha_{ik}, \gamma^*_j] c_k + [\beta_{ik}, \gamma^*_j] c^*_k && \nonumber \\
-+ [\gamma_i, \beta^*_{jl}] c_l + [\gamma_i, \alpha_{jl}] c^*_l && \nonumber \\
-+ [\alpha_{ik}, \alpha^*_{jl}] c_k c^*_l + [\beta_{ik}, \beta^*_{jl}] c^*_k c_l && \nonumber \\
-+ (\alpha^*_{jk} \alpha_{ik} - \beta^*_{jk} \beta_{ik} + [\gamma_i, \gamma^*_j]) &=& \delta_{ij} \quad .
-\eea
+\beq
+\begin{split}
+& [\alpha_{ik}, \beta^*_{jl}]c_l c_k + [\beta_{ik}, \alpha^*_{jl}] c^*_l c^*_k \\
+& + [\alpha_{ik}, \gamma^*_j] c_k + [\beta_{ik}, \gamma^*_j] c^*_k \\
+& + [\gamma_i, \beta^*_{jl}] c_l + [\gamma_i, \alpha_{jl}] c^*_l \\
+& + [\alpha_{ik}, \alpha^*_{jl}] c_k c^*_l + [\beta_{ik}, \beta^*_{jl}] c^*_k c_l \\
+& + (\alpha^*_{jk} \alpha_{ik} - \beta^*_{jk} \beta_{ik} + [\gamma_i, \gamma^*_j]) = \delta_{ij} \quad .
+\end{split}
+\eeq
 
 In the first of these relations, for the equality to be satisfied, it is sufficient for
 the coefficients of all the terms on the left hand side to be equal to zero.
@@ -370,31 +376,30 @@ i & -i
 \right)
 \eeq
 to put it in a real form. The transformation gives:
-\bea
-A' & = & U A U^\dagger \\
-& = & \frac12 \left(
-\begin{array}{cc}
-1 & 1 \\
-i & -i
-\end{array}
-\right) \left(
-\begin{array}{cc}
-\alpha & \beta \\
-\beta^* & \alpha^*
-\end{array}
-\right) \left(
-\begin{array}{cc}
-1 & -i \\
-1 & i
-\end{array}
-\right) \\
-& = & \left(
-\begin{array}{cc}
-Re(\alpha) + Re(\beta) & Im(\alpha) - Im(\beta) \\
-- Im(\alpha) - Im(\beta) & Re(\alpha) - Re(\beta)
-\end{array}
-\right)
-\eea
+\beq
+\begin{split}
+A'
+&= U A U^\dagger \\
+&= \frac12
+    \begin{pmatrix}
+      1 & 1 \\
+      i & -i
+    \end{pmatrix}
+    \begin{pmatrix}
+      \alpha & \beta \\
+      \beta^* & \alpha^*
+    \end{pmatrix}
+    \begin{pmatrix}
+      1 & -i \\
+      1 & i
+    \end{pmatrix}
+    \\
+&=  \begin{pmatrix}
+      Re(\alpha) + Re(\beta) & Im(\alpha) - Im(\beta) \\
+      - Im(\alpha) - Im(\beta) & Re(\alpha) - Re(\beta)
+    \end{pmatrix}
+\end{split}
+\eeq
 which is a real matrix that is a member of the
 general linear group $GL(2d, \IR)$. Thus we
 have the group $IGL(2d, \IR)$, the inhomogeneous general linear group.
@@ -408,36 +413,33 @@ as discussed previously. After the contraction,
 again, the inhomogeneous part of this group become
 complex numbers. However, if we apply the previous similarity
 transformation on the homogeneous part, we get:
-\bea
-A' & = & U A U^\dagger \\
-& = & \frac12 \left(
-\begin{array}{cc}
-1 & 1 \\
-i & -i
-\end{array}
-\right)
-\left(
-\begin{array}{cc}
-\alpha & 0 \\
-0 & \alpha^*
-\end{array}
-\right)
-\left(
-\begin{array}{cc}
-1 & -i \\
-1 & i
-\end{array}
-\right) \\
-& = & \left(
-\begin{array}{cc}
-Re(\alpha) & Im(\alpha) \\
-- Im(\alpha) & Re(\alpha)
-\end{array}
-\right) \\
-& = & Re(\alpha) \I1
- +
-Im(\alpha) \II
-\eea
+\beq
+\begin{split}
+A'
+&=  U A U^\dagger \\
+&=  \frac12
+      \begin{pmatrix}
+        1 & 1 \\
+        i & -i
+      \end{pmatrix}
+      \begin{pmatrix}
+        \alpha & 0 \\
+        0 & \alpha^*
+      \end{pmatrix}
+      \begin{pmatrix}
+        1 & -i \\
+        1 & i
+      \end{pmatrix}
+    \\
+&=
+    \begin{pmatrix}
+      Re(\alpha) & Im(\alpha) \\
+      - Im(\alpha) & Re(\alpha)
+    \end{pmatrix}
+    \\
+&= Re(\alpha) \I1 + Im(\alpha) \II
+\end{split}
+\eeq
 where $\I1$ stands for the identity matrix and
 $\II$ stands for the matrix the square of which is minus the
 identity matrix. This way we can see that the matrix $A'$ is a
@@ -482,36 +484,42 @@ c'_i c'_j + c'_j c'_i & = & 0 \\
 c'_i {c^*}'_j + {c^*}'_j c'_i & = & \delta_{ij}
 \eea
 Explicitly writing out the transformed operators, these relations become:
-\bea
+\begin{align}
+\begin{split}
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1) \nonumber \\
-+
-(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1)
+(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1) \\
++(\alpha_{jl} \otimes c_l + \beta_{jl} \otimes c^*_l + \gamma_j \otimes 1)
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-& = & 0 \\
+& = 0
+\end{split} \\
+\begin{split}
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1) \nonumber  \\
-+
-(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1)
+(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1) \\
++(\alpha^*_{jl} \otimes c^*_l + \beta^*_{jl} \otimes c_l + \gamma^*_j \otimes 1)
 (\alpha_{ik} \otimes c_k + \beta_{ik} \otimes c^*_k + \gamma_i \otimes 1)
-& = & \delta_{ij}
-\eea
+& = \delta_{ij}
+\end{split}
+\end{align}
 which gives us:
-\bea
-[\alpha_{jl}, \alpha_{ik}]c_l c_k + [\beta_{jl}, \beta_{ik}]c^*_l c^*_k && \nonumber \\
-+ \{\alpha_{ik}, \gamma_j\} c_k + \{\beta_{ik}, \gamma_j\} c^*_k && \nonumber \\
-+ \{\gamma_i, \alpha_{jl}\} c_l + \{\gamma_i, \beta_{jl}\} c^*_l && \nonumber \\
-+ [\alpha_{ik}, \beta_{jl}] c_k c^*_l + [\beta_{ik}, \alpha_{jl}] c^*_k c_l && \nonumber \\
-+ (\alpha_{jk} \beta_{ik} + \beta_{jk} \alpha_{ik} + \{\gamma_i, \gamma_j\}) &=&  0 \quad ,
-\eea
+\beq
+\begin{split}
+&[\alpha_{jl}, \alpha_{ik}]c_l c_k + [\beta_{jl}, \beta_{ik}]c^*_l c^*_k  \\
+&+ \{\alpha_{ik}, \gamma_j\} c_k + \{\beta_{ik}, \gamma_j\} c^*_k  \\
+&+ \{\gamma_i, \alpha_{jl}\} c_l + \{\gamma_i, \beta_{jl}\} c^*_l  \\
+&+ [\alpha_{ik}, \beta_{jl}] c_k c^*_l + [\beta_{ik}, \alpha_{jl}] c^*_k c_l  \\
+&+ (\alpha_{jk} \beta_{ik} + \beta_{jk} \alpha_{ik} + \{\gamma_i, \gamma_j\}) = 0 \quad ,
+\end{split}
+\eeq
 and
-\bea
-[\beta^*_{jl}, \alpha_{ik}]c_l c_k + [\alpha^*_{jl}, \beta_{ik}] c^*_l c^*_k && \nonumber \\
-+ \{\alpha_{ik}, \gamma^*_j\} c_k + \{\beta_{ik}, \gamma^*_j\} c^*_k && \nonumber \\
-+ \{\gamma_i, \beta^*_{jl}\} c_l + \{\gamma_i, \alpha_{jl}\} c^*_l && \nonumber \\
-+ [\alpha_{ik}, \alpha^*_{jl}] c_k c^*_l + [\beta_{ik}, \beta^*_{jl}] c^*_k c_l && \nonumber \\
-+ (\alpha^*_{jk} \alpha_{ik} + \beta^*_{jk} \beta_{ik} + \{\gamma_i, \gamma^*_j\}) &=& \delta_{ij} \quad .
-\eea
+\beq
+\begin{split}
+&[\beta^*_{jl}, \alpha_{ik}]c_l c_k + [\alpha^*_{jl}, \beta_{ik}] c^*_l c^*_k \\
+&+ \{\alpha_{ik}, \gamma^*_j\} c_k + \{\beta_{ik}, \gamma^*_j\} c^*_k \\
+&+ \{\gamma_i, \beta^*_{jl}\} c_l + \{\gamma_i, \alpha_{jl}\} c^*_l \\
+&+ [\alpha_{ik}, \alpha^*_{jl}] c_k c^*_l + [\beta_{ik}, \beta^*_{jl}] c^*_k c_l \\
+&+ (\alpha^*_{jk} \alpha_{ik} + \beta^*_{jk} \beta_{ik} + \{\gamma_i, \gamma^*_j\}) = \delta_{ij} \quad .
+\end{split}
+\eeq
 
 In the first of these relations, for the equality to be satisfied, it is sufficient for
 the coefficients of all the terms on the left hand side to be equal to zero.
@@ -552,13 +560,21 @@ We have shown that there is a rich sub(quantum)group structure for
 \BISp and it should naturally follow that there should be a similarly
 rich sub(quantum)group structure for the fermionic counterpart \FIO.
 
-In this subsection this sub(quantum)group structure will be explored again using
-the relations introduced in equations \eqref{suba} - \eqref{subd}.The
-implication of each of these relations will be explored in
+In this subsection this sub(quantum)group structure will be explored using
+relations similar to the ones considered for \BISp:
+\begin{subequations}
+\bea
+\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} &=& 0 \label{subafer} \\
+\gamma_i &=& 0  \label{subbfer} \\
+\beta_{ij} &=& 0  \label{subcfer} \\
+\alpha_{ij} &=& 0  \quad. \label{subdfer}
+\eea
+\end{subequations}
+The implication of each of these relations will be explored in
 the following subsections.
 
 \subsubsection{Inhomogeneous Subsupergroup}
-The relation \eqref{suba}:
+The relation \eqref{subafer}:
 \[
 \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk}
 = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} = 0
@@ -590,12 +606,12 @@ $\beta_{ij}$, $\alpha^*_{ij}$ and $\beta^*_{ij}$ are bosonic and the elements
 $\gamma_i$, $\gamma^*_i$ are fermionic.
 
 \subsubsection{Homogeneous Subgroup}
-The relation \eqref{subb}:
+The relation \eqref{subbfer}:
 \[
 \gamma_i = 0
 \]
 practically gets rid of the inhomogeneous part of the
-transformation and also implies the relation \eqref{suba} considered
+transformation and also implies the relation \eqref{subafer} considered
 in the previous subsection.
 
 This gives us the subgroup in the previous subsection
@@ -603,7 +619,7 @@ without the inhomogeneous part which is basically the
 classical orthogonal group $O(2d, \IR)$.
 
 \subsubsection{Fermionic Inhomogeneous Unitary Quantum Group}
-The relation \eqref{subc}:
+The relation \eqref{subcfer}:
 \[
 \beta_{ij} = 0
 \]
@@ -626,7 +642,7 @@ inhomogeneous quantum group, $FIU(d)$, since the inhomogeneous part of
 the transformation exhibits fermionic behavior.
 
 \subsubsection{Fermion Algebra}
-The relation \eqref{subd}:
+The relation \eqref{subdfer}:
 \[
 \alpha_{ij} = 0
 \]
@@ -637,7 +653,7 @@ set of transformations can never include the identity
 transformation.
 
 However, if this relation is applied together with the previous
-one, relation \eqref{subc}, the resulting relation gets rid of the
+one, relation \eqref{subcfer}, the resulting relation gets rid of the
 whole homogeneous part of the transformation leaving only the
 inhomogeneous part and gives us a single relation:
 \bea
@@ -648,7 +664,7 @@ which
 gives us back the fermion algebra, $FA(d)$.
 
 It should be noted that the fermion algebra in $d$ dimensions is isomorphic
-with the Clifford algebra in $2d$ dimensions. If one considers operators $\psi_i$
+to the Clifford algebra in $2d$ dimensions. If one considers operators $\psi_i$
 defined as:
 \bea
 \psi_i =
@@ -673,32 +689,41 @@ In order to show this, one only needs to prove the cases:
 \eeq
 
 For $i$ and $j$ both odd, $\{\psi_i, \psi_j\}$ becomes:
-\bea
-\{\psi_i, \psi_j\} &=& (c_{(i + 1)/2} + c^*_{(i + 1)/2}) (c_{(j + 1)/2} + c^*_{(j + 1)/2}) \\
-& & + (c_{(j + 1)/2} + c^*_{(j + 1)/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
-&=& \{c_{(i + 1)/2}, c_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c^*_{(j + 1)/2}\} \\
-& & + \{c_{(i + 1)/2}, c^*_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c_{(j + 1)/2}\} \\
-&=& 0 + 0 + \delta_{ij} + \delta_{ij} \\
-&=& 2 \delta_{ij}
-\eea
+\beq
+\begin{split}
+\{\psi_i, \psi_j\}
+&= (c_{(i + 1)/2} + c^*_{(i + 1)/2}) (c_{(j + 1)/2} + c^*_{(j + 1)/2}) \\
+& \phantom{=} + (c_{(j + 1)/2} + c^*_{(j + 1)/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
+&= \{c_{(i + 1)/2}, c_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c^*_{(j + 1)/2}\} \\
+& \phantom{=} + \{c_{(i + 1)/2}, c^*_{(j + 1)/2}\} + \{c^*_{(i + 1)/2}, c_{(j + 1)/2}\} \\
+&= 0 + 0 + \delta_{ij} + \delta_{ij} \\
+&= 2 \delta_{ij}
+\end{split}
+\eeq
 Similarly, when $i$ and $j$ are both even, one gets:
-\bea
-\{\psi_i, \psi_j\} &=& i (c_{i/2} - c^*_{i/2}) i (c_{j/2} - c^*_{j/2}) \\
-& & + i (c_{j/2} - c^*_{j/2}) i (c_{i/2} - c^*_{i/2}) \\
-&=& - \{c_{i/2}, c_{j/2}\} - \{c^*_{i/2}, c^*_{j/2}\} \\
-& & + \{c_{i/2}, c^*_{j/2}\} + \{c^*_{i/2}, c_{j/2}\} \\
-&=& - 0 - 0 + \delta_{ij} + \delta_{ij} \\
-&=& 2 \delta_{ij}
-\eea
+\beq
+\begin{split}
+\{\psi_i, \psi_j\}
+&= i (c_{i/2} - c^*_{i/2}) i (c_{j/2} - c^*_{j/2}) \\
+& \phantom{=} + i (c_{j/2} - c^*_{j/2}) i (c_{i/2} - c^*_{i/2}) \\
+&= - \{c_{i/2}, c_{j/2}\} - \{c^*_{i/2}, c^*_{j/2}\} \\
+& \phantom{=} + \{c_{i/2}, c^*_{j/2}\} + \{c^*_{i/2}, c_{j/2}\} \\
+&= - 0 - 0 + \delta_{ij} + \delta_{ij} \\
+&= 2 \delta_{ij}
+\end{split}
+\eeq
 Finally, when $i$ is odd and $j$ is even, the anticommutator becomes:
-\bea
-\{\psi_i, \psi_j\} &=& (c_{(i + 1)/2} + c^*_{(i + 1)/2}) i (c_{j/2} - c^*_{j/2}) \\
-& & + i (c_{j/2} - c^*_{j/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
-&=& i \{c_{(i + 1)/2}, c_{j/2}\} - i \{c^*_{(i + 1)/2}, c^*_{j/2}\} \\
-& & - i \{c_{(i + 1)/2}, c^*_{j/2}\} + i \{c^*_{(i + 1)/2}, c_{j/2}\} \\
-&=& 0 - 0 - \delta_{i+1,j} + \delta_{i+1,j} \\
-&=& 0
-\eea
+\beq
+\begin{split}
+\{\psi_i, \psi_j\}
+&= (c_{(i + 1)/2} + c^*_{(i + 1)/2}) i (c_{j/2} - c^*_{j/2}) \\
+&  \phantom{=}+ i (c_{j/2} - c^*_{j/2}) (c_{(i + 1)/2} + c^*_{(i + 1)/2}) \\
+&= i \{c_{(i + 1)/2}, c_{j/2}\} - i \{c^*_{(i + 1)/2}, c^*_{j/2}\} \\
+&  \phantom{=}- i \{c_{(i + 1)/2}, c^*_{j/2}\} + i \{c^*_{(i + 1)/2}, c_{j/2}\} \\
+&= 0 - 0 - \delta_{i+1,j} + \delta_{i+1,j} \\
+&= 0
+\end{split}
+\eeq
 thereby completing the proof that the operators $\psi_i$ form the elements of a Clifford algebra
 of $2d$ dimensions. If one also considers that fact that the definition of $\psi_i$
 is invertible and that $c_i$ can also be defined in terms of $\psi_i$, one can
@@ -709,11 +734,11 @@ As a result of the above discussion, we get the sub(quantum)group
 diagram:
 \[
 \begin{CD}
-{FIO(2d, \IR)}   @> \eqref{suba} >> {GrIO(2d, \IR)} @> \eqref{subb} >> {O(2d, \IR)} \\
-@V\eqref{subc}VV                    @V\eqref{subc}VV                   @V\eqref{subc}VV \\
-{FIU(d)}         @> \eqref{suba} >> {GrIU(d)}       @> \eqref{subb} >> {U(d)} \\
-@V\eqref{subd}VV \\
-{FA(d) \approx Clif(2d)}
+{FIO(2d, \IR)}   @> \eqref{subafer} >> {GrIO(2d, \IR)} @> \eqref{subbfer} >> {O(2d, \IR)} \\
+@V\eqref{subcfer}VV                    @V\eqref{subcfer}VV                   @V\eqref{subcfer}VV \\
+{FIU(d)}         @> \eqref{subafer} >> {GrIU(d)}       @> \eqref{subbfer} >> {U(d)} \\
+@V\eqref{subdfer}VV \\
+{FA(d) \approx Cliff(2d)}
 \end{CD}
 \]
 for the for the sub(quantum)groups of \FIO that have been introduced in
@@ -753,9 +778,9 @@ where the inhomogeneous part of the group are Grassmanian.
 
 If we consider the contraction of the subgroups as well then we
 should examine the $\hbar \rightarrow 0$ limit after the relations
-\eqref{subc} and \eqref{subd} are applied.
+\eqref{subcfer} and \eqref{subdfer} are applied.
 
-After we apply relation \eqref{subc}, we get the subgroup $FIU(d)$
+After we apply relation \eqref{subcfer}, we get the subgroup $FIU(d)$
 as discussed previously. After the contraction,
 again, the inhomogeneous part of this group become
 Grassmanian variables. However, as was shown during the contraction
@@ -766,8 +791,8 @@ homogeneous part of the transformation is a member of the general
 linear group $GL(d, \IC)$. Similarly this gives us $GrIGL(d, \IC)$.
 
 We have previously shown that we get the fermion
-algebra after applying both of the relations \eqref{subc} and
-\eqref{subd}. We have also discussed that in this case only the
+algebra after applying both of the relations \eqref{subcfer} and
+\eqref{subdfer}. We have also discussed that in this case only the
 inhomogeneous part of the transformation survives. After
 applying the contraction, the surviving inhomogeneous part of the
 transformation turns into Grassmanian variables. Thus
@@ -778,11 +803,11 @@ As a summary, for the contraction considered combined with the
 remaining subgroup relations we get the table:
 \[
 \begin{CD}
-{FIO(2d, \IR)}            @> \hbar \rightarrow 0 >> {GrIGL(2d, \IR)} \\
-@V\eqref{subc}VV                                    @V\eqref{subc}VV \\
-{FIU(d)}                  @> \hbar \rightarrow 0 >> {GrIGL(d, \IC)} \\
-@V\eqref{subd}VV                                    @V\eqref{subd}VV \\
-{FA(d) \approx Clif(2d)} @> \hbar \rightarrow 0 >> {Gr(d, \IC)}
+{FIO(2d, \IR)}            @> \hbar \rightarrow 0   >> {GrIGL(2d, \IR)} \\
+@V\eqref{subcfer}VV                                    @V\eqref{subcfer}VV \\
+{FIU(d)}                  @> \hbar \rightarrow 0   >> {GrIGL(d, \IC)} \\
+@V\eqref{subdfer}VV                                    @V\eqref{subdfer}VV \\
+{FA(d) \approx Cliff(2d)} @> \hbar \rightarrow 0    >> {Gr(d, \IC)}
 \end{CD}
 \]
 
@@ -850,84 +875,100 @@ to consider the three cases:
 \end{cases}
 \]
 For the case when $1 \leq i,j \leq d$, the above form becomes:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& 2\{Re(\gamma_i), Re(\gamma_j) \} \\
-&=& \frac12 \left[\{\gamma_i,\gamma_j\} + \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
-&=& \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) + (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
-& & \quad   \left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
-&=& \frac12 \left[2\delta_{ij} - (\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
-&=& \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right]
-\eea
+\beq \label{Gamma-case1}
+\begin{split}
+\{\Gamma_i, \Gamma_j\} &= 2\{Re(\gamma_i), Re(\gamma_j) \} \\
+&= \frac12 \left[\{\gamma_i,\gamma_j\} + \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
+&= \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) + (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+&  \phantom{{=} \frac12 \left[\right.}\left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&= \frac12 \left[2\delta_{ij} - (\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
+&= \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right]
+\end{split}
+\eeq
 however, for this case, the form of $A_{ik}A_{jk}$ is:
-\bea
-\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
-&=& \sum^{d}_{k = 1} \left[Re(\alpha_{ik} + \beta_{ik})Re(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Im(\alpha_{jk} - \beta_{jk})\right] \\
-&=& \frac14 \left[(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} + \alpha^*_{jk} + \beta^*_{jk}) \right.\\
-& & \quad   \left.-(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} - \alpha^*_{jk} + \beta^*_{jk}) \right] \\
-&=& \frac14 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta^*_{jk}) \right. \\
-& & \quad   \left.(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right. \\
-& & \quad   \left.(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik}) (\alpha_{jk} + \beta^*_{jk}) \right. \\
-& & \quad   \left.(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right] \\
-&=& \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk})\right]
-\eea
-and using this in the previous expression gives us:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
-&=& \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i,j \leq d$}
-\eea
-
+\beq
+\begin{split}
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &= \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&= \sum^{d}_{k = 1} \left[Re(\alpha_{ik} + \beta_{ik})Re(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Im(\alpha_{jk} - \beta_{jk})\right] \\
+&= \frac14 \left[(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} + \alpha^*_{jk} + \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left. -(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} - \alpha^*_{jk} + \beta^*_{jk}) \right] \\
+&= \frac14 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik}) (\alpha_{jk} + \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik}) (\alpha^*_{jk} + \beta^*_{jk}) \right] \\
+&= \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} + \beta_{jk}) \right]
+\end{split}
+\eeq
+and using this in equation \eqref{Gamma-case1} gives us:
+\beq
+\begin{split}
+\{\Gamma_i, \Gamma_j\} &= \delta_{ij} - \frac12 \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} + \beta_{jk}) + (\beta_{ik} + \alpha^*_{ik})(\alpha_{jk} + \beta_{jk})\right] \\
+&= \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i,j \leq d$}
+\end{split}
+\eeq
 For the case when $d + 1 \leq i,j \leq 2d$, the above form becomes:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& 2\{Im(\gamma_i), Im(\gamma_j) \} \\
-&=& - \frac12 \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} - \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
-&=& - \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
-& &   \quad   \left. - (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
-&=& - \frac12 \left[-2\delta_{ij} + (\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\beta^*_{ik} - \alpha_{ik})(\beta_{jk} - \alpha^*_{jk})\right] \\
-&=& \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
-\eea
+\beq
+\begin{split} \label{Gamma-case2}
+\{\Gamma_i, \Gamma_j\} &= 2\{Im(\gamma_i), Im(\gamma_j) \} \\
+&= - \frac12 \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} - \{\gamma^*_i,\gamma_j\} + \{\gamma^*_i,\gamma^*_j\}\right] \\
+&= - \frac12 \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+&    \phantom{{=} - \frac12 \left[\right.}\left. - (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) + (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&= - \frac12 \left[-2\delta_{ij} + (\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\beta^*_{ik} - \alpha_{ik})(\beta_{jk} - \alpha^*_{jk})\right] \\
+&= \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
+\end{split}
+\eeq
 however, for this case, the form of $A_{ik}A_{jk}$ is:
-\bea
-\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
-&=& \sum^{d}_{k = 1} \left[Im(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Re(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
-&=& \frac14 \left[-(\alpha_{ik} + \beta_{ik} - \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
-& & \quad   \left.+(\alpha_{ik} - \beta_{ik} + \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
-&=& \frac14 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
-& & \quad   \left.(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
-& & \quad   \left.(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
-& & \quad   \left.(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right] \\
-&=& \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
-\eea
-and using this in the previous expression gives us:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right] \\
-&=& \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $d + 1 \leq i,j \leq 2d$}
-\eea
-
+\beq
+\begin{split}
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &= \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&= \sum^{d}_{k = 1} \left[Im(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Re(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
+&= \frac14 \left[-(\alpha_{ik} + \beta_{ik} - \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha_{ik} - \beta_{ik} + \alpha^*_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
+&= \frac14 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} - \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+&  \phantom{{=} \frac14 \left[\right.}\left.+(\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right] \\
+&= \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right]
+\end{split}
+\eeq
+and using this in equation \eqref{Gamma-case2} gives us:
+\beq
+\begin{split}
+\{\Gamma_i, \Gamma_j\} &= \delta_{ij} - \frac12 \left[(\alpha^*_{ik} - \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha_{ik} - \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk})\right] \\
+&= \delta_{ij} - A_{ik}A_{jk} \quad \quad \text{for $d + 1 \leq i,j \leq 2d$}
+\end{split}
+\eeq
 Finally, for the case when $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$, the above form becomes:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& - 2\{Re(\gamma_i), Im(\gamma_j) \} \\
-&=& - \frac1{2i} \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} - \{\gamma^*_i,\gamma^*_j\}\right] \\
-&=& - \frac1{2i} \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
-& &   \quad      \left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) - (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
-&=& - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
-\eea
+\beq
+\begin{split} \label{Gamma-case3}
+\{\Gamma_i, \Gamma_j\} &= - 2\{Re(\gamma_i), Im(\gamma_j) \} \\
+&= - \frac1{2i} \left[\{\gamma_i,\gamma_j\} - \{\gamma_i,\gamma^*_j\} + \{\gamma^*_i,\gamma_j\} - \{\gamma^*_i,\gamma^*_j\}\right] \\
+&= - \frac1{2i} \left[(-\beta_{ik}\alpha_{jk}-\alpha_{ik}\beta_{jk}) - (\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik}\beta^*_{jk}) \right.\\
+&    \phantom{{=} - \frac1{2i} \left[\right.}\left. + (\delta_{ij} - \alpha^*_{ik}\alpha_{jk} - \beta^*_{ik}\beta_{jk}) - (-\beta^*_{ik}\alpha^*_{jk}-\alpha^*_{ik}\beta^*_{jk})\right] \\
+&= - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
+\end{split}
+\eeq
 however, for this case, the form of $A_{ik}A_{jk}$ is:
-\bea
-\sum^{2d}_{k = 1} A_{ik} A_{jk} &=& \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
-&=& \sum^{d}_{k = 1} \left[-Re(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
-&=& \frac1{4i} \left[-(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
-& & \quad      \left.+(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
-&=& \frac1{4i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
-& & \quad      \left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
-& & \quad      \left.(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
-& & \quad      \left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right] \\
-&=& \frac12    \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
-\eea
-and using this in the previous expression gives us:
-\bea
-\{\Gamma_i, \Gamma_j\} &=& - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right] \\
-&=& - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$}
-\eea
+\beq
+\begin{split}
+\sum^{2d}_{k = 1} A_{ik} A_{jk} &= \sum^{d}_{k = 1} A_{ik} A_{jk} + \sum^{2d}_{k = d + 1} A_{ik} A_{jk} \\
+&= \sum^{d}_{k = 1} \left[-Re(\alpha_{ik} + \beta_{ik})Im(\alpha_{jk} + \beta_{jk}) + Im(\alpha_{ik} - \beta_{ik})Re(\alpha_{jk} - \beta_{jk})\right] \\
+&= \frac1{4i} \left[-(\alpha_{ik} + \beta_{ik} + \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} + \beta_{jk} - \alpha^*_{jk} - \beta^*_{jk}) \right.\\
+&  \phantom{{=} \frac1{4i} \left[\right.}\left.+(\alpha_{ik} - \beta_{ik} - \alpha^*_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta_{jk} + \alpha^*_{jk} - \beta^*_{jk}) \right] \\
+&= \frac1{4i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac1{4i} \left[\right.}\left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) + (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right. \\
+&  \phantom{{=} \frac1{4i} \left[\right.}\left.+(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) + (\alpha_{ik} + \beta^*_{ik})(\alpha_{jk} - \beta^*_{jk}) \right. \\
+&  \phantom{{=} \frac1{4i} \left[\right.}\left.-(\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha^*_{jk} - \beta_{jk}) \right] \\
+&= \frac12    \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right]
+\end{split}
+\eeq
+and using this in equation \eqref{Gamma-case3} gives us:
+\beq
+\begin{split}
+\{\Gamma_i, \Gamma_j\} &= - \frac1{2i} \left[(\alpha_{ik} + \beta^*_{ik})(\alpha^*_{jk} - \beta_{jk}) - (\alpha^*_{ik} + \beta_{ik})(\alpha_{jk} - \beta^*_{jk})\right] \\
+&= - A_{ik}A_{jk} \quad \quad \text{for $1 \leq i \leq d$ and $d + 1 \leq j \leq 2d$}
+\end{split}
+\eeq
 which completes the derivation of equation \eqref{relcombined}.
 
 Similar to the analysis that went into finding the
@@ -941,17 +982,17 @@ can only restrict the algebra by setting the whole of $A$ to zero.
 Thus the resulting sub(quantum)algebra relations are:
 \begin{subequations}
 \bea
-\delta_{ij} - A_{ik}A_{jk} = 0 \label{subfa} \\
-\Gamma_i = 0 \label{subfb} \\
-A_{ij} = 0 \label{subfc}
+\delta_{ij} - A_{ik}A_{jk} = 0 \label{subaferodd} \\
+\Gamma_i = 0 \label{subbferodd} \\
+A_{ij} = 0 \label{subcferodd}
 \eea
 \end{subequations}
 which, through a similar analysis to the even dimensional case,
 gives us the following sub(quantum)group diagram:
 \[
 \begin{CD}
-{FIO(2d + 1, \IR)} @>\eqref{subfa}>> {GrIO(2d + 1, \IR)} @>\eqref{subfb}>> {O(2d + 1, \IR)} \\
-@V\eqref{subfc}VV\\
-{Clif(2d + 1)}
+{FIO(2d + 1, \IR)} @>\eqref{subaferodd}>> {GrIO(2d + 1, \IR)} @>\eqref{subbferodd}>> {O(2d + 1, \IR)} \\
+@V\eqref{subcferodd}VV\\
+{Cliff(2d + 1)}
 \end{CD}
 \]

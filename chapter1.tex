@@ -1,37 +1,123 @@
 \section{Bosons and fermions}
-The concept of bosonic and fermionic particles is one of the most important concepts in modern quantum physics. The behavior of large scale matter, from chemical properties of elements to superconductivity and superfluidity can mostly be understood by referring to the fermionic or bosonic nature of the quantum mechanical particles involved in such processes. It is for this reason that understanding the symmetry properties of these phenomena and, motivated by their importance, trying to find other behavior that mimic them is very meaningful.
+The concept of bosonic and fermionic particles is one of the most important concepts
+in modern quantum physics. The behavior of large scale matter, from chemical
+properties of elements to superconductivity and superfluidity can mostly be
+understood by referring to the fermionic or bosonic nature of the quantum
+mechanical particles involved in such phenomena. It is for this reason that
+understanding the symmetry properties of these phenomena and, motivated by their
+importance, trying to find other behavior that mimic them is very meaningful.
 
-Furthermore, while bosonic behavior has a classical counterpart, the concept of a fermionic particle is one that can only exist in the quantum domain. This fact makes the study of such behavior even more important. However, what could be more interesting is the study of other such constructs that cannot have a classical counterpart. These constructs would thus belong solely in the quantum domain and could help us understand phenomena that are strictly quantum mechanical in nature.
+Furthermore, while bosonic behavior has a classical counterpart, the
+concept of a fermionic particle is one that can only exist in the quantum
+domain. This fact makes the study of such behavior even more important.
+However, what could be more interesting is the study of other such
+constructs that cannot have a classical counterpart. These constructs would
+thus belong solely in the quantum domain and could help us understand phenomena
+that are strictly quantum mechanical in nature.
 
-There is a strong relation between the spin properties of a particle and the particle being a boson or a fermion. In fact, it is a proven fact of quantum physics that integer spin particles are bosons and half-integer spin particles are fermions. This is most often referred to as the "spin-statistics theorem" in quantum mechanics and is a very interesting fact since it implies a relationship between two concepts that seem to be totally unrelated. This strong relation between the bosonic/fermionic nature of a particle and its spin make the angular momentum algebra also very central in quantum physics.
+There is a strong relation between the spin properties of a particle and
+the particle being a boson or a fermion. In fact, it is a proven fact of
+quantum physics that integer spin particles are bosons and half-integer spin
+particles are fermions. This is most often referred to as the "spin-statistics
+theorem" in quantum mechanics and is a very interesting fact since it implies
+a relationship between two concepts that seem to be totally unrelated. This
+strong relation between the bosonic/fermionic nature of a particle and its spin
+makes the angular momentum algebra also very central in quantum physics.
 
-Before we start investigating such matters, it would be apt to give an overview of the state of bosons and fermions and the angular momentum algebra as it has been studied up to now.
+Before we start investigating such matters, it would be apt to give an
+overview of the state of bosons and fermions and the angular momentum
+algebra as it has been studied up to now.
 
-When the harmonic oscillator is studied in a quantum mechanical manner, one arrives at the relation:
+When the harmonic oscillator is studied in a quantum mechanical manner,
+one arrives at the relation:
 \beq
 a \adag - \adag a = 1 \label{bosonic comm rel}
 \eeq
-for the system the Hamiltonian of which is given by $\frac{\hbar \omega}{2} (a \adag + \adag a)$. The spectrum of this Hamiltonian, which in turn gives us the allowable energy levels of the quantum harmonic oscillator, can be obtained easily by introducing the hermitian operator $N = \adag a$ which satisfies the following relations with $a$ and $\adag$:
+to describe the system. The Hamiltonian of this system is given
+by $\frac{\hbar \omega}{2} (a \adag + \adag a)$. The spectrum of this
+Hamiltonian, which in turn gives us the allowable energy levels of the
+quantum harmonic oscillator, can be obtained easily by introducing the
+hermitian operator $N = \adag a$ which satisfies the following relations
+with $a$ and $\adag$:
 \bea
  [ N , \adag ] &=& \adag \\ [0pt]
  [ N , a ]     &=& a
 \eea
-where $[\;,\; ]$ denotes the usual commutator. By observing the fact that the Hamiltonian is nothing but $\hbar \omega (N + \frac12)$, one can see that one can get the states that correspond to the energy levels as eigenvectors $\ket{n}$, of the operator $N$. The action of $\adag$ and $a$ on such an eigenvector $\ket{n}$ is found to be:
+where $[\;,\; ]$ denotes the usual commutator. By observing the fact
+that the Hamiltonian is nothing but $\hbar \omega (N + \frac12)$, one
+can see that one can get the states that correspond to the energy levels
+as eigenvectors $\ket{n}$, of the operator $N$. The action of $\adag$
+and $a$ on such an eigenvector $\ket{n}$ is found to be:
 \bea
 \adag \ket{n} &=& \sqrt{n + 1} \ket{n + 1} \\
 a \ket{n} &=& \sqrt{n} \ket{n - 1}
 \eea
-Due to the fact that the operator $N$ is a positive hermitian operator, its eigenvalues, namely $n$, cannot be negative. For a given positive value of $n$, however, one can construct states with eigenvalues $n-1$, $n-2$, $n-3$, and so on, by repeatedly applying the operator $a$ on the original state. This sequence of eigenvalues will contain negative values eventually for any given finite $n$ unless it is an integer. In that case, the sequence will end at the eigenvalue $0$ since a further application of the operator $a$ on that state will give us the zero vector of the Hilbert space which is not a physically observable state and is thus a state out of our domain.
+Due to the fact that the operator $N$ is a positive hermitian operator,
+its eigenvalues, namely $n$, cannot be negative. For a given positive
+value of $n$, however, one can construct states with eigenvalues $n-1$,
+$n-2$, $n-3$, and so on, by repeatedly applying the operator $a$ on the
+original state. This sequence of eigenvalues will contain negative values
+eventually for any given finite $n$ unless it is an integer. In that case,
+the sequence will end at the eigenvalue $0$ since a further application of
+the operator $a$ on that state will give us the zero vector of the Hilbert
+space which is not a physically observable state and is thus a state
+out of our domain.
 
-As a result of this study one finds that the values of $n$, the eigenvalues of the operator $N$, begin from $0$ and increase by $1$ every time $\adag$ is applied on the relevant state and that the energy levels of the quantum harmonic oscillator are given by $\hbar \omega (n + \frac12)$. The operators $\adag$ and $a$ turn out to be  operators that create and destroy, respectively, one quanta of energy and for this reason they are usually called creation and annihilation operators.
+As a result of this study one finds that the values of $n$, the
+eigenvalues of the operator $N$, begin from $0$ and increase by
+$1$ every time $\adag$ is applied on the relevant state and that the energy
+levels of the quantum harmonic oscillator are given by $\hbar \omega (n + \frac12)$.
+The operators $\adag$ and $a$ turn out to be  operators that create and destroy,
+respectively, one quanta of energy and for this reason they are usually called
+creation and annihilation operators.
 
-Even though this operator algebra seems to only describe the quantum harmonic oscillator, when one studies quantum field theory, this algebra comes up as the algebra of the Fourier coefficients of the field operator describing a bosonic particle. Each normal mode of a quantum field behaves as if it is an independent harmonic oscillator and for that reason we have a separate set of creation and annihilation operators for each of these modes. In that setting, the operators $\adag_p$ and $a_p$, which now carry a continuous momentum index, are interpreted as the operators that create and destroy, respectively, one bosonic particle of such a field with momentum $p$.
+Even though this operator algebra seems to only describe the quantum harmonic
+oscillator, when one studies quantum field theory, this algebra comes up as the
+algebra of the Fourier coefficients of the field operator describing a bosonic
+particle. Each normal mode of a quantum field behaves as if it is an independent
+harmonic oscillator and for that reason we have a separate set of creation and
+annihilation operators for each of these modes. In that setting, the operators
+$\adag_p$ and $a_p$, which now carry a continuous momentum index, are interpreted
+as the operators that create and destroy, respectively, one bosonic particle
+of such a field with momentum $p$.
 
 For fermionic particles the story is a little bit more different.
-In 1925, Pauli first proposed his "exclusion principle" to explain the behavior of electrons in an atom. According to this principle, no two electrons could exist in the same quantum state and it was for this reason that electrons could not all occupy the lowest energy state in the atomic orbitals but instead had to line up the energy levels in a well ordered manner. The implication of this principle to the electron gas was first considered by Fermi and Dirac and it is for this reason that particles that obey these statistics are called "fermions". In 1926 Dirac noted that the "exclusion principle" could apply to other particles by relating bosons and fermions to the symmetry of the many-particle wavefunction. If the wavefunction changes sign upon exchange of two particles then those particles would be fermions and they would be bosons if the wavefunction did not change sign. This treatment effectively implies the Pauli exclusion principle since if there were to be two fermionic particles occupying the same quantum state, then upon their exchange the wavefunction would change sign; on the other hand, we expect the wavefunction to be identical to the original one before the exchange since nothing must have changed about the quantum state of the system. For this reason the original wavefunction can be nothing but zero if it is to be equal to its negative in this manner. Thus, by contradiction, one can show that no two fermions can exist in the same quantum state. It was only later, in 1928, that Jordan and Wigner proposed that in order to treat fermions in quantum field theory, their field operators had
-to anticommute so that the wavefunction could be antisymmetric. They showed that a consistent second-quantization of fermions implied anticommutation relations on the field operators. This is turn implies that the Fourier coefficients of the field operators that belong to a normal mode also obey anticommutation relations instead of the commutation relations that the bosonic creation and annihilation operators obey.
+In 1925, Pauli first proposed his "exclusion principle" to explain the behavior
+of electrons in an atom. According to this principle, no two electrons could
+exist in the same quantum state and it was for this reason that electrons could not
+all occupy the lowest energy state in the atomic orbitals but instead had to line up
+the energy levels in a well ordered manner. The implication of this principle to the
+electron gas was first considered by Fermi and Dirac and it is for this reason that
+particles that obey these statistics are called "fermions". In 1926 Dirac noted that
+the "exclusion principle" could apply to other particles by relating bosons and
+fermions to the symmetry of the many-particle wavefunction. If the wavefunction
+changes sign upon exchange of two particles then those particles would be fermions
+and they would be bosons if the wavefunction did not change sign. This treatment
+effectively implies the Pauli exclusion principle since if there were to be two
+fermionic particles occupying the same quantum state, then upon their exchange
+the wavefunction would change sign; on the other hand, we expect the wavefunction
+to be identical to the original one before the exchange since nothing must have
+changed about the quantum state of the system. For this reason the original
+wavefunction can be nothing but zero if it is to be equal to its negative in
+this manner. Thus, by contradiction, one can show that no two fermions can exist
+in the same quantum state. It was only later, in 1928, that Jordan and Wigner
+proposed that in order to treat fermions in quantum field theory, their field
+operators had to anticommute so that the wavefunction could be antisymmetric.
+They showed that a consistent second-quantization of fermions implied anticommutation
+relations on the field operators. This is turn implies that the Fourier coefficients
+of the field operators that belong to a normal mode also obey anticommutation
+relations instead of the commutation relations that the bosonic creation and
+annihilation operators obey.
 
-In this work, we would like to give an alternative derivation of this algebra by only starting from the Pauli exclusion principle and assuming that fermionic particles also have creation and annihilation operators just like the bosonic particles. If this is the case then Pauli exclusion principle tells us that we cannot create a second fermion in the same quantum state, i.e. that $(\adag)^2$, and in turn $a^2$, should be $0$. This relation, however, is not compatible with the commutation relation (\ref{bosonic comm rel}) and thus should be supplemented with another kind of relation. If we define the operator $K$ as the anticommutator of $a$ and $\adag$:
+In this work, we would like to give an alternative derivation of this algebra
+by only starting from the Pauli exclusion principle and assuming that fermionic
+particles also have creation and annihilation operators just like the bosonic
+particles. If this is the case then Pauli exclusion principle tells us that we
+cannot create a second fermion in the same quantum state, i.e. that $(\adag)^2$,
+and in turn $a^2$, should be $0$. This relation, however, is not compatible with
+the commutation relation (\ref{bosonic comm rel}) and thus should be supplemented
+with another kind of relation. If we define the operator $K$ as the anticommutator
+of $a$ and $\adag$:
 \beq
 K \equiv a \adag + \adag a
 \eeq
@@ -40,19 +126,39 @@ then we find that $K$ is a central element of the algebra, since:
 \adag K &= \adag (a \adag + \adag a ) =& \adag a \adag \\
 K \adag &= (a \adag + \adag a ) \adag =& \adag a \adag
 \eea
-which implies that $K$ commutes with $\adag$ and similarly with $a$, thus making it a central element of the algebra. The central operator $K$ can be written as a multiple of the identity $k\I1$ and if we rescale the operators $a$ and $\adag$ by $1/\sqrt{k}$, we arrive at the fermion anticommutator algebra:
+which implies that $K$ commutes with $\adag$ and similarly with $a$, thus making
+it a central element of the algebra. The central operator $K$ can be written as
+a multiple of the identity $k\I1$ and if we rescale the operators $a$ and $\adag$
+by $1/\sqrt{k}$, we arrive at the fermion anticommutator algebra:
 \bea
 a^2 &=& 0 \\
 a \adag + \adag a &=& 1
 \eea
 
-This derivation of the fermion algebra also shows clearly that the physically more important relation is the fact that the square of the annihilation operator is zero, since the other relation follows from this fact. In literature, it is often the case that only the anticommutation relation is presented as describing fermionic particles, completely omitting the other, more important, relation. This is usually falsely motivated by the assumption that the anticommutation relation uniquely describes a fermionic system just as the commutation relation alone describes a bosonic system. As we show in Appendix A of this work, however, without the first relation, the anticommutation relation alone describes a completely different system which still has two states but is not equivalent to the fermionic system.
+This derivation of the fermion algebra also shows clearly that the physically more
+important relation is the fact that the square of the annihilation operator is zero,
+since the other relation follows from this fact. In literature, it is often the
+case that only the anticommutation relation is presented as describing fermionic
+particles, completely omitting the other, more important, relation. This is
+usually falsely motivated by the assumption that the anticommutation relation
+uniquely describes a fermionic system just as the commutation relation alone
+describes a bosonic system. As we show in Appendix A of this work, however,
+without the first relation, the anticommutation relation alone describes a
+completely different system which still has two states but is not equivalent to the
+fermionic system.
 
-A study of this fermion algebra, similar to the boson algebra, shows that, again, a hermitian positive-definite number operator $N = \adag a$ can be defined and has eigenvalues $0$ and $1$ that correspond to the states $\ket{0}$ and $\ket{1}$, respectively. In harmony with our original assumption, the operator $\adag$ takes the state $\ket{0}$ to the state $\ket{1}$ thus fulfilling the interpretation of it as a creation operator. Similarly, the operator $a$ acts as an annihilation operator of the algebra.
+A study of this fermion algebra, similar to the boson algebra, shows that, again,
+a hermitian positive-definite number operator $N = \adag a$ can be defined and has
+eigenvalues $0$ and $1$ that correspond to the states $\ket{0}$ and $\ket{1}$,
+respectively. In harmony with our original assumption, the operator $\adag$ takes
+the state $\ket{0}$ to the state $\ket{1}$ thus fulfilling the interpretation of
+it as a creation operator. Similarly, the operator $a$ acts as an annihilation
+operator of the algebra.
 
 \section{Quantum groups and Hopf algebras}
 
-The discovery of quantum groups has historically been motivated by the study of quantization of non-linear completely integrable systems \cite{sklyanin}.
+The discovery of quantum groups has historically been motivated by the study
+of quantization of non-linear completely integrable systems \cite{sklyanin}.
 
 \section{Quantum matrix groups}
 
@@ -68,13 +174,19 @@ a_{n1} & \ldots & \ldots & a_{nn}
 \end{array}
 \right)
 \eeq
-such that every element of the matrix belong to a Hopf Algebra $\mathcal{H}$. The matrix group defined in this way naturally becomes a Hopf algebra with the coproduct, counit and coinverse of the matrix algebra being defined as:
+such that every element of the matrix belong to a Hopf Algebra $\mathcal{H}$.
+The matrix group defined in this way naturally becomes a Hopf algebra with the
+coproduct, counit and coinverse of the matrix algebra being defined as:
 \bea
 \triangle(M) &=& M \dot{\otimes} M \\
 \epsilon(M) &=& \I1 \\
 S(M) &=& M^{-1}
 \eea
-where $\dot{\otimes}$ stands for the operation where when the matrix multiplication is performed but the matrix elements are multiplied using the tensor product is instead of the normal product. The relations above imply the definitions of the coproduct, counit and coinverse of the matrix elements:
+where $\dot{\otimes}$ stands for the operation
+where when the matrix multiplication is performed the matrix
+elements are multiplied using the tensor product is instead of the
+normal product. The relations above imply the definitions of the
+coproduct, counit and coinverse of the matrix elements:
 \bea
 \triangle(\alpha_{ij}) &=& \sum_k \alpha_{ik} \otimes \alpha_{kj} \\
 \epsilon(\alpha_{ij}) &=& \delta_{ij} \\
