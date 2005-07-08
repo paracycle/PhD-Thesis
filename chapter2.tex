@@ -171,37 +171,52 @@ M =
 \eeq
 such that the matrix elements satisfy the following relations:
 \bea
+a b & = & q b a \label{ab} \\
+b d & = & q d b \label{bd} \\
 a c & = & q c a \label{ac} \\
+c d & = & q d c \label{cd} \\
 a d - q b c & = & d a - q^{-1} c b \label{det} \\
 b c & = & c b \label{bc}
 \eea
-Using this definition of $GL_q(2)$, we can define the quantum special
-orthogonal group $SO_q(3)$ as the quantum subgroup of $SL_q(3, \IC)$
-where an element is given by:
+Using this definition of $GL_q(2)$, we first define $GL_q(3)$ as the set of
+matrices:
 \beq
 A =
   \begin{pmatrix}
     A_{11} & A_{12} & A_{13} \\
     A_{21} & A_{22} & A_{23} \\
     A_{31} & A_{32} & A_{33}
-  \end{pmatrix}
+  \end{pmatrix} \in GL_q(3)
 \eeq
 where
-\begin{gather}
-A_{ij}^* = A_{ij} \quad , \\
-A^T= A^{-1} \quad , \\
-\intertext{and}
+\beq
 \label{gl2}
 \begin{pmatrix}
   A_{in} & A_{im} \\
   A_{jn} & A_{jm}
 \end{pmatrix}
 \in GL_{q}(2) \quad \text{for $i \neq j$ and $m \neq n$}\quad .
-\end{gather}
-
-The quantum group $SO_q(3)$ is equivalent to the quantum group
+\eeq
+From $GL_q(3)$, one can obtain the quantum special linear group in
+3-dimensions, $SL_q(3)$ by imposing the condition:
+\beq
+det_{q}(A) = 1
+\eeq
+where the quantum determinant is defined as presented in the Introduction.
+Furthermore, on $SL_q(3)$, one can impose the "reality" condition:
+\beq
+A_{ij} = A^*_{ij}
+\eeq
+thus ending up the quantum group $SL_q(3, \IR)$. On the other hand, one
+can impose the unitarity condition:
+\beq
+A^\dagger = A^{-1}
+\eeq
+on $SL_q(3)$ and
+obtain the quantum group $SU_q(3)$. The quantum group $SO_q(3)$ 
+is equivalent to the quantum group
 \mbox{$SL_q(3, \IR) \cap SU_q(3)$}. However one can show for
-$SL_q(3)$ that $q= e^{i\beta}$ for some $\beta \in \IR$ and
+$SL_q(3, \IR)$ that $q= e^{i\beta}$ for some $\beta \in \IR$ and
 similarly for $SU_q(3)$ that $q \in \IR$. Thus one finds that $q =
 \pm 1$ for $SO_q(3)$. When $q = 1$ the quantum group becomes the
 usual $SO(3)$ group; the interesting case is when $q = -1$ which,
