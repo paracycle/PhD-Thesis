@@ -213,7 +213,7 @@ can impose the unitarity condition:
 A^\dagger = A^{-1}
 \eeq
 on $SL_q(3)$ and
-obtain the quantum group $SU_q(3)$. The quantum group $SO_q(3)$ 
+obtain the quantum group $SU_q(3)$. The quantum group $SO_q(3)$
 is equivalent to the quantum group
 \mbox{$SL_q(3, \IR) \cap SU_q(3)$}. However one can show for
 $SL_q(3, \IR)$ that $q= e^{i\beta}$ for some $\beta \in \IR$ and
@@ -392,6 +392,64 @@ from the $\mu= -j$ state and applying $J_-$ and $J_+$ alternately;
 starting with $J_-$.
 \\
 We now give a few examples:
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(ul,dl)[]_*+{J_+} \ar@{-}[r]^-*+{0} & \ar@(ur,dr)[]^*+{J_-}
+  }
+  \]
+  \caption{State diagram for $j=0$}
+  \label{J0Diagram}
+\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@/_/[d]_*+{J_+} \ar@{-}[r]^-*+{+1} & \\
+    \ar@/_/[d]_*+{J_-} \ar@{-}[r]^-*+{0} & \\
+    \ar@{-}[r]^-*+{-1} &  \\
+  }
+  \]
+  \caption{State diagram for $j=1$}
+  \label{J1Diagram}
+\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{+2} & \\
+    \ar@(dl,ul)[ddd]_>>>>>*+{J_-} \ar@{-}[r]^-*+{+1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@/_/[u]_-*+{J_+} \\
+    \ar@{-}[r]^-*+{-1} & \ar@/_/[u]_-*+{J_-} \\
+    \ar@{-}[r]^-*+{-2} &
+  }
+  \]
+  \caption{State diagram for $j=2$}
+  \label{J2Diagram}
+\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@(ul,dl)[]_*+{J_+} \ar@{-}[rr]^-*+{\frac12} & & \\
+                                                  & \ar@{-}[rr]^-*+{-\frac12} & & \ar@(ur,dr)[]^*+{J_-} \\
+  }
+  \]
+  \caption{State diagram for $j=\frac12$}
+  \label{J1/2Diagram}
+\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@/_/[dd]_*+{J_+} \ar@{-}[rr]^-*+{\frac32} &  & \\
+                                                 & \ar@{-}[rr]^-*+{\frac12} &   & \\
+    \ar@{-}[rr]^-*+{-\frac12} & *\txt<2pc>{}      &  & \\
+                                                 & \ar@{-}[rr]^-*+{-\frac32} &   & \ar@/_/[uu]^*+{J_-}\\
+  }
+  \]
+  \caption{State diagram for $j=\frac32$}
+  \label{J3/2Diagram}
+\end{figure}
+\pagebreak
+\begin{comment}
 \begin{itemize}
   \item
 For $\mathbf{j=2}$ the states follow the sequence:
@@ -418,6 +476,7 @@ For $\mathbf{j=\frac{5}{2}}$ the two representations are given by:
 \]
 
 \end{itemize}
+\end{comment}
 
 \section{Hopf Algebra Structure with braiding}
 

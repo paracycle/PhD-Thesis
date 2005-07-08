@@ -158,7 +158,98 @@ operator of the algebra.
 \section{Quantum groups and Hopf algebras}
 
 The discovery of quantum groups has historically been motivated by the study
-of quantization of non-linear completely integrable systems \cite{sklyanin}.
+of quantization of non-linear completely integrable systems \cite{sklyanin}. The study of
+such systems has shown that some non-linear completely integrable systems that
+possess group symmetries, when quantized, acquire a different kind of symmetry;
+a symmetry under quantum groups. By definition quantum groups are non-commutative and
+non-cocommutative Hopf algebras and thus the physical importance of quantum groups and
+Hopf algebras, in general, is very great since the aforementioned discovery.
+
+In order to give an overview of the definition of a Hopf algebra and the motivations
+behind these definition, we will start from the definition of an associative algebra
+and starting form that definition give definitions of coalgebra, bialgebra and Hopf
+algebra.
+
+\subsection{Associative Algebras}
+In abstract mathematics, an associative algebra $A$ over a field $F$ is
+defined to be a vector space over
+$F$ with an $F$ bilinear multiplication $m: A \otimes A \rightarrow A$ (where the image of
+$(x, y) \in A \otimes A$ which is $m(x,y)$ is usually written as $xy$) such that the associativity
+law:
+\beq
+(xy)z = x(yz) \quad \text{for all $x,y,z \in A$}
+\eeq
+is satisfied. This associativity condition can also be written without reference to any of
+the elements of the algebra $A$ by first considering that the condition is equivalent to:
+\beq
+m\circ(m(x, y), z) = m\circ(x, m(y,z)) \quad \text{for all $x,y,z \in A$},
+\eeq
+where $\circ$ denotes functional composition,
+and then realizing that the "for all" condition can be expressed as:
+\beq
+m\circ(m(A \otimes A) \otimes A) = m\circ(A \otimes m(A \otimes A)) \quad .
+\eeq
+If we further define the identity operator on $A$ as $id(x) = x$
+for all $x \in A$, then we can write the above form as:
+\beq
+m\circ(m \otimes id) (A \otimes A \otimes A) = m\circ(id \otimes m) (A \otimes A \otimes A) \quad ,
+\eeq
+where it is obvious that we can drop the $A \otimes A \otimes A$ terms from both sides
+of the equation without losing the expressive power of the relation. Thus we end up with:
+\beq
+m\circ(m \otimes id) = m\circ(id \otimes m)
+\eeq
+for the definition of associativity of the product on an algebra $A$. This form of "element free
+notation", where appropriate, will be used in this work from this point on.
+
+An associative algebra is called unital if the algebra $A$ contains an identity element $1$ such
+that $1x = x1 = x$ for all $x \in A$. Such a unital algebra is also a ring and contains all the
+elements of the field $F$ by identifying an element $a$ of the field with the algebra element $a1$.
+This identification can be expressed as the existence of a unit map $\eta: F \rightarrow A$ which
+has the property:
+\beq
+m \circ (id \otimes \eta) = s = m \circ (\eta \otimes id)
+\eeq
+where $s$ is the scalar multiplication $s: F \otimes A \rightarrow A$ such that $s(k, x) = kx$.
+Since $F \otimes A$ is isomorphic to the original algebra $A$, the above relation is sometimes
+written with $id$ in place of $s$ with scalar multiplication being implicitly understood.
+
+As a result, we can see that the definition of a unital associative algebra is a
+vector space over a field $F$ with two operations, $m: A \otimes A \rightarrow A$
+and $\eta: F \rightarrow A$ defined such that the operations satisfy:
+\begin{align}
+m\circ(m \otimes id) &= m\circ(id \otimes m) \\
+m \circ (id \otimes \eta) = &\; id = m \circ (\eta \otimes id)
+\end{align}
+These relations can also be written as the condition that the following diagrams
+commute:
+\pagebreak
+\begin{figure}[!h]
+  \[
+  \xymatrix@=100pt{
+    A \otimes A \otimes A \ar[r]^-*+{m \circ id} \ar[d]^-*+{id \circ m}& A \otimes A \ar[d]^-*+{m}\\
+    A \otimes A \ar[r]^-*+{m} & A \\
+  }
+  \]
+  \caption{Associativity in an algebra $A$}
+  \label{assoc-algebra}
+\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@=100pt{
+    F \otimes A \cong A \cong A \otimes F
+       \ar[r]^-*+{\eta \circ id}
+       \ar[d]^-*+{id \circ \eta}
+       \ar[dr]^-*+{id} & A \times A \ar[d]^-*+{m}\\
+    A \times A \ar[r]^-*+{m} & A \\
+  }
+  \]
+  \caption{Existence of unit in the algebra $A$}
+  \label{unit-algebra}
+\end{figure}
+
+
+\subsection{Coalgebras}
 
 \section{Quantum matrix groups}
 
