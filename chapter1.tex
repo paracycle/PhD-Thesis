@@ -7,6 +7,7 @@ mechanical particles involved in such phenomena. It is for this reason that
 understanding the symmetry properties of these phenomena and, motivated by their
 importance, trying to find other behavior that mimic them is very meaningful.
 
+
 Furthermore, while bosonic behavior has a classical counterpart, the
 concept of a fermionic particle is one that can only exist in the quantum
 domain. This fact makes the study of such behavior even more important.
@@ -15,18 +16,21 @@ constructs that cannot have a classical counterpart. These constructs would
 thus belong solely in the quantum domain and could help us understand phenomena
 that are strictly quantum mechanical in nature.
 
+
 There is a strong relation between the spin properties of a particle and
 the particle being a boson or a fermion. In fact, it is a proven fact of
 quantum physics that integer spin particles are bosons and half-integer spin
-particles are fermions. This is most often referred to as the "spin-statistics
-theorem" in quantum mechanics and is a very interesting fact since it implies
+particles are fermions. This is most often referred to as the {\it spin-statistics
+theorem} in quantum mechanics and is a very interesting fact since it implies
 a relationship between two concepts that seem to be totally unrelated. This
 strong relation between the bosonic/fermionic nature of a particle and its spin
 makes the angular momentum algebra also very central in quantum physics.
 
+
 Before we start investigating such matters, it would be apt to give an
 overview of the state of bosons and fermions and the angular momentum
 algebra as it has been studied up to now.
+
 
 When the harmonic oscillator is studied in a quantum mechanical manner,
 one arrives at the relation:
@@ -63,6 +67,7 @@ the operator $a$ on that state will give us the zero vector of the Hilbert
 space which is not a physically observable state and is thus a state
 out of our domain.
 
+
 As a result of this study one finds that the values of $n$, the
 eigenvalues of the operator $N$, begin from $0$ and increase by
 $1$ every time $\adag$ is applied on the relevant state and that the energy
@@ -70,6 +75,7 @@ levels of the quantum harmonic oscillator are given by $\hbar \omega (n + \frac1
 The operators $\adag$ and $a$ turn out to be  operators that create and destroy,
 respectively, one quanta of energy and for this reason they are usually called
 creation and annihilation operators.
+
 
 Even though this operator algebra seems to only describe the quantum harmonic
 oscillator, when one studies quantum field theory, this algebra comes up as the
@@ -81,15 +87,16 @@ $\adag_p$ and $a_p$, which now carry a continuous momentum index, are interprete
 as the operators that create and destroy, respectively, one bosonic particle
 of such a field with momentum $p$.
 
+
 For fermionic particles the story is a little bit more different.
-In 1925, Pauli first proposed his "exclusion principle" to explain the behavior
+In 1925, Pauli first proposed his {\it exclusion principle} to explain the behavior
 of electrons in an atom. According to this principle, no two electrons could
 exist in the same quantum state and it was for this reason that electrons could not
 all occupy the lowest energy state in the atomic orbitals but instead had to line up
 the energy levels in a well ordered manner. The implication of this principle to the
 electron gas was first considered by Fermi and Dirac and it is for this reason that
-particles that obey these statistics are called "fermions". In 1926 Dirac noted that
-the "exclusion principle" could apply to other particles by relating bosons and
+particles that obey these statistics are called {\it fermions}. In 1926 Dirac noted that
+the exclusion principle could also apply to other particles by relating bosons and
 fermions to the symmetry of the many-particle wavefunction. If the wavefunction
 changes sign upon exchange of two particles then those particles would be fermions
 and they would be bosons if the wavefunction did not change sign. This treatment
@@ -108,6 +115,7 @@ relations on the field operators. This is turn implies that the Fourier coeffici
 of the field operators that belong to a normal mode also obey anticommutation
 relations instead of the commutation relations that the bosonic creation and
 annihilation operators obey.
+
 
 In this work, we would like to give an alternative derivation of this algebra
 by only starting from the Pauli exclusion principle and assuming that fermionic
@@ -135,6 +143,7 @@ a^2 &=& 0 \\
 a \adag + \adag a &=& 1
 \eea
 
+
 This derivation of the fermion algebra also shows clearly that the physically more
 important relation is the fact that the square of the annihilation operator is zero,
 since the other relation follows from this fact. In literature, it is often the
@@ -142,10 +151,11 @@ case that only the anticommutation relation is presented as describing fermionic
 particles, completely omitting the other, more important, relation. This is
 usually falsely motivated by the assumption that the anticommutation relation
 uniquely describes a fermionic system just as the commutation relation alone
-describes a bosonic system. As we show in Appendix A of this work, however,
+describes a bosonic system. However,
 without the first relation, the anticommutation relation alone describes a
 completely different system which still has two states but is not equivalent to the
 fermionic system.
+
 
 A study of this fermion algebra, similar to the boson algebra, shows that, again,
 a hermitian positive-definite number operator $N = \adag a$ can be defined and has
@@ -155,7 +165,9 @@ the state $\ket{0}$ to the state $\ket{1}$ thus fulfilling the interpretation of
 it as a creation operator. Similarly, the operator $a$ acts as an annihilation
 operator of the algebra.
 
+
 \section{Quantum groups and Hopf algebras}
+
 
 The discovery of quantum groups has historically been motivated by the study
 of quantization of non-linear completely integrable systems \cite{sklyanin}. The study of
@@ -165,10 +177,12 @@ a symmetry under quantum groups. By definition quantum groups are non-commutativ
 non-cocommutative Hopf algebras and thus the physical importance of quantum groups and
 Hopf algebras, in general, is very great since the aforementioned discovery.
 
+
 In order to give an overview of the definition of a Hopf algebra and the motivations
 behind these definition, we will start from the definition of an associative algebra
 and starting form that definition give definitions of coalgebra, bialgebra and Hopf
 algebra.
+
 
 \subsection{Associative Algebras}
 In abstract mathematics, an associative algebra $A$ over a field $F$ is
@@ -185,7 +199,7 @@ the elements of the algebra $A$ by first considering that the condition is equiv
 m\circ(m(x, y), z) = m\circ(x, m(y,z)) \quad \text{for all $x,y,z \in A$},
 \eeq
 where $\circ$ denotes functional composition,
-and then realizing that the "for all" condition can be expressed as:
+and then realizing that the {\it for all} condition can be expressed as:
 \beq
 m\circ(m(A \otimes A) \otimes A) = m\circ(A \otimes m(A \otimes A)) \quad .
 \eeq
@@ -199,8 +213,9 @@ of the equation without losing the expressive power of the relation. Thus we end
 \beq
 m\circ(m \otimes id) = m\circ(id \otimes m)
 \eeq
-for the definition of associativity of the product on an algebra $A$. This form of "element free
-notation", where appropriate, will be used in this work from this point on.
+for the definition of associativity of the product on an algebra $A$. This form of {\it element free
+notation}, where appropriate, will be used in this work from this point on.
+
 
 An associative algebra is called unital if the algebra $A$ contains an identity element $1$ such
 that $1x = x1 = x$ for all $x \in A$. Such a unital algebra is also a ring and contains all the
@@ -213,6 +228,7 @@ m \circ (id \otimes \eta) = s = m \circ (\eta \otimes id)
 where $s$ is the scalar multiplication $s: F \otimes A \rightarrow A$ such that $s(k, x) = kx$.
 Since $F \otimes A$ is isomorphic to the original algebra $A$, the above relation is sometimes
 written with $id$ in place of $s$ with scalar multiplication being implicitly understood.
+
 
 As a result, we can see that the definition of a unital associative algebra is a
 vector space over a field $F$ with two operations, $m: A \otimes A \rightarrow A$
@@ -240,8 +256,8 @@ commute:
     F \otimes A \cong A \cong A \otimes F
        \ar[r]^-*+{\eta \circ id}
        \ar[d]^-*+{id \circ \eta}
-       \ar[dr]^-*+{id} & A \times A \ar[d]^-*+{m}\\
-    A \times A \ar[r]^-*+{m} & A \\
+       \ar[dr]^-*+{id} & A \otimes A \ar[d]^-*+{m}\\
+    A \otimes A \ar[r]^-*+{m} & A \\
   }
   \]
   \caption{Existence of unit in the algebra $A$}
@@ -249,7 +265,334 @@ commute:
 \end{figure}
 
 
+
+
 \subsection{Coalgebras}
+
+
+The primary motivation for coalgebras stem from the study of the effect of the multiplication and unity
+operators defined on an algebra on the dual of that algebra. The dual $A^*$ of an algebra $A$
+is defined to be the set of all linear maps from $A$ to $F$. By this definition, the dual
+of an algebra is a vector space provided that the addition and scalar multiplication is
+defined as:
+\begin{align}
+(\phi + \psi)(x) & = \phi(x) + \psi(x) \\
+(k\phi)(x) & = k \phi(x)
+\end{align}
+for all $\phi, \psi \in A^*$, $x \in A$ and $k \in F$. The dual does not
+naturally carry any of the algebra structure of the original algebra and, in general,
+is not itself an algebra. For this
+reason, it is very natural to inquire about the effect of multiplication in $A$ on
+the dual $A^*$. For this we consider:
+\beq
+\phi(xy) = \phi(m(x \otimes y))
+\eeq
+for $\phi \in A^*$ and $x,y \in A$. This form, in general, is not equal to $\phi(x) \phi(y)$
+but it should be possible
+to write it as a tensor product in terms of other elements of $A^*$ valued at $x \otimes y$. The
+possibility of this can be shown if $A$ is finite-dimensional. In general, the multiplication
+$m: A \otimes A \rightarrow A$ yields a linear map on the dual $\Delta: A^* \rightarrow
+(A \otimes A)^*$. However, if $A$ is finite-dimensional, $(A \otimes A)^*$ is naturally isomorphic
+to $(A^* \otimes A^*)$ and for that reason the map on the dual can be written as $\Delta: A^*
+\rightarrow A^* \otimes A^*$. This map is called to coproduct. In terms of the coproduct, the
+above relation becomes:
+\beq
+\phi(xy) = \phi(m(x \otimes y)) = \Delta(\phi)(x \otimes y)
+\eeq
+Similarly, the action of the unit map $\eta: F \rightarrow A$ yields a linear map on the
+dual $\epsilon: A^* \rightarrow F$, which is called the counit. The action of the counit is
+as follows:
+\beq
+\phi(k1) = \phi(\eta(k)) = \epsilon(\phi)k
+\eeq
+for $\phi \in A^*$ and $k \in F$. Thus, we see that the multiplication and unit maps on $A$
+naturally define the coproduct and counit maps on the dual $A^*$. Furthermore, the associativity
+and existence of unit conditions on the algebra $A$ implies certain conditions on the maps defined
+on the dual $A^*$. The structure we have thus arrived at is called a coalgebra and the dual
+of an algebra $A$ becomes a coalgebra.
+
+
+Formally, the definition of a coalgebra $C$ is a vector space over a field $F$ together with
+two linear maps:
+\begin{itemize}
+    \item Coproduct: $\Delta: C \rightarrow C \otimes C$
+    \item Counit: $\epsilon: C \rightarrow F$
+\end{itemize}
+such that the conditions:
+\begin{align}
+(id \otimes \Delta) \circ \Delta & = (\Delta \otimes id) \circ \Delta \\
+(id \otimes \epsilon) \circ \Delta = &\; id = (\epsilon \otimes id) \circ \Delta
+\end{align}
+are satisfied. The first of these conditions is called the coassociativity condition and is
+equivalent to the fact that the Figure \ref{coassoc-coalgebra} is commutative.
+\begin{figure}[!h]
+  \[
+  \xymatrix@=100pt{
+    C \ar[r]^-*+{\Delta} \ar[d]^-*+{\Delta}& C \otimes C \ar[d]^-*+{id \otimes \Delta}\\
+    C \otimes C \ar[r]^-*+{\Delta \otimes id} & C \otimes C \otimes C \\
+  }
+  \]
+  \caption{Coassociativity in a coalgebra $C$}
+  \label{coassoc-coalgebra}
+\end{figure}
+Similarly, the second condition is called the existence of counit and is equivalent to the
+commutativity of the Figure \ref{counit-coalgebra}.
+\begin{figure}[!h]
+  \[
+  \xymatrix@=100pt{
+    C
+       \ar[r]^-*+{\Delta}
+       \ar[d]^-*+{\Delta}
+       \ar[dr]^-*+{id} & C \otimes C \ar[d]^-*+{id \otimes \epsilon}\\
+    C \otimes C \ar[r]^-*+{\epsilon \otimes id} & F \otimes C \cong C \cong C \otimes F \\
+  }
+  \]
+  \caption{Existence of counit in the coalgebra $C$}
+  \label{counit-coalgebra}
+\end{figure}
+
+
+\subsection{Bialgebras}
+
+
+Formally, a bialgebra $B$  over a field $F$ is both a unital associative algebra
+and a coalgebra over $F$ such that the coproduct and counit maps are both algebra homomorphisms.
+In this respect, the coalgebra structure should be compatible with the algebra structure
+of the bialgebra. We will also show that the same statement can be expressed from the
+opposite point of view, ie. that the algebra structure of the bialgebra should be
+compatible with the coalgebra structure. For this reason, the product and the unit maps
+should, equivalently, be algebra homomorphisms.
+
+
+Before analyzing the implications of the compatibility condition, we should define
+$m_{B \otimes B}$ which is the product defined on $B \otimes B$ using the product
+defined on $B$. The map $m_{B \otimes B}: (B \otimes B) \otimes (B \otimes B) \rightarrow B \otimes B$
+is a formalization of the product rule $(a\otimes b)(c \otimes d) = (ac) \otimes (bd)$ and for this
+reason the action of this map is defined by:
+\beq
+m_{B \otimes B}((a\otimes b) \otimes (c \otimes d)) = m(a \otimes c) \otimes m(b \otimes d) \quad .
+\eeq
+One should notice that the definition of this product involves a permutation of the order of the terms $b$ and $c$.
+Using this fact and defining the permutation operator $\tau: B \otimes B \rightarrow B \otimes B$ by:
+\beq
+\tau(a \otimes b) = b \otimes a \quad ,
+\eeq
+we can rewrite the action of the product map on $B \otimes B$ as:
+\beq
+\begin{split}
+m_{B \otimes B}((a \otimes b) \otimes (c \otimes d))
+ & = m(a \otimes c) \otimes m(b \otimes d) \\
+ & = (m \otimes m) (a \otimes c \otimes b \otimes d) \\
+ & = (m \otimes m) \circ (id \otimes \tau \otimes id) (a \otimes b \otimes c \otimes d) \quad .
+\end{split}
+\eeq
+As a result, we find that $m_{B \otimes B}$ is defined in terms of the product map on $B$ as:
+\beq
+m_{B \otimes B} = (m \otimes m) \circ (id \otimes \tau \otimes id) \quad .
+\eeq
+
+
+The statement that the coproduct map is a algebra homomorphism implies that:
+\begin{align}
+\Delta(ab) = \Delta(m(a \otimes b)) & = m_{B \otimes B}(\Delta(a) \otimes \Delta(b)) \\
+\Delta(1) & = 1 \otimes 1
+\end{align}
+These two equations say that the action of the coproduct map respects both the product and the
+unit of the algebra structure in the bialgebra. Similarly, the condition that the counit
+is an algebra homomorphism implies:
+\begin{align}
+\epsilon(ab) = \epsilon(m(a \otimes b)) &= m(\epsilon(a) \otimes \epsilon(b)) = \epsilon(a) \epsilon(b) \\
+\epsilon(1) &= 1
+\end{align}
+
+
+The content of these relations that define a bialgebra
+can again be expressed by the commutative diagrams in Figures
+\ref{coproduct-comp-product-bialgebra} and \ref{coproduct-comp-unit-bialgebra} for the homomorphism
+conditions on the coproduct and Figures \ref{counit-comp-product-bialgebra} and
+\ref{counit-comp-unit-bialgebra} for the homomorphism
+conditions on the counit.
+\begin{figure}[!h]
+  \[
+  \xymatrix@=100pt{
+    B \otimes B \ar[r]^-*+{\Delta \otimes \Delta} \ar[d]^-*+{m}& (B \otimes B) \otimes (B \otimes B) \ar[d]^-*+{m_{B \otimes B}}\\
+    B \ar[r]^-*+{\Delta} & B \otimes B\\
+  }
+  \]
+  \caption{Compatibility of the coproduct with the product on the bialgebra $B$}
+  \label{coproduct-comp-product-bialgebra}
+\end{figure}
+
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@=60pt{
+    F \cong F \otimes F \ar[dr]^-*+{\eta} \ar[rr]^-*+{\eta \otimes \eta} &                       & B \otimes B\\
+                                                                         & B \ar[ur]^-*+{\Delta} &            \\
+  }
+  \]
+  \caption{Compatibility of the coproduct with the unit on the bialgebra $B$}
+  \label{coproduct-comp-unit-bialgebra}
+\end{figure}
+
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@=60pt{
+    B \otimes B \ar[dr]^-*+{m} \ar[rr]^-*+{\epsilon \otimes \epsilon} &                         & F \otimes F \cong F \\
+                                                                      & B \ar[ur]^-*+{\epsilon} &                     \\
+  }
+  \]
+  \caption{Compatibility of the counit with the product on the bialgebra $B$}
+  \label{counit-comp-product-bialgebra}
+\end{figure}
+
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@=60pt{
+    F \ar[dr]^-*+{\eta} \ar[rr]^-*+{id} &                         & F  \\
+                                        & B \ar[ur]^-*+{\epsilon} & \\
+  }
+  \]
+  \caption{Compatibility of the counit with the unit on the bialgebra $B$}
+  \label{counit-comp-unit-bialgebra}
+\end{figure}
+\pagebreak
+One can see from these commutative diagrams, that the diagrams are completely symmetric with
+respect to the coalgebra and algebra maps. In other words, one can see that these diagrams
+can also be read as the coalgebra homomorphism conditions of the product and the unit maps
+of the algebra structure of the bialgebra $B$. The only diagram that does not explicitly exhibit
+this symmetry is Figure \ref{coproduct-comp-product-bialgebra}. This diagram, however, can be
+written in an explicitly symmetric way by using the definition of $m_{B\otimes B}$ to produce the
+commutative diagram shown in Figure \ref{coproduct-comp-product-bialgebra-symm}. This way
+the content of all the diagrams can be read both as the compatibility of the coalgebra maps
+on the algebra structure and the compatibility of the algebra maps on the coalgebra structure of
+the bialgebra $B$.
+
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@=70pt{
+                                                                   & B  \ar[dr]^-*+{\Delta} & \\
+    B \otimes B \ar[ur]^-*+{m} \ar[d]^-*+{\Delta \otimes \Delta}            &  & B \otimes B \\
+    B \otimes B \otimes B \otimes B \ar[rr]^-*+{id \otimes \tau \otimes id} &  & B \otimes B \otimes B \otimes B \ar[u]^-*+{m \otimes m}\\
+  }
+  \]
+  \caption{Compatibility of the coproduct with the product on the bialgebra $B$}
+  \label{coproduct-comp-product-bialgebra-symm}
+\end{figure}
+
+
+
+
+\subsection{Hopf Algebras}
+
+
+A Hopf algebra $H$ is basically a bialgebra, ie. both a unital associative algebra and a coalgebra, with an additional
+structure called the coinverse (or the antipode) which is a linear map $S: H \rightarrow H$
+such that the diagram in Figure \ref{antipode-hopf} is commutative.
+
+
+\begin{figure}[!h]
+  \[
+  \xymatrix@=50pt{
+    H \otimes H \ar[rr]^-*+{S \otimes id}                        &                    & H \otimes H \ar[d]^-*+{m}\\
+    H \ar[u]^-*+{\Delta} \ar[d]^-*+{\Delta} \ar[r]^-*+{\epsilon} & F \ar[r]^-*+{\eta} & H \\
+    H \otimes H \ar[rr]^-*+{id \otimes S}                        &                    & H \otimes H \ar[u]^-*+{m}\\
+  }
+  \]
+  \caption{Definition of coinverse on the Hopf algebra $H$}
+  \label{antipode-hopf}
+\end{figure}
+
+\pagebreak
+In order to write the concept of a coinverse more
+explicitly, we will introduce Sweedler's \cite{sweedler} notation which can be considered to
+be the analogue of Einstein summation convention for coproducts. Given an element $c$ of a coalgebra,
+there exists elements $c_{(1)}^i$ and $c_{(2)}^i$ in the coalgebra such that:
+\beq
+\Delta(c) = \sum_i c_{(1)}^i \otimes c_{(2)}^i \quad .
+\eeq
+Using Sweedler's notation, this can be abbreviated to:
+\beq
+\Delta(c) = \sum_c c_{(1)} \otimes c_{(2)}
+\eeq
+and in the sumless version of Sweedler's notation, it further becomes:
+\beq
+\Delta(c) = c_{(1)} \otimes c_{(2)}
+\eeq
+Thus the coinverse map $S$ can also be expressed as:
+\beq
+S(c_{(1)})c_{(2)} = m(S(c_{(1)}) \otimes c_{(2)}) = \epsilon(c) 1 = m(c_{(1)} \otimes S(c_{(2)})) = c_{(1)}S(c_{(2)})
+\eeq
+
+The notion commutativity in a Hopf algebra is defined by the commutativity of the product
+map of the algebra structure. An algebra is commutative if and only if the product map
+satisfies the relation:
+\beq
+m = m \circ \tau
+\eeq
+so that the order of multiplying terms in the product does not matter. In terms of
+elements of the algebra this relation becomes:
+\beq
+m(a \otimes b) = m(b \otimes a)
+\eeq
+for all elements $a,b$ of the algebra. Similarly, the
+notion of cocommutativity in a Hopf algebra is defined by the cocommutativity of the
+coproduct map of the coalgebra structure. A coalgebra is cocommutative if and only if
+the coproduct map satisfies the relation:
+\beq
+\Delta = \tau \circ \Delta
+\eeq
+so that the order of terms in the outcome of the coproduct does not matter. In
+terms of elements of the coalgebra and using sumless Sweedler's notation, this
+relation implies:
+\beq
+\Delta(c) = c_{(1)} \otimes c_{(2)} = c_{(2)} \otimes c_{(1)}
+\eeq
+for all elements $c$ of the coalgebra.
+
+There are various examples of Hopf algebras. Out of these the most important examples
+are the group algebras and universal enveloping algebras of Lie algebras. Given a
+group $G$, the group algebra $FG$ is a unital associative algebra over the field $F$.
+It becomes a Hopf algebra, if we define the coproduct, counit and coinverse maps by:
+\begin{align}
+\Delta(g) & = g \otimes g \\
+\epsilon(g) & = 1 \\
+S(g) & = g^{-1}
+\end{align}
+for all $g \in G$. In this instance the resulting Hopf algebra is cocommutative and
+commutative depending on the original group $G$ being abelian or not. If the
+underlying group $G$ is abelian, the resulting Hopf algebra is both commutative
+and cocommutative. Otherwise, it is both noncommutative and noncocommutative.
+
+Similarly, given a Lie algebra $g$ over a field $F$, its universal enveloping algebra
+$U(g)$ is a unital associative algebra. This algebra $U(g)$ becomes a Hopf algebra
+if we define the coproduct, counit and the coinverse maps as:
+\begin{align}
+\Delta(x) & = 1 \otimes x + x \otimes 1 \\
+\epsilon(x) & = 0 \\
+S(x) & = -x
+\end{align}
+for all $x \in U(g)$. Notice that the coproduct rule is not only compatible with the
+product on the universal enveloping algebra but it is also compatible with the
+antisymmetric product defined on the Lie algebra itself. This Hopf algebra is
+cocommutative but noncommutative.
+
+Quantum groups are, loosely, defined as Hopf algebras that are neither commutative nor
+cocommutative. As such, they are important in non-commutative geometry. The reason for
+this stems from the observation that in order to study geometry on a manifold $M$,
+it is possible to work with the algebra of functions $A = C(M)$ on $M$ which is a Hopf
+algebra. Thus, one can continue studying Hopf algebras, including noncommutative
+and noncocommutative ones, and do geometry with them even though the underlying manifold
+does not exist anymore in a conventional sense. They are called quantum groups because of
+a similar reasoning stating that a standard algebraic group is well described by the
+Hopf algebra of regular functions on the algebraic group and that a deformed version
+of the Hopf algebra should, in some sense, describe a deformed, quantized version of the
+algebraic group. In essence, identifying these quantized algebraic groups with their
+Hopf algebras one can study them in full generality and make a theory of these quantum
+groups.
 
 \section{Quantum matrix groups}
 
@@ -265,24 +608,69 @@ a_{n1} & \ldots & \ldots & a_{nn}
 \end{array}
 \right)
 \eeq
-such that every element of the matrix belong to a Hopf Algebra $\mathcal{H}$.
+such that every element of the matrix belong to a Hopf algebra $H$.
 The matrix group defined in this way naturally becomes a Hopf algebra with the
 coproduct, counit and coinverse of the matrix algebra being defined as:
 \bea
-\triangle(M) &=& M \dot{\otimes} M \\
-\epsilon(M) &=& \I1 \\
-S(M) &=& M^{-1}
+\triangle(M) &=& M \dot{\otimes} M \label{qmg-coproduct}\\
+\epsilon(M) &=& \I1_n \label{qmg-counit} \\
+S(M) &=& M^{-1} \label{qmg-coinverse}
 \eea
 where $\dot{\otimes}$ stands for the operation
 where when the matrix multiplication is performed the matrix
 elements are multiplied using the tensor product is instead of the
-normal product. The relations above imply the definitions of the
+normal product and $\I1_n$ stands for the $n$ x $n$ unit matrix.
+The relations above imply the definitions of the
 coproduct, counit and coinverse of the matrix elements:
 \bea
 \triangle(\alpha_{ij}) &=& \sum_k \alpha_{ik} \otimes \alpha_{kj} \\
 \epsilon(\alpha_{ij}) &=& \delta_{ij} \\
 \sum_j S(\alpha_{ij}) \alpha_{jk} &=& \delta_{ij} = \sum_j \alpha_{ij} S(\alpha_{jk})
 \eea
+
+One of the most important examples of quantum matrix groups is the quantum
+group $GL_q(n)$. This quantum group is a quantum subgroup of the bialgebra
+$M_q(n)$. An element $T$ of $M_q(n)$ has matrix entries $t_{ij}$ that satisfy:
+\begin{align}
+t_{ik} t_{il} & = q^{-1} t_{il} t_{ik} & &\text{for $k < l$} \\
+t_{ik} t_{jk} & = q^{-1} t_{jk} t_{ik} & &\text{for $i < j$} \\
+t_{il} t_{jk} & = t_{jk} t_{il} & &\text{for $i  < j$, $k < l$} \\
+t_{ik} t_{jl} - t_{jl} t_{ik} & = (q^{-1} - q) t_{il} t_{jk} & &\text{for $i  < j$, $k < l$}
+\end{align}
+for some $q \in \IC$. One can immediately see that $M_q(n)$ is a
+bialgebra with the definitions of coproduct and counit given in
+equations \eqref{qmg-coproduct} and \eqref{qmg-counit}. In order to define
+the coinverse, one needs to define the inverse of such a matrix and for
+this one should define the quantum analogues of the
+determinant and the adjoint. For an element $T$ of $M_q(n)$ one defines
+the {\it quantum determinant} \cite{krob-leclerc} as:
+\beq \label{qdet}
+det_q(T) = \sum_{\sigma \in S_n} (-q)^{i(\sigma)} t_{1\sigma(1)} \cdots t_{n\sigma(n)}
+\eeq
+where $S_n$ is the symmetric group on ${1, \cdots, n}$ and $i(\sigma)$ is the number
+of permutation inversions in the permutation $\sigma$. Similar to normal matrices,
+one can also define the
+{\it quantum adjoint} matrix $adj(T) = (a_{ij})$ such that:
+\beq \label{qadjoint}
+a_{ij} = (-q)^{j - i} det_q(T^{ij})
+\eeq
+where $T^{ij}$ stands for the $(n-1)$ x $(n-1)$ matrix obtained from $T$ by
+deleting the $i$th row and the $j$th column. Just as in classical matrices, one
+has:
+\beq
+T \cdot adj(T)^T = adj(T)^T \cdot T = det_q(T) \I1_n
+\eeq
+which yields the inverse, and in turn the coinverse, of such a quantum matrix as:
+\beq \label{qinverse}
+S(T) = T^{-1} = det_q^{-1}(T) adj(T)^T
+\eeq
+This coinverse is obviously only defined when $det_q(T)$ is non-zero for all $T$ in the
+quantum matrix group. The quantum subgroup of $M_q(n)$ that satisfies this condition
+is called $GL_q(n)$, the quantum general linear group of dimension $n$ and this structure
+is a Hopf algebra since the coinverse is now defined. In analogy with
+the classical matrix groups, one can further restrict the determinant of such matrices
+to be equal to $1$ and obtain the quantum subgroup $SL_q(n)$, the special linear quantum
+group of dimension $n$.
 
 \section{Quantum group invariance of an algebra}
 Given an algebra $\mathcal{A}$ with generators $a_1$, $a_2$, $\ldots$, $a_n$, one can construct the column matrix:
@@ -298,3 +686,23 @@ a_n
 \right)
 \eeq
 \section{Summary}
+
+This work is divided into four chapters. In the first chapter, an introduction was given to
+the basic concepts of boson and fermions and basic mathematical structures related to the
+succeeding chapters were introduced.
+
+In the second chapter, the anticommuting spin algebra (ACSA) will be introduced. In that section
+it will be shown that the invariance group of ACSA is $SO_{q = -1}(3)$ and that the representations
+of ACSA show great similarity to the representations of its sister spin algebra. Finally, the exact
+relationship between ACSA and the spin algebra will be examined and a braided Hopf algebra structure
+for ACSA will be introduced.
+
+The third chapter deals entirely with the inhomogeneous invariance (quantum) groups of the
+boson and fermion algebras. The bosonic inhomogeneous symplectic quantum group and the
+fermionic inhomogeneous orthogonal group will be introduced to describe these invariance
+conditions. In the subsections of this chapter, the sub(quantum)groups and contractions of
+these new quantum groups will be studied. Finally, the fermionic inhomogeneous orthogonal
+group will defined in odd number of dimensions and its sub(quantum)groups will be studied.
+
+The fourth and final chapter is reserved for concluding remarks about the body of work that
+has been introduced in this study.

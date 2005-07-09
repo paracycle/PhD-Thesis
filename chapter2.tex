@@ -22,13 +22,18 @@ angular momentum algebra by the relations
 
 \section{Defining relations}
 
+We define the anticommuting spin algebra by the relations:
 \bea
 \anti{J_1}{J_2} & = & J_3 \label{eqn:defrel1} \\
 \anti{J_2}{J_3} & = & J_1 \label{eqn:defrel2} \\
 \anti{J_3}{J_1} & = & J_2 \label{eqn:defrel3}
 \eea
-where $J_1$, $J_2$, $J_3$ are hermitian generators of the algebra. We will name this algebra ACSA, the anticommutator spin algebra. In these expressions the curly bracket denotes the anticommutator \beq
-\anti{A}{B} \equiv AB + BA \eeq so (\ref{eqn:defrel1}-\ref{eqn:defrel3}) should be taken as the
+where $J_1$, $J_2$, $J_3$ are hermitian generators of the algebra.
+In these expressions the curly bracket denotes the anticommutator
+\beq
+\anti{A}{B} \equiv AB + BA
+\eeq
+so \eqref{eqn:defrel1}-\eqref{eqn:defrel3} should be taken as the
 definition of an associative algebra. This proposed algebra does
 not fall into the category of superalgebras in the sense of
 Berezin-Kac axioms. In particular, the algebra is consistent
@@ -50,23 +55,6 @@ those of the angular momentum algebra yet exhibit remarkable
 differences. Since the angular momentum algebra is used to
 describe various internal symmetries, ACSA could be relevant in
 describing those symmetries.
-
-In section 2 we will show that ACSA is invariant under the action
-of the quantum group $SO_q(3)$ with $q=-1$. Here, $SO_q(3)$ is
-defined as the quantum subgroup of $SU_q(3)$ where each of the
-(non-commuting) matrix elements of the $3$x$3$ matrix is
-hermitian. We note that this defines a quantum group only for
-$q=\pm1$. For $q=1$ one has the real orthogonal group $SO(3)$.
-
-In section 3, we will construct all representations of ACSA and
-show that the representations can be labelled by a quantum number
-$j$ corresponding to the eigenvalue of $J_3$ whose absolute value
-is maximum. For integer $j$, spectrum of $J_3$ is given by $j,
-j-1, \ldots, -j$ whereas for half-integer $j$ there are two
-representations. These two representations are such that for $j =
-2k\pm\frac12$ spectrum of $J_3$ is respectively given by $j, j-2,
-\ldots, \pm\frac12$ and $-j, j+2, \ldots, \mp\frac12$. Section 4
-is reserved for conclusions and discussion.
 
 \section{The invariance quantum group $SO_{q = -1}(3)$}
 
@@ -203,7 +191,7 @@ From $GL_q(3)$, one can obtain the quantum special linear group in
 det_{q}(A) = 1
 \eeq
 where the quantum determinant is defined as presented in the Introduction.
-Furthermore, on $SL_q(3)$, one can impose the "reality" condition:
+Furthermore, on $SL_q(3)$, one can impose the {\it reality} condition:
 \beq
 A_{ij} = A^*_{ij}
 \eeq
@@ -266,26 +254,30 @@ that due to the $GL_q(2)$ relation \eqref{gl2-res2}, part of the above equality 
 matrix elements of a matrix in $SO_{q=-1}(3)$. The fact that both sides of this relation
 is equal to another matrix element does not rise form the $GL_q(2)$ relations but is
 due to the fact that the matrix is special and orthogonal, i.e. it is due to the fact that
-$A^T = A^{-1}$ and that $\det_{q=-1}A = 1$. In order to show this, we should first note that
+$A^T = A^{-1}$ and that $det_{q=-1}(A) = 1$. In order to show this, we should first note that
 $\det_q$ where $q = -1$ is the same as the normal determinant except there is no alternation
 of signs as there is in the normal determinant; this type of
 determinant with no alternation of signs is also called a
-permanent. Given this fact, one can notice that the $GL_{q=-1}(2)$
+permanent. If we refer to the form of the quantum determinant given in equation
+\eqref{qdet}, we can see that for $q=-1$, this form turns into a direct sum
+of all permutations of matrix elements. Given this fact, one can notice that the $GL_{q=-1}(2)$
 relation \eqref{gl2-res2} is equal to the determinant of the $GL_{q=-1}(2)$ submatrix and
 is nothing but the statement that this determinant is defined and unique.
-The inverse of a matrix, $A^{-1}$, is defined as:
+Using the definition given in equation \eqref{qinverse}, the inverse of a matrix
+$A$ that is an element of $SO_{q = -1}(3)$ is defined as:
 \beq \label{matinverse}
-A^{-1} = \frac{1}{\det A} adj(A)^T
+A^{-1} = det_{q = -1}^{-1}(A) adj(A)^T
 \eeq
-where $adj(A)$ stands for the adjoint matrix where each matrix element is equal to the
-cofactor of the same position element in the original matrix A.
-For a matrix $A \in SO_{q=-1}(3)$; however, we have the fact that $A^{-1} = A^T$ and
-$\det_{q = -1} A = 1$, thus for such a matrix, the relation \eqref{matinverse} becomes:
+For a matrix $A$ in $SO_{q=-1}(3)$, however, we also have the fact that $A^{-1} = A^T$ and
+$det_{q = -1}(A) = 1$, thus for such a matrix, the relation \eqref{matinverse} becomes:
 \beq
 A^T = adj(A)^T \qquad \Rightarrow \qquad A = adj(A)
 \eeq
-which implies that the matrix elements of $A$ and $adj(A)$ are equal. This further implies
-that each matrix element of $A$ is equal to the cofactor of itself. For $SO_{q=-1}(3)$
+where $adj(A)$ stands for the matrix
+where each matrix element $a_{ij}$ is equal to the determinant of original matrix A
+without the $i$th row and $j$th column, ie. the cofactor of the matrix element.
+This implies that the matrix elements of $A$ and $adj(A)$ are equal. This further implies
+that each matrix element of $A$ is equal to the cofactor of that matrix element. For $SO_{q=-1}(3)$
 matrices, the cofactor of a matrix element is equal to the $q = -1$ determinant of its
 $GL_{q=-1}(2)$ minor submatrix.
 Thus, as a result of this argument, we have:
@@ -376,7 +368,7 @@ Note that equation (\ref{jplus}) shows that the action of $J_+$ is
 composed of a reflection which changes sign of $\mu$, the
 eigenvalue of $J_3$, followed by raising by one unit. Similarly,
 equation (\ref{jminus}) shows that $J_-$ reflects and lowers. Thus
-the highest state $\mu = j$ is annihilated by $J_-$ and "lowered"
+the highest state $\mu = j$ is annihilated by $J_-$ and {\it lowered}
 by $J_+$. Applying $J_+$ or $J_-$ twice to any state gives back
 the same state due to relations (\ref{jp^2}) and (\ref{jm^2}).
 Thus starting from the highest state we apply $J_-$ and $J_+$
@@ -390,9 +382,9 @@ $\mu$ half-odd integer between $j$ and $-j$. The rest of the
 states cannot be reached from these but are obtained by starting
 from the $\mu= -j$ state and applying $J_-$ and $J_+$ alternately;
 starting with $J_-$.
-\\
-We now give a few examples:
 
+For the first few integer and half-integer values of $j$, the spectrum
+and state transition are depicted in the following figures.
 \begin{figure}[!h]
   \[
   \xymatrix@R=20pt@C=100pt{
@@ -402,11 +394,12 @@ We now give a few examples:
   \caption{State diagram for $j=0$}
   \label{J0Diagram}
 \end{figure}
+\pagebreak
 \begin{figure}[!h]
   \[
   \xymatrix@R=20pt@C=100pt{
-    \ar@/_/[d]_*+{J_+} \ar@{-}[r]^-*+{+1} & \\
-    \ar@/_/[d]_*+{J_-} \ar@{-}[r]^-*+{0} & \\
+    \ar@/_/[d]_*+{J_+} \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@/^/[d]^*+{J_-} \\
     \ar@{-}[r]^-*+{-1} &  \\
   }
   \]
@@ -416,8 +409,8 @@ We now give a few examples:
 \begin{figure}[!h]
   \[
   \xymatrix@R=20pt@C=100pt{
-    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{+2} & \\
-    \ar@(dl,ul)[ddd]_>>>>>*+{J_-} \ar@{-}[r]^-*+{+1} & \\
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{2} & \\
+    \ar@(dl,ul)[ddd]_>>>>>*+{J_-} \ar@{-}[r]^-*+{1} & \\
     \ar@{-}[r]^-*+{0} & \ar@/_/[u]_-*+{J_+} \\
     \ar@{-}[r]^-*+{-1} & \ar@/_/[u]_-*+{J_-} \\
     \ar@{-}[r]^-*+{-2} &
@@ -436,17 +429,57 @@ We now give a few examples:
   \caption{State diagram for $j=\frac12$}
   \label{J1/2Diagram}
 \end{figure}
+%\begin{figure}[!h]
+%  \[
+%  \xymatrix@R=20pt@C=50pt{
+%    \ar@/_/[dd]_*+{J_+} \ar@{-}[rr]^-*+{\frac32} &                           &  &\\
+%                                                 & \ar@{-}[rr]^-*+{\frac12}  &  & \ar@(dr,ur)[]_*+{J_-}  \\
+%    \ar@(dl,ul)[]^*+{J_+} \ar@{-}[rr]^-*+{-\frac12}                    &                           &  & \\
+%                                                 & \ar@{-}[rr]^-*+{-\frac32} &  & \ar@/_/[uu]_*+{J_-}\\
+%  }
+%  \]
+%  \caption{State diagram for $j=\frac32$}
+%  \label{J3/2Diagram}
+%\end{figure}
 \begin{figure}[!h]
   \[
   \xymatrix@R=20pt@C=50pt{
-    \ar@/_/[dd]_*+{J_+} \ar@{-}[rr]^-*+{\frac32} &  & \\
-                                                 & \ar@{-}[rr]^-*+{\frac12} &   & \\
-    \ar@{-}[rr]^-*+{-\frac12} & *\txt<2pc>{}      &  & \\
-                                                 & \ar@{-}[rr]^-*+{-\frac32} &   & \ar@/_/[uu]^*+{J_-}\\
+    \ar@/_/[dd]_*+{J_+} \ar@{-}[rr]^-*+{\frac32} &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{\frac12}  &  & \\
+    \ar@{-}[rr]^-*+{-\frac12}                    &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{-\frac32} &  & \ar@/_/[uu]_*+{J_-}\\
   }
   \]
   \caption{State diagram for $j=\frac32$}
   \label{J3/2Diagram}
+\end{figure}
+%\begin{figure}[!h]
+%  \[
+%  \xymatrix@R=20pt@C=50pt{
+%    \ar@/_4pc/[dddd]_*+{J_+} \ar@{-}[rr]^-*+{\frac52} &                           &  & \\
+%                                                      & \ar@{-}[rr]^-*+{\frac32}  &  & \ar@/^/[dd]_*+{J_+}\\
+%    \ar@(dl,ul)[]^*+{J_+} \ar@{-}[rr]^-*+{\frac12}    &                           &  & \\
+%                                                      & \ar@{-}[rr]^-*+{-\frac12} &  & \ar@(dr,ur)[]_*+{J_-} \\
+%    \ar@/^/[uu]_*+{J_-} \ar@{-}[rr]^-*+{-\frac32}     &                           &  & \\
+%                                                      & \ar@{-}[rr]^-*+{-\frac52} &  & \ar@/_4pc/[uuuu]_*+{J_-}\\
+%  }
+%  \]
+%  \caption{State diagram for $j=\frac52$}
+%  \label{J5/2Diagram}
+%\end{figure}
+\begin{figure}[!h]
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@/_2pc/[dddd]_*+{J_+} \ar@{-}[rr]^-*+{\frac52} &                           &  & \\
+                                                      & \ar@{-}[rr]^-*+{\frac32}  &  & \ar@/^/[dd]_*+{J_+}\\
+    \ar@{-}[rr]^-*+{\frac12}                          &                           &  & \\
+                                                      & \ar@{-}[rr]^-*+{-\frac12} &  & \\
+    \ar@/^/[uu]_*+{J_-} \ar@{-}[rr]^-*+{-\frac32}     &                           &  & \\
+                                                      & \ar@{-}[rr]^-*+{-\frac52} &  & \ar@/_2pc/[uuuu]_*+{J_-}\\
+  }
+  \]
+  \caption{State diagram for $j=\frac52$}
+  \label{J5/2Diagram}
 \end{figure}
 \pagebreak
 \begin{comment}
@@ -477,7 +510,7 @@ For $\mathbf{j=\frac{5}{2}}$ the two representations are given by:
 
 \end{itemize}
 \end{comment}
-
+\pagebreak
 \section{Hopf Algebra Structure with braiding}
 
 One natural question to ask having considered this associative algebra is whether or not it has a Hopf algebra structure. On the surface, this algebra shares a lot with its sister algebra, the $SU(2)$ Lie algebra, which has a Hopf algebra structure and one would expect ACSA to similarly have one. It turns out, however, that naively trying the same coproduct rule for ACSA does not work due to the symmetric nature of the product defined on ACSA since the product is defined in terms of anticommutators. As was noted in the Introduction of this work, the coproduct of the Lie algebra requires the product on the Lie algebra to be anti-symmetric. For this reason, the coproduct of the $SU(2)$ Lie algebra is not suitable for ACSA.
@@ -511,15 +544,28 @@ since:
 \quad \mbox{for}\quad  i \neq j \neq k \neq i.
 \eean
 
-These two relations show that the $SU(2)$ algebra and ACSA are so closely related that it is not even possible to identify which one of these algebras is more fundamental. Both of them can be written in terms of the generators of the other and their algebraic structure can be derived from the structure of the other one. However, as mentioned, the Hopf algebra structure of ACSA cannot be derived from the Hopf algebra structure of the $SU(2)$ algebra. Specifically, ACSA does not admit a coproduct defined in a normal way using the usual tensor products. Such a coproduct can be defined if one were to extend the permutation operator $\tau$ used in the connecting relation. Normally the operation of $\tau$ is defined as:
+These two relations show that the $SU(2)$ algebra and ACSA are so closely related
+that it is not even possible to identify which one of these algebras is more
+fundamental. Both of them can be written in terms of the generators of the other
+and their algebraic structure can be derived from the structure of the other one.
+However, as mentioned, the Hopf algebra structure of ACSA cannot be derived from the
+Hopf algebra structure of the $SU(2)$ algebra. Specifically, ACSA does not admit a
+coproduct defined in a normal way using the usual tensor products. Such a
+coproduct can be defined if one were to extend the definition of the permutation map
+$\tau$ used in the connecting relation of a bialgebra. Normally the operation of
+$\tau$ is defined as:
 \beq
 \tau(A \otimes B) = B \otimes A \quad ,
 \eeq
-however, if one considers the algebra to be graded and one were to define a degree operator ($deg$) which is $0$ for bosonic variables and is $1$ for fermionic variables, then the natural redefinition of the $\tau$ operator is
+however, if one considers the algebra to be graded and one were to define a
+degree operator ($deg$) which is $0$ for bosonic variables and is $1$ for fermionic
+variables, then the natural redefinition of the $\tau$ operator is
 \beq
 \tau(A \otimes B) = (-1)^{deg\;A\; deg\;B\;} B \otimes A \quad .
 \eeq
-Using this redefined permutation operator, one can still write down the Hopf algebra relations and only the connecting relation will be the one that will be redefined; thus, we arrive at a braided Hopf algebra structure.
+Using this redefined permutation operator, one can still write down the
+bialgebra and Hopf algebra relations and only the connecting relation will be
+redefined; thus, one arrives at the definition of a braided Hopf algebra structure.
 
 When the permutation operator is redefined in this way, the product of two tensor product terms is given by $(A\otimes B) (C\otimes D) = (-1)^{deg\;B\; deg\;C\;} (AC \otimes BD)$ where the $-1$ factor comes in because of the reordering of the $B$ and $C$ terms. Using this rule and defining the degree of $1$ as $0$ and the degrees of $J_1, J_2, J_3$ as $1$, we can see that the coproduct defined as:
 \bea
