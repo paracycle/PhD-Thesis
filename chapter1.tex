@@ -184,7 +184,7 @@ and starting form that definition give definitions of coalgebra, bialgebra and H
 algebra.
 
 
-\subsection{Associative Algebras}
+\subsection{Associative algebras}
 In abstract mathematics, an associative algebra $A$ over a field $F$ is
 defined to be a vector space over
 $F$ with an $F$ bilinear multiplication $m: A \otimes A \rightarrow A$ (where the image of
@@ -219,7 +219,7 @@ notation}, where appropriate, will be used in this work from this point on.
 
 An associative algebra is called unital if the algebra $A$ contains an identity element $1$ such
 that $1x = x1 = x$ for all $x \in A$. Such a unital algebra is also a ring and contains all the
-elements of the field $F$ by identifying an element $a$ of the field with the algebra element $a1$.
+elements of the field $F$ by identifying an element $k$ of the field with the algebra element $k1$.
 This identification can be expressed as the existence of a unit map $\eta: F \rightarrow A$ which
 has the property:
 \beq
@@ -254,8 +254,8 @@ commute:
   \[
   \xymatrix@=100pt{
     F \otimes A \cong A \cong A \otimes F
-       \ar[r]^-*+{\eta \circ id}
-       \ar[d]^-*+{id \circ \eta}
+       \ar[r]^-*+{id \circ \eta}
+       \ar[d]^-*+{\eta \circ id}
        \ar[dr]^-*+{id} & A \otimes A \ar[d]^-*+{m}\\
     A \otimes A \ar[r]^-*+{m} & A \\
   }
@@ -324,7 +324,7 @@ such that the conditions:
 (id \otimes \epsilon) \circ \Delta = &\; id = (\epsilon \otimes id) \circ \Delta
 \end{align}
 are satisfied. The first of these conditions is called the coassociativity condition and is
-equivalent to the fact that the Figure \ref{coassoc-coalgebra} is commutative.
+equivalent to the fact that Figure \ref{coassoc-coalgebra} is commutative.
 \begin{figure}[!h]
   \[
   \xymatrix@=100pt{
@@ -336,7 +336,7 @@ equivalent to the fact that the Figure \ref{coassoc-coalgebra} is commutative.
   \label{coassoc-coalgebra}
 \end{figure}
 Similarly, the second condition is called the existence of counit and is equivalent to the
-commutativity of the Figure \ref{counit-coalgebra}.
+commutativity of Figure \ref{counit-coalgebra}.
 \begin{figure}[!h]
   \[
   \xymatrix@=100pt{
@@ -486,7 +486,7 @@ the bialgebra $B$.
 
 
 
-\subsection{Hopf Algebras}
+\subsection{Hopf algebras}
 
 
 A Hopf algebra $H$ is basically a bialgebra, ie. both a unital associative algebra and a coalgebra, with an additional
@@ -562,10 +562,11 @@ It becomes a Hopf algebra, if we define the coproduct, counit and coinverse maps
 \epsilon(g) & = 1 \\
 S(g) & = g^{-1}
 \end{align}
-for all $g \in G$. In this instance the resulting Hopf algebra is cocommutative and
+for all $g \in G$. In this instance the resulting Hopf algebra is always 
+cocommutative  (since $g \otimes g = g \otimes g$) and is
 commutative depending on the original group $G$ being abelian or not. If the
-underlying group $G$ is abelian, the resulting Hopf algebra is both commutative
-and cocommutative. Otherwise, it is both noncommutative and noncocommutative.
+underlying group $G$ is abelian, the resulting Hopf algebra is both cocommutative
+and commutative. Otherwise, it is cocommutative but noncommutative.
 
 Similarly, given a Lie algebra $g$ over a field $F$, its universal enveloping algebra
 $U(g)$ is a unital associative algebra. This algebra $U(g)$ becomes a Hopf algebra
@@ -632,10 +633,10 @@ One of the most important examples of quantum matrix groups is the quantum
 group $GL_q(n)$. This quantum group is a quantum subgroup of the bialgebra
 $M_q(n)$. An element $T$ of $M_q(n)$ has matrix entries $t_{ij}$ that satisfy:
 \begin{align}
-t_{ik} t_{il} & = q^{-1} t_{il} t_{ik} & &\text{for $k < l$} \\
-t_{ik} t_{jk} & = q^{-1} t_{jk} t_{ik} & &\text{for $i < j$} \\
+t_{ik} t_{il} & = q t_{il} t_{ik} & &\text{for $k < l$} \\
+t_{ik} t_{jk} & = q t_{jk} t_{ik} & &\text{for $i < j$} \\
 t_{il} t_{jk} & = t_{jk} t_{il} & &\text{for $i  < j$, $k < l$} \\
-t_{ik} t_{jl} - t_{jl} t_{ik} & = (q^{-1} - q) t_{il} t_{jk} & &\text{for $i  < j$, $k < l$}
+t_{ik} t_{jl} - t_{jl} t_{ik} & = (q - q^{-1}) t_{il} t_{jk} & &\text{for $i  < j$, $k < l$}
 \end{align}
 for some $q \in \IC$. One can immediately see that $M_q(n)$ is a
 bialgebra with the definitions of coproduct and counit given in
@@ -648,7 +649,7 @@ the {\it quantum determinant} \cite{krob-leclerc} as:
 det_q(T) = \sum_{\sigma \in S_n} (-q)^{i(\sigma)} t_{1\sigma(1)} \cdots t_{n\sigma(n)}
 \eeq
 where $S_n$ is the symmetric group on ${1, \cdots, n}$ and $i(\sigma)$ is the number
-of permutation inversions in the permutation $\sigma$. Similar to normal matrices,
+of adjacent transpositions in the permutation $\sigma$. Similar to normal matrices,
 one can also define the
 {\it quantum adjoint} matrix $adj(T) = (a_{ij})$ such that:
 \beq \label{qadjoint}
@@ -664,7 +665,7 @@ which yields the inverse, and in turn the coinverse, of such a quantum matrix as
 \beq \label{qinverse}
 S(T) = T^{-1} = det_q^{-1}(T) adj(T)^T
 \eeq
-This coinverse is obviously only defined when $det_q(T)$ is non-zero for all $T$ in the
+This coinverse is obviously only defined when $det_q(T)$ is invertible for all $T$ in the
 quantum matrix group. The quantum subgroup of $M_q(n)$ that satisfies this condition
 is called $GL_q(n)$, the quantum general linear group of dimension $n$ and this structure
 is a Hopf algebra since the coinverse is now defined. In analogy with
