@@ -72,7 +72,7 @@ B.S. in Mathematics, Bo\~ gazi\c ci University, 1997
 \examineriii{Prof. Dr. Cihan Sa\c{c}l{\i}o\~{g}lu}
 \examineriv{Do\c{c}. Dr. Teoman Turgut}
 %\examinerv{Title and Name of Examiner}
-\dateofapproval{Day.Month.Year}
+\dateofapproval{22.07.2005}
 
 \begin{document}
 \pagenumbering{roman}
@@ -85,14 +85,25 @@ B.S. in Mathematics, Bo\~ gazi\c ci University, 1997
 \makeapprovalpage
 
 \begin{acknowledgements}
-\begin{comment}
-For my loving wife Emi for all her support; my wise and understanding mentor Metin Bey for
-teaching me a lot of what I know.
-\end{comment}
+This work is dedicated to my loving wife \textit{Emi} for all her support and understanding;
+to my wise and patient mentor \textit{Metin Ar{\i}k} for teaching me a lot of what I know
+and to \textit{my parents} who have shown me how to think scientifically about nature.
 \end{acknowledgements}
 
 \begin{abstract}
-Type your abstract here.
+In this study, the anticommuting spin algebra is introduced and it is
+shown to be invariant under the action of the quantum group $SO_{q = -1}(3)$.
+Furthermore, its representations and Hopf algebra structure are studied and
+found to be closely resemble the similar results for the angular momentum
+algebra. The invariance properties of the bosonic and fermionic oscillator
+algebras under inhomogeneous transformations are also studied. The bosonic
+inhomogeneous symplectic group, \BISp, and the fermionic
+inhomogeneous orthogonal group, \FIO, are defined as the inhomogeneous invariance
+quantum groups of these algebras. The sub(quantum)groups and contractions of these
+quantum groups are studied as a source for new quantum groups. Finally, the
+fermionic inhomogeneous orthogonal quantum group is defined for odd number of
+dimensions and its sub(quantum)groups and contractions are studied.
+inho
 \end{abstract}
 %
 % The usage of the "foreword" and "preface" environments are similar
@@ -100,12 +111,21 @@ Type your abstract here.
 % correct order of these pages in the thesis.
 %
 \begin{ozet}
-T\"urk\c ce tez \"ozetini buraya yaz\i n\i z.
+Bu \c{c}al{\i}\c{s}mada, ters-de\~{g}i\c{s}meli spin cebri tan{\i}mlanm{\i}\c{s} ve bu cebrin $SO_{q = -1}(3)$
+kuantum grubu alt{\i}nda de\~{g}i\c{s}mezli\~{g}i g\"{o}sterilmi\c{s}tir. Bunun \"{o}tesinde, bu cebrin temsilleri
+ve Hopf cebir yap{\i}s{\i} incelenmi\c{s} ve a\c{c}{\i}sal momentum cebri i\c{c}in bulunmu\c{s} olanlara
+\c{c}ok benzer yap{\i}lara var{\i}lm{\i}\c{s}t{\i}r. Bozonik ve fermiyonik osilat\"{o}r cebirlerinin homojen
+olmayan de\~{g}i\c{s}mezlik \"{o}zellikleri incelenmi\c{s} ve bunlar{\i}n sonucunda bozonik inhomojen
+simplektik group, \BISp, ve fermiyonik inhomojen ortogonal group, \FIO,
+de\~{g}i\c{s}mezlik kuantum gruplar{\i} olarak tan{\i}mlanm{\i}\c{s}t{\i}r. Bu kuantum gruplar{\i}n{\i}n alt(kuantum)gruplar{\i}
+ve b\"{u}z\"{u}lmeleri yeni kuantum grup kaynaklar{\i} olarak incelenmi\c{s}tir. Son olarak, fermiyonik
+inhomojen ortogonal kuantum grup tek boyutlarda da tan{\i}mlanm{\i}\c{s} ve bu kuantum grubunun da
+alt(kuantum)gruplar{\i} ve b\"{u}z\"{u}lmeleri incelenmi\c{s}tir.
 \end{ozet}
 
 \tableofcontents
 \listoffigures
-\listoftables
+%\listoftables
 
 \begin{symabbreviations}
 % The title will be typeset as "LIST OF SYMBOLS/ABBREVIATIONS".
@@ -114,11 +134,27 @@ T\"urk\c ce tez \"ozetini buraya yaz\i n\i z.
 %
 % Use a separate \sym command for each symbols definition.
 % First Latin symbols in alphabetical order
-\sym{$a_{ij}$}{Description of $a_{ij}$}
+\sym{$a$}{Annihilation operator}
+\sym{$a^\dagger$}{Creation operator}
+\sym{$id$}{Identity map}
+\sym{$m$}{Multiplication map}
+\sym{$N$}{Number operator}
+\sym{$S$}{Coinverse map}
+
 % Then Greek symbols in alphabetical order
-\sym{$\alpha$}{Description of $\alpha$}
+\sym{$\Delta$}{Coproduct map}
+\sym{$\epsilon$}{Counit map}
+\sym{$\eta$}{Unit map}
+\sym{$\tau$}{Permutation map}
+\sym{$\sigma_i$}{Pauli sigma matrices}
 \sym{}{}       % Separating line between symbols and abbreviations
-\sym{DA}{Description of abbreviation}
+\sym{$\otimes$}{Tensor product}
+\sym{$\dot{\otimes}$}{Matrix multiplication with tensor product}
+\sym{$\circ$}{Function composition}
+\sym{}{}       % Separating line between symbols and abbreviations
+\sym{ACSA}{The Anticommuting Spin Algebra}
+\sym{BISp}{The Bosonic Inhomogeneous Symplectic Quantum Group}
+\sym{FIO}{The Fermionic Inhomogeneous Orthogonal Quantum Group}
 \end{symabbreviations}
 
 \chapter{INTRODUCTION}
@@ -138,137 +174,8 @@ T\"urk\c ce tez \"ozetini buraya yaz\i n\i z.
 
 \input{chapter4}
 
-%\appendix      % Starts appendices
-%\chapter{A FERMION LIKE ALGEBRA}
-%\input{appendix1}
+\bibliography{references}
+\bibliographystyle{unsrt}
+%\bibliographystyle{plain}
 
-\begin{thebibliography}{9}
-
-\bibitem{sweedler}
-M.E. Sweedler, \textit{Hopf Algebras}, Benjamin (1969)
-
-\bibitem{krob-leclerc}
-D. Krob, B. Leclerc, \textit{Commun. Math. Phys.}, {\bf 169} (1995) 1-23
-
-%% References for Chapter 2
-
-\bibitem{sklyanin}
-E.K. Sklyanin, \textit{Funct. Anal. Appl.}, {\bf 16} (1982) 263
-
-\bibitem{frt}
-L.D. Fadeev, N.Y. Reshetikhin, L.A. Takhtajan,
-\textit{Quantization of Lie Groups and Lie Algebras}, preprint
-LOMI, {\bf E-14-87} (1987)
-
-\bibitem{drinfeld}
-V.G. Drinfeld, \textit{Quantum Groups}, Proc. Int. Congr. Math.,
-Berkeley 1, 798 (1986)
-
-\bibitem{woronowicz}
-S.L. Woronowicz, \textit{Commun. Math. Phys.}, {\bf 111} (1987)
-613
-
-\bibitem{manin}
-Yu I. Manin, \textit{Quantum Groups and Non-commutative Geometry}
-(CRM, Montreal University Press, 1988)
-
-\bibitem{jx}
-S. Jing, J. Xu, \textit{J. Phys. A: Math. Gen.}, {\bf 24} (1991)
-L891
-
-\bibitem{xh}
-W.Y. Chan, C.L. Ho, \textit{J. Phys. A: Math. Gen.}, {\bf 26}
-(1993) 4827
-
-\bibitem{sm}
-A. Solomon, R. McDermott, \textit{J. Phys. A: Math. Gen.}, {\bf
-27} (1994) 2619
-
-\bibitem{chung}
-W.S. Chung, \textit{Phys. Lett. A}, {\bf 259} (1999) 437
-
-\bibitem{nt}
-T Nassar and O Tirkkonen, \textit{J. Phys. A: Math. Gen.}, {\bf31}
-(1998) 9983
-
-\bibitem{gppr}
-H Grosse, S Pallua, P Prester and E Raschhofer, \textit{J. Phys.
-A: Math. Gen.}, {\bf27} (1994) 4761
-
-\bibitem{bnnpsw} J. Balog, M. Niedermaier, F. Niedermayer, A. Patrascioiu, E. Seiler and P. Weisz,
-\textit{Nuclear Physics B}, {\bf618} (2001) 315
-
-\bibitem{ubriaco}
-M. R. Ubriaco, \textit{Phys. Rev. E}, {\bf58} (1998) 4191
-
-\bibitem{leites}
-D. A. Leites, I. M. Shchepochkina, \textit{Theor. Math. Phys.},
-{\bf 3}, (2001) 281
-
-\bibitem{batalin}
-I. Batalin, I. Tyutin, “Generalized field–antifield formalism,”,
-Topics in Statistical and Theoretical Physics (R. Dobrushin et
-al., eds.) (Trans. Am. Math. Soc., Ser. 2, Vol. 177), Am. Math.
-Soc., Providence, RI (1996), 23
-
-%% References for Chapter 3
-
-\bibitem{fadeev}
-V. G. Drinfeld, \textit{Proc. Int. Congr. Math.}, Berkeley {\bf
-1}, 798 (1986)
-
-M. Jimbo, \textit{Lett. Math. Phys.} {\bf 11}, 247 (1986)
-
-S. L. Woronowicz, \textit{Commun. Math. Phys.} {\bf 111}, 613
-(1987)
-
-L.D. Fadeev, N.Y. Reshetikhin, L.A. Takhtajan, "Quantization of
-Lie Groups and Lie Algebras", \textit{Leningrad Math. J.} {\bf 1},
-193 (1987)
-
-\bibitem{sww}
-M. Schlieker, W. Weich and R. Weixler, \textit{Z. Phys. C} {\bf
-53}, 79 (1992)
-
-\bibitem{pw}
-P. Podles and S. L. Woronowicz, \textit{Commun. Math. Phys.} {\bf
-185}, 325 (1997)
-
-\bibitem{unruh}
-W. G. Unruh, \textit{Phys. Rev. D} {\bf14}, 870 (1976)
-
-\bibitem{hawking}
-S. W. Hawking, \textit{Phys. Rev. D} {\bf 14}, 2460 (1976)
-
-\bibitem{agy}
-M. Arik, S. Gun, A. Yildiz, \textit{Eur. Phys. J. C} {\bf 27}, 453
-(2003)
-
-\bibitem{ab}
-M. Arik, A. Baykal, \textit{J. Math. Phys.} {\bf 45}, 4207 (2004)
-
-\bibitem{inonu}
-E.Inonu and E.P.Wigner, \textit{Proc. Natl. Acad. Sci. U.S.A.}
-{\bf 39}, 510 (1953)
-
-\bibitem{majid}
-S. Majid, "Braided groups and algebraic quantum field theories",
-\textit{Letters in Math. Phys.} {\bf 22}, 167 (1991)
-
-\bibitem{puszwor}
-W. Pusz and S.L. Woronowicz, \textit{Rep. Math. Phys.} {\bf 27},
-231 (1989)
-
-M. Arik, \textit{Z. Phys. C} {\bf 51}, 627 (1991)
-
-%% References for Chapter 4
-
-
-
-\end{thebibliography}
-%
-% You can also try harvardbibliography, bibnotcited and
-% harvardbibnotcited environments for other types of bibliographical
-% lists.
-%
 \end{document}

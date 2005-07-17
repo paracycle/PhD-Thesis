@@ -7,7 +7,6 @@ mechanical particles involved in such phenomena. It is for this reason that
 understanding the symmetry properties of these phenomena and, motivated by their
 importance, trying to find other behavior that mimic them is very meaningful.
 
-
 Furthermore, while bosonic behavior has a classical counterpart, the
 concept of a fermionic particle is one that can only exist in the quantum
 domain. This fact makes the study of such behavior even more important.
@@ -15,7 +14,6 @@ However, what could be more interesting is the study of other such
 constructs that cannot have a classical counterpart. These constructs would
 thus belong solely in the quantum domain and could help us understand phenomena
 that are strictly quantum mechanical in nature.
-
 
 There is a strong relation between the spin properties of a particle and
 the particle being a boson or a fermion. In fact, it is a proven fact of
@@ -26,13 +24,10 @@ a relationship between two concepts that seem to be totally unrelated. This
 strong relation between the bosonic/fermionic nature of a particle and its spin
 makes the angular momentum algebra also very central in quantum physics.
 
-
 Before we start investigating such matters, it would be apt to give an
-overview of the state of bosons and fermions and the angular momentum
-algebra as it has been studied up to now.
+overview of the state of bosons and fermions as it has been studied up to now.
 
-
-When the harmonic oscillator is studied in a quantum mechanical manner,
+When the harmonic oscillator is studied in a quantum mechanical manner \cite{dirac-book},
 one arrives at the relation:
 \beq
 a \adag - \adag a = 1 \label{bosonic comm rel}
@@ -89,28 +84,30 @@ of such a field with momentum $p$.
 
 
 For fermionic particles the story is a little bit more different.
-In 1925, Pauli first proposed his {\it exclusion principle} to explain the behavior
+In 1925, Pauli first proposed his {\it exclusion principle} \cite{pauli} to explain the behavior
 of electrons in an atom. According to this principle, no two electrons could
 exist in the same quantum state and it was for this reason that electrons could not
 all occupy the lowest energy state in the atomic orbitals but instead had to line up
 the energy levels in a well ordered manner. The implication of this principle to the
 electron gas was first considered by Fermi and Dirac and it is for this reason that
-particles that obey these statistics are called {\it fermions}. In 1926 Dirac noted that
-the exclusion principle could also apply to other particles by relating bosons and
-fermions to the symmetry of the many-particle wavefunction. If the wavefunction
-changes sign upon exchange of two particles then those particles would be fermions
-and they would be bosons if the wavefunction did not change sign. This treatment
-effectively implies the Pauli exclusion principle since if there were to be two
-fermionic particles occupying the same quantum state, then upon their exchange
+particles that obey these statistics are called {\it fermions}. In 1926 Dirac noted
+\cite{dirac} that the exclusion principle could also apply to other particles
+by relating bosons and fermions to the symmetry of the many-particle
+wavefunction. If the wavefunction changes sign upon exchange of two
+particles then those particles would be fermions and they would be bosons
+if the wavefunction did not change sign. This treatment effectively
+implies the Pauli exclusion principle since if there were to be two fermionic
+particles occupying the same quantum state, then upon their exchange
 the wavefunction would change sign; on the other hand, we expect the wavefunction
 to be identical to the original one before the exchange since nothing must have
 changed about the quantum state of the system. For this reason the original
 wavefunction can be nothing but zero if it is to be equal to its negative in
 this manner. Thus, by contradiction, one can show that no two fermions can exist
 in the same quantum state. It was only later, in 1928, that Jordan and Wigner
-proposed that in order to treat fermions in quantum field theory, their field
-operators had to anticommute so that the wavefunction could be antisymmetric.
-They showed that a consistent second-quantization of fermions implied anticommutation
+proposed \cite{jordan-wigner} that in order to treat fermions in
+quantum field theory, their field operators had to anticommute so
+that the wavefunction could be antisymmetric. They showed that a
+consistent second-quantization of fermions implied anticommutation
 relations on the field operators. This is turn implies that the Fourier coefficients
 of the field operators that belong to a normal mode also obey anticommutation
 relations instead of the commutation relations that the bosonic creation and
@@ -562,7 +559,7 @@ It becomes a Hopf algebra, if we define the coproduct, counit and coinverse maps
 \epsilon(g) & = 1 \\
 S(g) & = g^{-1}
 \end{align}
-for all $g \in G$. In this instance the resulting Hopf algebra is always 
+for all $g \in G$. In this instance the resulting Hopf algebra is always
 cocommutative  (since $g \otimes g = g \otimes g$) and is
 commutative depending on the original group $G$ being abelian or not. If the
 underlying group $G$ is abelian, the resulting Hopf algebra is both cocommutative
@@ -595,6 +592,41 @@ algebraic group. In essence, identifying these quantized algebraic groups with t
 Hopf algebras one can study them in full generality and make a theory of these quantum
 groups.
 
+Since it is essentially the noncocommutativity of a Hopf algebra that makes it interesting,
+it is natural for there to be a mathematical property to quantify the amount of
+its noncocommutativity. This is analogous to the definition of the commutator to describe
+the amount of noncommutativity of an associative algebra. Thus, a quasitriangular Hopf
+algebra is defined as a Hopf algebra $H$, where there is an invertible element $R$
+in $H \otimes H$, such that it satisfies:
+\begin{align}
+\tau \circ \Delta & = R \Delta R^{-1} \\
+(\Delta \otimes id)(R) & = R^{13} R^{13} \\
+(id \otimes \Delta)(R) & = R^{13} R^{12}
+\end{align}
+where if $R = a_{i} \otimes\; b_{i}$ then $R^{12}$, $R^{13}$ and $R^{23}$ are defined as:
+\begin{align}
+R^{12} & = a_{i} \otimes\; b_{i} \otimes\; 1 \\
+R^{13} & = a_{i} \otimes\; 1 \otimes\; b_{i} \\
+\intertext{and}
+R^{23} & = 1 \otimes\; a_{i} \otimes\; b_{i} \quad .
+\end{align}
+As can be seen, in a quasitriangular Hopf algebra the coproduct is almost cocommutative
+up to a conjugation by the invertible element $R$. Moreover, if one works with
+the equations given above, one can arrive at a matrix equation for $R$
+given by the quantum Yang-Baxter equation:
+\beq
+R^{12} R^{13} R^{23} = R^{23} R^{13} R^{12}
+\eeq
+which plays a fundamental role in the theory of completely integrable systems \cite{qybe}.
+If one starts from this matrix equation for $R$, one can start categorizing the solutions
+to the matrix equation and thus categorize quasitriangular Hopf algebras. Equivalently,
+every matrix representation of a quasitriangular Hopf algebra, implies a matrix representation
+of $R$ and as such gives one a solution to the quantum Yang-Baxter equation. Thus, from
+a single Hopf algebra, it is possible to extract many solutions to this equation by using
+different matrix representations. This is the reason why the element $R$ of $H \otimes H$ is
+sometimes called the universal $R$-matrix. It is mostly for these reasons that commonly
+studied physical Hopf algebras and quantum groups are generally quasitriangular.
+
 \section{Quantum matrix groups}
 
 A quantum matrix group is defined by a set of $n$ x $n$ matrices $M$:
@@ -624,9 +656,9 @@ normal product and $\I1_n$ stands for the $n$ x $n$ unit matrix.
 The relations above imply the definitions of the
 coproduct, counit and coinverse of the matrix elements:
 \bea
-\triangle(\alpha_{ij}) &=& \sum_k \alpha_{ik} \otimes \alpha_{kj} \\
-\epsilon(\alpha_{ij}) &=& \delta_{ij} \\
-\sum_j S(\alpha_{ij}) \alpha_{jk} &=& \delta_{ij} = \sum_j \alpha_{ij} S(\alpha_{jk})
+\triangle(a_{ij}) &=& \sum_k a_{ik} \otimes a_{kj} \\
+\epsilon(a_{ij}) &=& \delta_{ij} \\
+\sum_j S(a_{ij}) a_{jk} &=& \delta_{ij} = \sum_j a_{ij} S(a_{jk})
 \eea
 
 One of the most important examples of quantum matrix groups is the quantum
@@ -674,18 +706,54 @@ to be equal to $1$ and obtain the quantum subgroup $SL_q(n)$, the special linear
 group of dimension $n$.
 
 \section{Quantum group invariance of an algebra}
-Given an algebra $\mathcal{A}$ with generators $a_1$, $a_2$, $\ldots$, $a_n$, one can construct the column matrix:
+A (left)module over the ring $R$ consists of an abelian group $M$ and the scalar
+multiplication operation $s: R \otimes M \rightarrow M$, the action of which is
+usually written as $s(r, x) = rx$ for some $r$ in $R$ and some $x$ in $M$, and such that:
+\begin{align}
+r(x+y) &= rx+ry \\
+(r+s)x &= rx+sx \\
+(rs)x &= r(sx) \\
+1x &= x
+\end{align}
+for all $r,s$ in $R$ and all $x, y$ in $M$. Notice that this definition of a module is the same
+as the definition of a vector space except a module is defined over a ring instead of a field.
+Thus, every vector space is also a module and a module over $K$ is the same thing as a vector
+space over $K$ if $K$ is a field.
+
+The reason why the module is defined here is that they gives a representation of a ring or any
+structure that extends the ring structure. On order to see this, one can consider the scalar
+multiplication as the action of the ring $R$ on $M$ by sending the element $x$ to $rx$. This action
+will be a group endomorphism due to the definition of a module. Thus, if one identifies an element
+$r$ in $R$ by its action, then one has defined a map from $R$ to $End(M)$ which respects the
+ring structure. Such a map $R \rightarrow End(M)$ is called a representation of the ring $R$ over
+the abelian group $M$. If we consider the representations of a vector space, then these representations
+also form a vector space such that these representations can be multiplied by the elements
+of the underlying field and can be added to generate new representations. Since a Hopf algebra
+is an associative algebra, which itself is a vector space, it also has such
+representations. However, the interesting fact for Hopf algebras (more specifically bialgebras)
+is that if $U$ and $V$ are two representations of the Hopf algebra then $U \otimes V$ is also
+a representation for the Hopf algebra due to the nature of the coproduct. The representation
+of $A$ in $H$ on $W = U \otimes V$ is given by $\Delta(A) = A_{(1)} \otimes A_{(2)}$ such that
+$A_{(1)}$ gives the representation on $U$ and $A_{(2)}$ gives the representation on $V$.
+Thus, one can form direct products of representations to form new representations for a Hopf
+algebra.
+
+Starting from this interesting fact for Hopf algebras one can arrive at an even more
+interesting result. If one were to consider an associative algebra $A$ as a vector representation
+of an algebra, then the original algebra structure of $A$ would not be preserved since the
+product of two representations don't even form another representation. However, if we consider $A$
+as representation for a Hopf algebra $H$ and if the product $m_A$ on $A$ respects the representation map,
+then the linear map $\rho: H \otimes A \rightarrow A$ is an algebra representation of the Hopf algebra.
+Thus Hopf algebras accept representations which can also form algebras.
+
+Finally, if $A$ is a representation of a Hopf algebra and $X$ is an element of $A$ such that:
 \beq
-A =
-\left(
-\begin{array}{c}
-a_1 \\
-a_2 \\
-\vdots \\
-a_n
-\end{array}
-\right)
+c[X] = \epsilon(c) X
 \eeq
+for all $c$ in $H$, then $X$ is said to invariant under
+$H$. The subset of all such invariant elements of a representation $A$ forms a subrepresentation of $H$.
+Thus, given an algebra $A$ which is a representation of $H$, if the invariant elements of $A$ form the
+whole of the algebra then $A$ is said to be invariant under the action of the Hopf algebra $H$.
 \section{Summary}
 
 This work is divided into four chapters. In the first chapter, an introduction was given to
