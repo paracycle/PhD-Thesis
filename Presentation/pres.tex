@@ -13,12 +13,10 @@
 \usepackage{xypic}
 \xyoption{all}
 
-\newcommand{\beq}{\begin{equation}}
-\newcommand{\eeq}{\end{equation}}
-\newcommand{\bea}{\begin{eqnarray}}
-\newcommand{\eea}{\end{eqnarray}}
-\newcommand{\bean}{\begin{eqnarray*}}
-\newcommand{\eean}{\end{eqnarray*}}
+\newcommand{\beq}{\[}
+\newcommand{\eeq}{\]}
+\newcommand{\bea}{\begin{align*}}
+\newcommand{\eea}{\end{align*}}
 
 \newcommand{\adag}{a^{\dagger}}
 \newcommand{\bdag}{b^{\dagger}}
@@ -46,29 +44,1261 @@
 %%    SLIDE     %%
 %%%%%%%%%%%%%%%%%%
 
-\begin{slide}[Dissolve]{}
-Hedere Hodoro
+\begin{slide}{Motivations}
+\begin{itemize}
+    \item{Bosons and fermions are important}
+    \item{Angular momentum algebra is important}
+    \item{Quantum groups (Hopf algebras) will be important}
+\end{itemize}
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%
 %%    SLIDE     %%
 %%%%%%%%%%%%%%%%%%
 
-\begin{slide}{}
+\begin{slide}{Bosons}
+The boson algebra arises from the quantization of the harmonic oscillator:
+\begin{align*}
+a \adag - \adag a & = 1 \\
+a a - a a & = 0
+\end{align*}
+Defining $N$ as $\adag a$ gives:
+\begin{align*}
+N \ket{n} &= n \ket{n} \\
+\adag \ket{n} &= \sqrt{n + 1} \ket{n + 1} \\%
+a \ket{n} &= \sqrt{n} \ket{n - 1}
+\end{align*}
+for $n = 0, 1, 2, \cdots$.
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%
 %%    SLIDE     %%
 %%%%%%%%%%%%%%%%%%
 
-\begin{slide}{}
+\begin{slide}{Bosonic Energy Levels}
+\xymatrix@R=20pt@C=40pt{
+\ar@{}[rr]^-*+{\vdots} & & \\
+\ar@{}[rr]^-*+{\vdots} & & \\
+\ar@/^/[u]_*+{\adag} \ar@{-}[rr]^-*+{\ket{2}} & &\ar@/^/[d]^*+{a} \\
+\ar@/^/[u]_*+{\adag} \ar@{-}[rr]^-*+{\ket{1}} & &\ar@/^/[d]^*+{a} \\
+\ar@/^/[u]_*+{\adag} \ar@{-}[rr]^-*+{\ket{0}} & \ar@{->}[d]^*+{a} & \\
+& & \\
+\ar@{}[rr]^-*+{\text{0 - Null State}} & &
+}
 \end{slide}
 
 %%%%%%%%%%%%%%%%%%
 %%    SLIDE     %%
 %%%%%%%%%%%%%%%%%%
 
-\begin{slide}{}
+\begin{slide}{Fermions}
+The fermion algebra is invented the other way around.
+
+The algebra is defined by:
+\begin{align*}
+a \adag + \adag a & = 1 \\
+a a + a a & = 0
+\end{align*}
+Defining $N$ as $\adag a$ gives:
+\begin{align*}
+N \ket{n} &= n \ket{n} \\
+\adag \ket{n} &= \sqrt{n + 1} \ket{n + 1} \\%
+a \ket{n} &= \sqrt{n} \ket{n - 1}
+\end{align*}
+for $n = 0$ and $1$.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Fermionic Energy Levels}
+\xymatrix@R=20pt@C=40pt{
+\ar@{}[rr]^-*+{\text{0 - Null State}}& &\\
+& \ar@{->}[u]_*+{\adag} & \\
+\ar@{-}[rr]^-*+{\ket{1}} & & \ar@/^/[d]^*+{a} \\
+\ar@/^/[u]_*+{\adag} \ar@{-}[rr]^-*+{\ket{0}} & \ar@{->}[d]^*+{a} &  \\
+& & \\
+\ar@{}[rr]^-*+{\text{0 - Null State}} & &
+}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+\overlays{6}{
+\begin{slide}{Associative Algebras}
+\fromSlide{1}
+{
+    An algebra $A$ is a vector space over $F$ with multiplication $m$.
+    \[
+    m(x, y) \equiv m(x \otimes y) \equiv xy
+    \]
+    We require that, $m$ is associative:
+}
+\onlySlide*{1}
+{
+    \[
+    (xy)z = x(yz) \quad \text{for all $x, y, z \in A$}
+    \]
+}
+\onlySlide*{2}
+{
+    \[
+    m(m(x,y), z) = m(x, m(y, z)) \quad \text{for all $x, y, z \in A$}
+    \]
+}
+\onlySlide*{3}
+{
+    \[
+    m(m(A \otimes A) \otimes A) = m(A \otimes m(A \otimes A))
+    \]
+}
+\onlySlide*{4}
+{
+    \[
+    m \circ (m \otimes id) (A \otimes A \otimes A) = m \circ (id \otimes m)(A \otimes A \otimes A)
+    \]
+}
+\fromSlide*{5}
+{
+    \[
+    m \circ (m \otimes id) = m \circ (id \otimes m)
+    \]
+}
+\fromSlide{6}
+{
+\[
+  \xymatrix@=60pt{
+    A \otimes A \otimes A \ar[r]^-*+{m \circ id} \ar[d]^-*+{id \circ m}& A \otimes A \ar[d]^-*+{m}\\
+    A \otimes A \ar[r]^-*+{m} & A \\
+  }
+\]
+}
+\end{slide}
+}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+\overlays{2} {
+\begin{slide}{Associative Algebras}
+The algebra $A$ is called \underline{unital} if there exists an identity
+\[
+x1 = 1x = x \quad \text{for all $x \in A$}
+\]
+This is the same thing as defining the map $\eta: F \rightarrow A$
+$ \eta(k) = k1 \quad \text{for all $k \in F$} $
+which satisfies:
+\[ m \circ (id \otimes \eta) = id = m \circ (\eta \otimes id) \]
+\onlySlide{2}
+{
+    \[
+    \xymatrix@R=50pt@C=80pt{
+    F \otimes A \cong A \cong A \otimes F
+        \ar[r]^-*+{id \circ \eta}
+        \ar[d]^-*+{\eta \circ id}
+        \ar[dr]^-*+{id} & A \otimes A \ar[d]^-*+{m}\\
+    A \otimes A \ar[r]^-*+{m} & A \\
+    }
+    \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Coalgebras}
+\underline{Motivation}: The action of the product on the dual of the algebra
+\break
+\break
+The dual of the algebra $A$ is also a vector space over $F$. The addition
+and scalar multiplication are carried over. However, what about the effect of $m$
+and $\eta$?
+\begin{align*}
+\phi(xy) &= \phi(m(x \otimes y)) = \Delta(\phi)(x \otimes y) \\
+\phi(k1) &= \phi(\eta(k)) = \epsilon(\phi)k
+\end{align*}
+Two new maps on $A^*$ are defined:
+\begin{itemize}
+  \item{The coproduct $\Delta: A^* \rightarrow A^* \otimes A^*$}
+  \item{The counit $\epsilon: A^* \rightarrow F$}
+\end{itemize}
+The associativity and unity conditions are carried over as coassociativity
+and counit conditions.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{2} {
+\begin{slide}{Coalgebras}
+A coalgebra $C$ is a vector field over $F$ with a coproduct $\Delta$ and a
+counit $\epsilon$ such that:
+\begin{align*}
+(id \otimes \Delta) \circ \Delta & = (\Delta \otimes id) \circ \Delta \\
+(id \otimes \epsilon) \circ \Delta = &\; id = (\epsilon \otimes id) \circ \Delta
+\end{align*}
+\fromSlide{2}
+{
+    \begin{minipage}{85pt} % A minipage that covers half the page
+    \[
+    \xymatrix@=50pt{
+        C \ar[r]^-*+{\Delta} \ar[d]^-*+{\Delta}& C \otimes C \ar[d]_-*+{id \otimes \Delta}\\
+        C \otimes C \ar[r]^-*+{\Delta \otimes id} & C \otimes C \otimes C \\
+    }
+    \]
+    \end{minipage}
+    \hspace{2cm} % To get a little bit of space between the figures
+    \vline{}
+    \begin{minipage}{85pt}
+    \[
+    \xymatrix@=50pt{
+        C
+        \ar[r]^-*+{\Delta}
+        \ar[d]^-*+{\Delta}
+        \ar[dr]^-*+{id} & C \otimes C \ar[d]^-*+{id \otimes \epsilon}\\
+        C \otimes C \ar[r]^-*+{\epsilon \otimes id} & F \otimes C \cong C \cong C \otimes F \\
+    }
+    \]
+    \end{minipage}
+}
+\end{slide}
+}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Bialgebras}
+A bialgebra $B$ is both an algebra and a coalgebra over the field $F$.
+The coalgebra and the algebra structure should be compatible.
+\begin{align*}
+\Delta(ab) = \Delta(m(a \otimes b)) & = m_{B \otimes B}(\Delta(a) \otimes \Delta(b)) \\
+\Delta(1) & = 1 \otimes 1
+\end{align*}
+and
+\begin{align*}
+\epsilon(ab) = \epsilon(m(a \otimes b)) &= m(\epsilon(a) \otimes \epsilon(b)) = \epsilon(a) \epsilon(b) \\
+\epsilon(1) &= 1
+\end{align*}
+where $m_{B \otimes B} = (m \otimes m) \circ (id \otimes \tau \otimes id)$ so that:
+\[
+m_{B \otimes B}((a \otimes b) \otimes (c \otimes d)) = m(a \otimes c) \otimes m(b \otimes d) = (ac) \otimes (bd)
+\]
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{5} {
+\begin{slide}{Bialgebra Diagrams}
+\onlySlide*{1}
+{
+    \[
+    \xymatrix@=40pt{
+                                                                    & B  \ar[dr]^-*+{\Delta} & \\
+        B \otimes B \ar[ur]^-*+{m} \ar[d]^-*+{\Delta \otimes \Delta}            &  & B \otimes B \\
+        B \otimes B \otimes B \otimes B \ar[rr]^-*+{id \otimes \tau \otimes id} &  & B \otimes B \otimes B \otimes B \ar[u]^-*+{m \otimes m}\\
+    }
+    \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@=60pt{
+    F \cong F \otimes F \ar[dr]^-*+{\eta} \ar[rr]^-*+{\eta \otimes \eta} &                       & B \otimes B\\
+                                                                         & B \ar[ur]^-*+{\Delta} &            \\
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@=60pt{
+    B \otimes B \ar[dr]^-*+{m} \ar[rr]^-*+{\epsilon \otimes \epsilon} &                         & F \otimes F \cong F \\
+                                                                      & B \ar[ur]^-*+{\epsilon} &                     \\
+  }
+  \]
+}
+\onlySlide*{4}
+{
+  \[
+  \xymatrix@=60pt{
+    F \ar[dr]^-*+{\eta} \ar[rr]^-*+{id} &                         & F  \\
+                                        & B \ar[ur]^-*+{\epsilon} & \\
+  }
+  \]
+}
+\fromSlide{5}
+{
+All diagrams are symmetric between $m, \eta$ and $\Delta, \epsilon$.
+\break
+\break
+Replace $m$ and $\eta$ with $\Delta$ and $\epsilon$ and reverse the arrows, one
+gets the same diagrams.
+\break
+\break
+\begin{minipage}{130pt}
+The coalgebra is \break compatible with the \break algebra structure
+\end{minipage}
+\hspace{10pt}
+$\Leftrightarrow$
+\hspace{10pt}
+\begin{minipage}{130pt}
+The algebra is \break compatible with the \break coalgebra structure
+\end{minipage}
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Hopf Algebras}
+A Hopf algebra $H$ is a bialgebra with an additional map $S: H \rightarrow H$
+such that $S$ satisfies:
+\[
+\xymatrix@=30pt{
+H \otimes H \ar[rr]^-*+{S \otimes id}                        &                    & H \otimes H \ar[d]^-*+{m}\\
+H \ar[u]^-*+{\Delta} \ar[d]^-*+{\Delta} \ar[r]^-*+{\epsilon} & F \ar[r]^-*+{\eta} & H \\
+H \otimes H \ar[rr]^-*+{id \otimes S}                        &                    & H \otimes H \ar[u]^-*+{m}\\
+}
+\]
+
+In terms of elements, this means that if $\Delta(c) = \sum_c c_{(1)} \otimes c_{(2)}$ then
+\[
+\sum_c S(c_{(1)})c_{(2)} = \epsilon(c) 1 = \sum_c c_{(1)}S(c_{(2)})
+\]
+
+
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Commutativity}
+An algebra $A$ is commutative if the input to the product is symmetric.
+\[
+xy = yx
+\]
+which means:
+\[
+m(x \otimes y) = m(y \otimes x)
+\]
+Without reference to elements:
+\[
+m  = m \circ \tau
+\]
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Cocommutativity}
+A coalgebra $C$ is cocommutative if the output of coproduct is symmetric.
+\break
+\break
+If $\Delta(c) = \sum_c c_{(1)} \otimes c_{(2)}$, then for a cocommutative coproduct:
+\[
+\sum_c c_{(1)} \otimes c_{(2)} = \Delta(c) = \sum_c c_{(2)} \otimes c_{(1)}
+\]
+
+Without reference to elements:
+\[
+\Delta  = \tau \circ \Delta
+\]
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Hopf Algebra examples}
+\begin{itemize}
+  \item{
+    \textbf{\underline{Group Algebra}:} For a group $G$, the group algebra $FG$ over $F$
+    is a Hopf algebra with:
+        \[
+        \left.
+        \begin{aligned}
+        \Delta(g) & = g \otimes g \\
+        \epsilon(g) & = 1 \\
+        S(g) & = g^{-1}
+        \end{aligned}\;
+        \right\} \quad
+        \shortstack{
+            \text{Cocommutative} \\
+            \text{Commutativity depends on $G$.}
+        }
+        \]
+    }
+  \item{
+    \textbf{\underline{Lie Algebra}:} The universal enveloping algebra $U(g)$ of a Lie
+      algebra $g$ is a Hopf algebra with:
+        \[
+        \left.
+        \begin{aligned}
+        \Delta(x) & = 1 \otimes x + x \otimes 1 \\
+        \epsilon(x) & = 0 \\
+        S(x) & = -x
+        \end{aligned}\;
+        \right\} \quad
+        \shortstack{
+            \text{Cocommutative} \\
+            \text{Noncommutative}
+        }
+        \]
+
+    }
+\end{itemize}
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Quantum Groups}
+The most important Hopf algebras are noncommutative and
+noncocommutative ones. These are called quantum groups.
+
+Motivations:
+\begin{itemize}
+  \item{A manifold $M$ can be studied by looking at $C(M)$ which is a cocommutative Hopf algebra.
+   If we study noncocommutative Hopf algebras then we can study noncommutative manifold. Thus, we
+   can study noncommutative geometry by looking at quantum groups.
+  }
+  \item{A group can be described fully by its Hopf algebra. A "deformed" version of the Hopf algebra
+   will enable one to study "deformed" ("quantized") groups. The study of "quantized" Hopf algebras is
+   a study of "quantum" groups.
+  }
+\end{itemize}
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Quasitriangular Hopf algebra}
+A quasitriangular Hopf algebra is almost cocommutative. The coproduct satisfies:
+\[
+\tau \circ \Delta = R \Delta R^{-1}
+\]
+for some element $R$ in $H \otimes H$ such that
+\begin{align*}
+(\Delta \otimes id)(R) & = R^{13} R^{13} \\
+(id \otimes \Delta)(R) & = R^{13} R^{12}
+\end{align*}
+where if $R = a_{i} \otimes\; b_{i}$
+\begin{align*}
+R^{12} & = a_{i} \otimes\; b_{i} \otimes\; 1 \\
+R^{13} & = a_{i} \otimes\; 1 \otimes\; b_{i} \\
+R^{23} & = 1 \otimes\; a_{i} \otimes\; b_{i}
+\end{align*}
+
+\end{slide}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$R$-Matrix}
+For a quasitriangular Hopf algebra, the condition on $R$ leads to the
+quantum Yang-Baxter eqaution:
+\[
+R^{12} R^{13} R^{23} = R^{23} R^{13} R^{12}
+\]
+Every matrix representation of the Hopf algebra gives a matrix solution to the
+QYBE and quasitriangular Hopf algebras can be categorized by finding solutions to QYBE.
+\break
+\break
+Most interesting quantum groups are quasitriangular.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Quantum matrix groups}
+Set of $n$ x $n$ matrices $M$ such that each entry $m_{ij}$ belongs to a Hopf algebra with:
+\begin{align*}
+\triangle(M) &= M \dot{\otimes} M \\
+\epsilon(M) &= \I1_n \\
+S(M) &= M^{-1}
+\end{align*}
+This is shorthand for:
+\begin{align*}
+\triangle(m_{ij}) &= \sum_k m_{ik} \otimes m_{kj} \\
+\epsilon(m_{ij}) &= \delta_{ij} \\
+\sum_j S(m_{ij}) m_{jk} &= \delta_{ij} = \sum_j m_{ij} S(m_{jk})
+\end{align*}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$M_q(n)$}
+An element $T$ of $M_q(n)$ has matrix entries $t_{ij}$ that satisfy:
+\begin{align*}
+t_{ik} t_{il} & = q t_{il} t_{ik} & &\text{for $k < l$} \\
+t_{ik} t_{jk} & = q t_{jk} t_{ik} & &\text{for $i < j$} \\
+t_{il} t_{jk} & = t_{jk} t_{il} & &\text{for $i  < j$, $k < l$} \\
+t_{ik} t_{jl} - t_{jl} t_{ik} & = (q - q^{-1}) t_{il} t_{jk} & &\text{for $i  < j$, $k < l$}
+\end{align*}
+for some $q \in \IC$.
+\break
+\break
+The coproduct and counit are defined as in a normal quantum matrix group.
+\break
+\break
+The coinverse might not be defined if $T$ is not invertible.
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$GL_q(n)$ and $SL_q(n)$}
+The $q$-determinant of $T$:
+\[
+det_q(T) = \sum_{\sigma \in S_n} (-q)^{i(\sigma)} t_{1\sigma(1)} \cdots t_{n\sigma(n)}
+\]
+and $T^{-1}$ is given by:
+\[
+T^{-1} = det_q^{-1}(T) adj(T)^T
+\]
+$\therefore\quad$ $S(T) = T^{-1}$ is defined $\Leftrightarrow$ $det_q(T)$ is invertible.
+\break
+\break
+This condition gives us $GL_q(n)$.
+\break
+\break
+Further require $det_q(T) = 1$, we get $SL_q(n)$.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Quantum group invariance of an algebra}
+Interesting facts:
+\begin{itemize}
+  \item{The tensor product of two vector space representations of a Hopf algebra is also
+    a vector space representation}
+  \item{The product on the Hopf algebra can be extended to the set of vector space
+    representations of a Hopf algebra. Thus, Hopf algebra have algebra representations}
+\end{itemize}
+
+Thus, given an algebra $A$ which is a representation of $H$, if the invariant elements of $A$ form the
+whole of the algebra then $A$ is said to be invariant under the action of the Hopf algebra $H$.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The Anticommuting Spin Algebra}
+Definition:
+\begin{align*}
+\anti{J_1}{J_2} & = J_3 \\
+\anti{J_2}{J_3} & = J_1 \\
+\anti{J_3}{J_1} & = J_2
+\end{align*}
+
+A (non-exceptional) Jordan algebra where the Jordan product is
+defined by:
+\[
+A \circ B \equiv \frac12 (AB + BA)
+\]
+A formal Jordan algebra, in addition to a commutative Jordan
+product, also satisfies
+\[
+A^2\circ(B\circ A) = (A^2\circ B)\circ A
+\]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The invariance quantum group of ACSA}
+Transform the generators $J_i$ to $J'_i$ by:
+\[
+J'_i = \sum_j\alpha_{ij} J_j
+\]
+where $\alpha_{ij}$ do not necessarily commute and define:
+\[
+u_{ijk} =
+  \begin{cases}
+    1, & \text{for $i \neq j \neq k \neq i$,} \\
+    0, & \text{otherwise.}
+  \end{cases}
+\]
+gives us relations among $\alpha_{ij}$ as:
+\begin{align*}
+\alpha_{in} \alpha_{jn} + \alpha_{jn} \alpha_{in} & = 0  && \text{for $i \neq j$}\\
+\alpha_{in} \alpha_{jm} - \alpha_{jm} \alpha_{in}& = 0 && \text{for $i \neq j$ and $n \neq m$}\\
+\sum_{n,\;m} \alpha_{in} \alpha_{jm} u_{nml} & = \alpha_{kl} && \text{for $i \neq j \neq k \neq i$}
+\end{align*}
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$SO_{q = -1}(3)$}
+We will show that the previous relations are exactly $SO_{q = -1}(3)$ relations.
+\break
+\break
+One can obtain $SO_q(3)$ by imposing on $SL_q(3)$ two conditions:
+\begin{itemize}
+  \item{Reality condition: $A_{ij} = A^*_{ij}$}
+  \item{Unitarity condition: $A^\dagger = A^{-1}$}
+\end{itemize}
+For $SO_q(3)$ one finds that $q = \pm 1$ only.
+\break
+\break
+The matrix elements of a matrix $A$ in $SO_{q = -1}(3)$ satisfy:
+\[
+\left.
+\begin{aligned}
+A_{in} A_{jn} & = - A_{jn} A_{in} \\
+A_{in} A_{jm} + A_{im} A_{jn} & = A_{jm} A_{in} + A_{jn} A_{im} \\
+A_{im} A_{jn} & = A_{jn} A_{im} \\
+A_{in} A_{jm} &= A_{jm} A_{in}
+\end{aligned}\;
+\right\}\text{for $i \neq j$ and $n \neq m$}
+\]
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The invariance group of ACSA = $SO_{q = -1}(3)$}
+First two relations follow from the first and the last equations from $SO_{q = -1}(3)$.
+\break
+\break
+The last invariance relation gives:
+\[
+\alpha_{kl} = \alpha_{in} \alpha_{jm} + \alpha_{im} \alpha_{jn} = \alpha_{jm} \alpha_{in} +  \alpha_{jn} \alpha_{im}
+\]
+for $i, j, k$ all different and $n, m, l$ all different.
+
+The definition of the inverse quantum matrix
+\[
+A^{-1} = det_{q = -1}^{-1}(A) adj(A)^T
+\]
+implies for $A \in SO_{q = -1}(3)$:
+\[
+A^T = adj(A)^T \qquad \Rightarrow \qquad A = adj(A)
+\]
+which results in the relation given above.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Representations of ACSA}
+Define the operators:
+\begin{align*}
+J_+ & = J_1 + J_2 \\
+J_- & = J_1 - J_2 \\
+J^2 & = J_1^2 + J_2^2 + J_3^2
+\end{align*}
+They obey the following relations:
+\begin{align*}
+\anti{J_+}{J_3} & = J_3 \\
+\anti{J_-}{J_3} & = -J_3 \\
+J_+^2 & = J^2 - J_3^2 + J_3 \\
+J_-^2 & = J^2 - J_3^2 - J_3
+\end{align*}
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Representations of ACSA}
+$J^2$ is central in the algebra and $J_+$, $J_-$ are hermitian.
+\break
+\break
+Label the states with the eigenvalues of $J^2$ and $J_3$:
+\begin{align*}
+J^2 \ket{\lambda, \mu} & = \lambda \ket{\lambda, \mu} \\
+J_3 \ket{\lambda, \mu} & = \mu \ket{\lambda, \mu}
+\end{align*}
+then we get the action of $J_+$ and $J_-$ as:
+\begin{align*}
+J_+ \ket{\lambda, \mu} & = \sqrt{\lambda - \mu^2 + \mu} \ket{\lambda,- \mu + 1} \\
+J_- \ket{\lambda, \mu} & = \sqrt{\lambda - \mu^2 - \mu} \ket{\lambda,- \mu - 1}
+\end{align*}
+where $\lambda = j(j+1)$ for some $j$ and $j \geq \mu \geq -j$ in order to have positive
+square norms.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{3} {
+\begin{slide}{State diagram of ACSA for $j=0$}
+\onlySlide*{1}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@{}[] \ar@{-}[r]^-*+{0} & \ar@{}[]
+  }
+  \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(ul,dl)[]_*+{J_+} \ar@{-}[r]^-*+{0} & \ar@{}[]\hspace{42pt}
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(ul,dl)[]_*+{J_+} \ar@{-}[r]^-*+{0} & \ar@(ur,dr)[]^*+{J_-}
+  }
+  \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+\overlays{3} {
+\begin{slide}{State diagram of ACSA for $j=1$}
+\onlySlide*{1}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@{}[d] \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@{}[d] \\
+    \ar@{-}[r]^-*+{-1} &  \\
+  }
+  \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@/_/[d]_*+{J_+} \ar@{-}[r]^-*+{1} & \hspace{30pt}\\
+    \ar@{-}[r]^-*+{0} & \ar@{}[d]\hspace{30pt} \\
+    \ar@{-}[r]^-*+{-1} &  \hspace{30pt}\\
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@/_/[d]_*+{J_+} \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@/^/[d]^*+{J_-} \\
+    \ar@{-}[r]^-*+{-1} &  \\
+  }
+  \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{5} {
+\begin{slide}{State diagram of ACSA for $j=2$}
+\onlySlide*{1}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@{}[ddd] \ar@{-}[r]^-*+{2} & \\
+    \ar@{}[ddd] \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@{}[u] \\
+    \ar@{-}[r]^-*+{-1} & \ar@{}[u] \\
+    \ar@{-}[r]^-*+{-2} &
+  }
+  \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{2} & \hspace{34pt}\\
+    \ar@{}[ddd] \ar@{-}[r]^-*+{1} & \hspace{34pt}\\
+    \ar@{-}[r]^-*+{0} & \ar@{}[u] \hspace{34pt}\\
+    \ar@{-}[r]^-*+{-1} & \ar@{}[u] \hspace{34pt}\\
+    \ar@{-}[r]^-*+{-2} & \hspace{34pt}
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{2} & \\
+    \ar@{}[ddd] \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@{}[u] \\
+    \ar@{-}[r]^-*+{-1} & \ar@/_/[u]_-*+{J_-} \\
+    \ar@{-}[r]^-*+{-2} &
+  }
+  \]
+}
+\onlySlide*{4}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{2} & \\
+    \ar@{}[ddd] \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@/_/[u]_-*+{J_+} \\
+    \ar@{-}[r]^-*+{-1} & \ar@/_/[u]_-*+{J_-} \\
+    \ar@{-}[r]^-*+{-2} &
+  }
+  \]
+}
+\onlySlide*{5}
+{
+  \[
+  \xymatrix@R=20pt@C=100pt{
+    \ar@(dl,ul)[ddd]_<<<<<*+{J_+} \ar@{-}[r]^-*+{2} & \\
+    \ar@(dl,ul)[ddd]_>>>>>*+{J_-} \ar@{-}[r]^-*+{1} & \\
+    \ar@{-}[r]^-*+{0} & \ar@/_/[u]_-*+{J_+} \\
+    \ar@{-}[r]^-*+{-1} & \ar@/_/[u]_-*+{J_-} \\
+    \ar@{-}[r]^-*+{-2} &
+  }
+  \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{3} {
+\begin{slide}{State diagram of ACSA for $j=\frac{1}{2}$}
+\onlySlide*{1}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@{-}[rrr]^-*+{\frac12} & & &\\
+    \ar@{-}[rrr]^-*+{-\frac12} & & & \\
+  }
+  \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@{}[] \ar@{-}[rr]^-*+{\frac12} & & \\
+                                                  & \ar@{-}[rr]^-*+{-\frac12} & & \ar@{}[] \\
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@(ul,dl)[]_*+{J_+} \ar@{-}[rr]^-*+{\frac12} & & \\
+                                                  & \ar@{-}[rr]^-*+{-\frac12} & & \ar@(ur,dr)[]^*+{J_-} \\
+  }
+  \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\overlays{3} {
+\begin{slide}{State diagram of ACSA for $j=\frac{3}{2}$}
+\onlySlide*{1}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@{-}[rrr]^-*+{\frac32} & &  & \\
+    \ar@{-}[rrr]^-*+{\frac12} & &  & \\
+    \ar@{-}[rrr]^-*+{-\frac12} & &  & \\
+    \ar@{-}[rrr]^-*+{-\frac32} &  &  & \\
+  }
+  \]
+}
+\onlySlide*{2}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@{-}[rr]^-*+{\frac32} &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{\frac12}  &  & \\
+    \ar@{-}[rr]^-*+{-\frac12}                    &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{-\frac32} &  & \\
+  }
+  \]
+}
+\onlySlide*{3}
+{
+  \[
+  \xymatrix@R=20pt@C=50pt{
+    \ar@/_/[dd]_*+{J_+} \ar@{-}[rr]^-*+{\frac32} &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{\frac12}  &  & \\
+    \ar@{-}[rr]^-*+{-\frac12}                    &                           &  & \\
+                                                 & \ar@{-}[rr]^-*+{-\frac32} &  & \ar@/_/[uu]_*+{J_-}\\
+  }
+  \]
+}
+\end{slide}
+}
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Hopf Algebra Structure with braiding}
+$SU(2)$ and $ACSA$ are very closely related:
+\break
+\break
+Observe that if $I_i$ is a generator of $SU(2)$ then:
+\[
+\tilde{J}_i = - I_i \otimes \sigma_i
+\]
+satisfies the ACSA relations. Similarly:
+\[
+\tilde{I}_i = J_i \otimes \sigma_i
+\]
+satisfies $SU(2)$ relations.
+\break
+\break
+Try to find a coproduct using the coproduct of $SU(2)$:
+\[
+\Delta(I_i) = 1 \otimes I_i + I_i \otimes 1
+\]
+
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Hopf Algebra Structure with braiding}
+Redefine the action of $\tau$:
+\beq
+\tau(A \otimes B) = B \otimes A
+\eeq
+by introducing grading; thus:
+\beq
+\tau(A \otimes B) = (-1)^{deg\;A\; deg\;B\;} B \otimes A
+\eeq
+The Hopf algebra relations remain invariant.
+\break
+\break
+Define the degree of $J_1, J_2, J_3$ as $1$ and degree of $1$ as $0$. Then, the coproduct:
+\beq
+\Delta(J_i) = 1 \otimes J_i + J_i \otimes 1
+\eeq
+satisfies the Hopf algebra axioms.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The Bosonic Inhom. Symplectic Quantum Group}
+Consider the multiparticle boson algebra:
+\begin{align*}
+c_i c_j - c_j c_i & = 0 \\
+c_i c^*_j - c^*_j c_i & = \delta_{ij}
+\end{align*}
+being transformed by:
+\beq
+\left(
+\begin{array}{c}
+c' \\
+{c^{*}}' \\
+1
+\end{array}
+\right) = \left(
+\begin{array}{ccc}
+\alpha & \beta & \gamma \\
+\beta^* & \alpha^* & \gamma^* \\
+0 & 0 & 1
+\end{array}
+\right) \dot{\otimes} \left(
+\begin{array}{c}
+c \\
+c^* \\
+1
+\end{array}
+\right)
+\eeq
+\break
+\break
+The transformation matrix is inhomogeneous and entries are non-commuting.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The Bosonic Inhom. Symplectic Quantum Group}
+In order for the boson algebra to be invariant, the matrix elements
+should satisfy:
+\[
+\left.
+\begin{aligned}
+\gamma_i \gamma^*_j - \gamma^*_j \gamma_i &= \delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} \\
+\gamma_i \gamma_j - \gamma_j \gamma_i &= \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \\
+\alpha_{ij} \gamma_k - \gamma_k \alpha_{ij} & = 0 \\
+\beta_{ij} \gamma_k - \gamma_k \beta_{ij} & = 0 \\
+\alpha_{ij} \gamma^*_k - \gamma^*_k \alpha_{ij} & = 0 \\
+\beta_{ij} \gamma^*_k - \gamma^*_k \beta_{ij} & = 0
+\end{aligned}
+\right|
+\text{$\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute}
+\]
+\break
+\break
+We call this the Bosonic Inhomogeneous Symplectic Quantum Group, \BISp
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{\BISp - Hopf Algebra structure}
+In terms of the matrix $M$:
+\beq M = \left(
+\begin{array}{cc|c}
+\alpha & \beta & \gamma \\
+\beta^* & \alpha^* & \gamma^* \\
+\hline 0 & 0 & 1
+\end{array}
+\right)
+ =
+\left(
+\begin{array}{c|c}
+A & \Gamma \\
+\hline 0 & 1
+\end{array}
+\right)
+\eeq
+the Hopf algebra structure is given by:
+\begin{align*}
+\Delta(M) & = M \dot{\otimes} M \\
+\epsilon(M) & = I  \\
+S(M) & = M^{-1}
+\end{align*}
+and as such it is a quantum matrix group. It is also
+a quasitriangular Hopf algebra with an $R$-matrix formulation.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{\BISp - Subgroups}
+Impose the following conditions to get the subgroups below:
+\begin{subequations}
+\begin{align}
+\delta_{ij} - \alpha_{ik}\alpha^*_{jk} + \beta_{ik} \beta^*_{jk} = \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} & = 0 \label{suba}\\
+\gamma_i &= 0  \label{subb}\\
+\beta_{ij} &= 0  \label{subc}\\
+\alpha_{ij} &= 0 \label{subd}
+\end{align}
+\end{subequations}
+    \[
+    \begin{CD}
+    {BISp(2d, \IR)} @>\eqref{suba}>> {ISp(2d, \IR)} @>\eqref{subb}>> {Sp(2d, \IR)} \\
+    @V\eqref{subc}VV @V\eqref{subc}VV @V\eqref{subc}VV \\
+    {BIU(d)} @>\eqref{suba}>> {IU(d)} @>\eqref{subb}>> {U(d)} \\
+    @V\eqref{subd})VV \\
+    {BA(d)}
+    \end{CD}
+    \]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{\BISp - Contractions}
+Rescale $\gamma_i$ to $\gamma_i/\sqrt{\hbar}\;$ and take the limit
+$\hbar \rightarrow 0$ to study contractions:
+    \[
+    \begin{CD}
+    {BISp(2d, \IR)} @>\hbar \rightarrow 0>> {IGL(2d, \IR)} \\
+    @V\eqref{subc}VV @V\eqref{subc}VV \\
+    {BIU(d)} @>\hbar \rightarrow 0>> {IGL(d, \IC)} \\
+    @V\eqref{subd}VV @V\eqref{subd}VV \\
+    {BA(d)} @>\hbar \rightarrow 0>> {\IC^d}
+    \end{CD}
+    \]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{The Fermionic Inhomogeneous Group \FIO}
+Study the invariance of the multiparticle fermion
+algebra:
+\begin{align*}
+c_i c_j + c_j c_i & = 0 \\
+c_i c^*_j + c^*_j c_i & = \delta_{ij}
+\end{align*}
+under the same inhomogeneous transformation to get:
+\[
+\left.
+\begin{aligned}
+\gamma_i \gamma^*_j + \gamma^*_j \gamma_i &= \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} \\
+\gamma_i \gamma_j + \gamma_j \gamma_i &= - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \\
+\alpha_{ij} \gamma_k + \gamma_k \alpha_{ij} & = 0 \\
+\beta_{ij} \gamma_k + \gamma_k \beta_{ij} & = 0 \\
+\alpha_{ij} \gamma^*_k + \gamma^*_k \alpha_{ij} & = 0 \\
+\beta_{ij} \gamma^*_k + \gamma^*_k \beta_{ij} & = 0
+\end{aligned}
+\right|
+\text{$\alpha_{ij}, \beta_{ij}, \alpha^*_{ij}, \beta^*_{ij}$ commute}
+\]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+\begin{slide}{\FIO - Subgroups}
+Impose the following conditions to get the subgroups below:
+\begin{subequations}
+\begin{align}
+\delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} = - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} &= 0 \label{subafer} \\
+\gamma_i &= 0  \label{subbfer} \\
+\beta_{ij} &= 0  \label{subcfer} \\
+\alpha_{ij} &= 0  \quad. \label{subdfer}
+\end{align}
+\end{subequations}
+    \[
+    \begin{CD}
+    {FIO(2d, \IR)}   @> \eqref{subafer} >> {GrIO(2d, \IR)} @> \eqref{subbfer} >> {O(2d, \IR)} \\
+    @V\eqref{subcfer}VV                    @V\eqref{subcfer}VV                   @V\eqref{subcfer}VV \\
+    {FIU(d)}         @> \eqref{subafer} >> {GrIU(d)}       @> \eqref{subbfer} >> {U(d)} \\
+    @V\eqref{subdfer}VV \\
+    {FA(d) \approx Cliff(2d)}
+    \end{CD}
+    \]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{\FIO - Contractions}
+Again rescale $\gamma_i$ to $\gamma_i/\sqrt{\hbar}\;$ and take the limit
+$\hbar \rightarrow 0$ to study contractions:
+    \[
+    \begin{CD}
+    {FIO(2d, \IR)}            @> \hbar \rightarrow 0   >> {GrIGL(2d, \IR)} \\
+    @V\eqref{subcfer}VV                                    @V\eqref{subcfer}VV \\
+    {FIU(d)}                  @> \hbar \rightarrow 0   >> {GrIGL(d, \IC)} \\
+    @V\eqref{subdfer}VV                                    @V\eqref{subdfer}VV \\
+    {FA(d) \approx Cliff(2d)} @> \hbar \rightarrow 0    >> {Gr(d, \IC)}
+    \end{CD}
+    \]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$FIO(2d + 1, \IR)$}
+Consider the similarity transformation on $M$ as:
+\[
+M \rightarrow UMU^{-1}
+\]
+with
+\beq U = \left(
+\begin{tabular}{cc|c}
+$\frac{1}{\sqrt{2}}$ & $\frac{1}{\sqrt{2}}$ & $0$ \\
+$\frac{i}{\sqrt{2}}$ & $\frac{-i}{\sqrt{2}}$ & $0$ \\
+\hline $0$ & $0$ & $1$
+\end{tabular}
+\right)
+\eeq
+One gets the real form of $M$ after the transformation as:
+\beq
+\left(
+\begin{tabular}{cc|c}
+$Re(\alpha + \beta)$ & $Im(\alpha - \beta)$ & $\sqrt{2}Re(\gamma)$ \\
+$-Im(\alpha + \beta)$ & $Re(\alpha - \beta)$ & $-\sqrt{2}Im(\gamma)$ \\
+\hline $0$ & $0$ & $1$
+\end{tabular}
+\right) = \left(
+\begin{tabular}{c|c}
+$A$ & $\Gamma$ \\
+\hline $0$ & $1$
+\end{tabular}
+\right)
+\eeq
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$FIO(2d + 1, \IR)$}
+In the real form, for \FIO, the non-trivial relations:
+\begin{align*}
+\gamma_i \gamma^*_j + \gamma^*_j \gamma_i &= \delta_{ij} - \alpha_{ik}\alpha^*_{jk} - \beta_{ik} \beta^*_{jk} \\
+\gamma_i \gamma_j + \gamma_j \gamma_i &= - \beta_{ik} \alpha_{jk} - \alpha_{ik} \beta_{jk} \\
+\end{align*}
+can be cast into a single equation:
+\beq
+\{\Gamma_i, \Gamma_j\} = \delta_{ij} - A_{ik} A_{jk} \quad,\quad i, j = 1, 2, \ldots , 2d .
+\eeq
+Using this form as the defining relation, there is no more restrictions
+on the dimension of the fermionic inhomogeneous algebra and one can extend it to
+$FIO(2d + 1, \IR)$.
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{$FIO(2d + 1, \IR)$ - Subgroups}
+If one considers imposing the relations:
+\begin{subequations}
+\begin{align}
+\delta_{ij} - A_{ik}A_{jk} &= 0 \label{subaferodd} \\
+\Gamma_i &= 0 \label{subbferodd} \\
+A_{ij} &= 0 \label{subcferodd}
+\end{align}
+\end{subequations}
+one gets the subgroup diagram:
+    \[
+    \begin{CD}
+    {FIO(2d + 1, \IR)} @>\eqref{subaferodd}>> {GrIO(2d + 1, \IR)} @>\eqref{subbferodd}>> {O(2d + 1, \IR)} \\
+    @V\eqref{subcferodd}VV\\
+    {Cliff(2d + 1)}
+    \end{CD}
+    \]
+\end{slide}
+
+%%%%%%%%%%%%%%%%%%
+%%    SLIDE     %%
+%%%%%%%%%%%%%%%%%%
+
+\begin{slide}{Conclusions}
+\begin{itemize}
+  \item{Quantized classical systems or non-classical systems have deformed invariance
+    groups.}
+  \item{Inhomogeneous quantum groups are novel and interesting. In 3 dimensions, the inhomogeneous
+    invariance quantum group of the bosonic oscillator is also a "quantum" symmetry of the phase space.}
+  \item{Both the fermionic and the bosonic inhomogeneous quantum groups can be extended to infinite
+    dimension by considering their action on fermions-bosons with continuous indices.}
+  \item{\BISp and \FIO can be considered to be deformations of bosons and fermions respectively.}
+  \item{ACSA and its close resemblance to $SU(2)$ is very interesting}
+\end{itemize}
 \end{slide}
 
 \end{document}
