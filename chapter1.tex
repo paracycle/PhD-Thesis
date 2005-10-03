@@ -1,4 +1,4 @@
-\section{Bosons and fermions}
+\section{Bosons and Fermions}
 The concept of bosonic and fermionic particles is one of the most important concepts
 in modern quantum physics. The behavior of large scale matter, from chemical
 properties of elements to superconductivity and superfluidity can mostly be
@@ -163,7 +163,7 @@ it as a creation operator. Similarly, the operator $a$ acts as an annihilation
 operator of the algebra.
 
 
-\section{Quantum groups and Hopf algebras}
+\section{Quantum Groups and Hopf Algebras}
 
 
 The discovery of quantum groups has historically been motivated by the study
@@ -181,7 +181,7 @@ and starting form that definition give definitions of coalgebra, bialgebra and H
 algebra.
 
 
-\subsection{Associative algebras}
+\subsection{Associative Algebras}
 In abstract mathematics, an associative algebra $A$ over a field $F$ is
 defined to be a vector space over
 $F$ with an $F$ bilinear multiplication $m: A \otimes A \rightarrow A$ (where the image of
@@ -291,7 +291,7 @@ possibility of this can be shown if $A$ is finite-dimensional. In general, the m
 $m: A \otimes A \rightarrow A$ yields a linear map on the dual $\Delta: A^* \rightarrow
 (A \otimes A)^*$. However, if $A$ is finite-dimensional, $(A \otimes A)^*$ is naturally isomorphic
 to $(A^* \otimes A^*)$ and for that reason the map on the dual can be written as $\Delta: A^*
-\rightarrow A^* \otimes A^*$. This map is called to coproduct. In terms of the coproduct, the
+\rightarrow A^* \otimes A^*$. This map is called the coproduct. In terms of the coproduct, the
 above relation becomes:
 \beq
 \phi(xy) = \phi(m(x \otimes y)) = \Delta(\phi)(x \otimes y)
@@ -391,20 +391,20 @@ m_{B \otimes B} = (m \otimes m) \circ (id \otimes \tau \otimes id) \quad .
 
 The statement that the coproduct map is a algebra homomorphism implies that:
 \begin{align}
-\Delta(ab) = \Delta(m(a \otimes b)) & = m_{B \otimes B}(\Delta(a) \otimes \Delta(b)) \\
+\Delta(ab) = \Delta(m(a \otimes b)) & = m_{B \otimes B}(\Delta(a) \otimes \Delta(b)) =  \Delta(a) \Delta(b) \\
 \Delta(1) & = 1 \otimes 1
 \end{align}
 These two equations say that the action of the coproduct map respects both the product and the
 unit of the algebra structure in the bialgebra. Similarly, the condition that the counit
 is an algebra homomorphism implies:
 \begin{align}
-\epsilon(ab) = \epsilon(m(a \otimes b)) &= m(\epsilon(a) \otimes \epsilon(b)) = \epsilon(a) \epsilon(b) \\
+\epsilon(ab) = \epsilon(m(a \otimes b)) &= m_F(\epsilon(a) \otimes \epsilon(b)) = \epsilon(a) \epsilon(b) \\
 \epsilon(1) &= 1
 \end{align}
+where $m_F$ stands for the product on the field $F$.
 
-
-The content of these relations that define a bialgebra
-can again be expressed by the commutative diagrams in Figures
+The content of these relations which define a bialgebra
+can also be expressed by the commutative diagrams in Figures
 \ref{coproduct-comp-product-bialgebra} and \ref{coproduct-comp-unit-bialgebra} for the homomorphism
 conditions on the coproduct and Figures \ref{counit-comp-product-bialgebra} and
 \ref{counit-comp-unit-bialgebra} for the homomorphism
@@ -483,7 +483,7 @@ the bialgebra $B$.
 
 
 
-\subsection{Hopf algebras}
+\subsection{Hopf Algebras}
 
 
 A Hopf algebra $H$ is basically a bialgebra, ie. both a unital associative algebra and a coalgebra, with an additional
@@ -524,7 +524,7 @@ Thus the coinverse map $S$ can also be expressed as:
 S(c_{(1)})c_{(2)} = m(S(c_{(1)}) \otimes c_{(2)}) = \epsilon(c) 1 = m(c_{(1)} \otimes S(c_{(2)})) = c_{(1)}S(c_{(2)})
 \eeq
 
-The notion commutativity in a Hopf algebra is defined by the commutativity of the product
+The notion of commutativity in a Hopf algebra is defined by the commutativity of the product
 map of the algebra structure. An algebra is commutative if and only if the product map
 satisfies the relation:
 \beq
@@ -560,7 +560,7 @@ It becomes a Hopf algebra, if we define the coproduct, counit and coinverse maps
 S(g) & = g^{-1}
 \end{align}
 for all $g \in G$. In this instance the resulting Hopf algebra is always
-cocommutative  (since $g \otimes g = g \otimes g$) and is
+cocommutative  (since $g \otimes g = \tau(g \otimes g)$) and is
 commutative depending on the original group $G$ being abelian or not. If the
 underlying group $G$ is abelian, the resulting Hopf algebra is both cocommutative
 and commutative. Otherwise, it is cocommutative but noncommutative.
@@ -576,7 +576,7 @@ S(x) & = -x
 for all $x \in U(g)$. Notice that the coproduct rule is not only compatible with the
 product on the universal enveloping algebra but it is also compatible with the
 antisymmetric product defined on the Lie algebra itself. This Hopf algebra is
-cocommutative but noncommutative.
+cocommutative (since $1 \otimes x + x \otimes 1 = x \otimes 1 + 1 \otimes x$) but noncommutative.
 
 Quantum groups are, loosely, defined as Hopf algebras that are neither commutative nor
 cocommutative. As such, they are important in non-commutative geometry. The reason for
@@ -627,7 +627,7 @@ different matrix representations. This is the reason why the element $R$ of $H \
 sometimes called the universal $R$-matrix. It is mostly for these reasons that commonly
 studied physical Hopf algebras and quantum groups are generally quasitriangular.
 
-\section{Quantum matrix groups}
+\section{Quantum Matrix Groups}
 
 A quantum matrix group is defined by a set of $n$ x $n$ matrices $M$:
 \beq
@@ -705,7 +705,7 @@ the classical matrix groups, one can further restrict the determinant of such ma
 to be equal to $1$ and obtain the quantum subgroup $SL_q(n)$, the special linear quantum
 group of dimension $n$.
 
-\section{Quantum group invariance of an algebra}
+\section{Quantum Group Invariance of an Algebra}
 A (left)module over the ring $R$ consists of an abelian group $M$ and the scalar
 multiplication operation $s: R \otimes M \rightarrow M$, the action of which is
 usually written as $s(r, x) = rx$ for some $r$ in $R$ and some $x$ in $M$, and such that:
